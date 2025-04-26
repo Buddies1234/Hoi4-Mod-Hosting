@@ -1,0 +1,1 @@
+NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = -1
