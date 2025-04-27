@@ -15730,7 +15730,7 @@ focus_tree = {
 		
 		allow_branch = { has_country_flag = ponatowski_enabled }
 
-		x = 11
+		x = 15
 		y = 1
 		cost = 10
 
@@ -15754,406 +15754,576 @@ focus_tree = {
 			}
 		}
 	}
-focus = {
-		id = POL_Ponatowski_Exspansion
-		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = POL_Ponatowski }
-		relative_position_id = POL_Ponatowski 
-
-		x = 1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 2.5
-		}
-		
-		available_if_capitulated = yes
-		completion_reward = {
-			add_ideas = POL_Ponatowski_Exspansion
-		}
-	}
-	focus = {
-		id = POL_demand_Baltics_Ponitowski
-		icon = GFX_goal_demand_sudetenland
-		prerequisite = { focus = POL_Ponatowski_Exspansion }
-		relative_position_id = POL_Ponatowski_Exspansion
-		will_lead_to_war_with = LIT
-
-		x = 0
-		y = 1
-		cost = 10
-
-		ai_will_do = {
-			factor = 2.5
-		}
-		
-
-		available_if_capitulated = no
-		
-		available = {
-			is_subject = no 
-			IF = {
-				limit = { has_completed_focus = POL_romanov }
-				has_government = neutrality
-			}
-			784 = {
-				owns_or_subject_of = yes
-			}
-			has_army_manpower = { size > 399999 }
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			#Poland demands Lithuanian annexation
-			if = {
-				limit = {
-					LIT = { has_war = no }
-				}
-				LIT = {
-					country_event = {
-						id = poland.15
-						days = 1
-					}
-				}
-			}
-			else = {
-				11 = {
-					add_claim_by = POL
-				}
-				814 = {
-					add_claim_by = POL
-				}
-				815 = {
-					add_claim_by = POL
-				}
-				189 = {
-					add_claim_by = POL
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = LIT
-				}
-			}
-			if = {
-				limit = {
-					LAT = { has_war = no }
-				}
-				LAT = {
-					country_event = {
-						id = poland.15
-						days = 1
-					}
-				}
-			}
-			else = {
-				222 = {
-					add_claim_by = POL
-				}
-				12 = {
-					add_claim_by = POL
-				}
-				808 = {
-					add_claim_by = POL
-				}
-				809 = {
-					add_claim_by = POL
-				}
-				190 = {
-					add_claim_by = POL
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = LAT
-				}
-			}
-			if = {
-				limit = {
-					EST = { has_war = no }
-				}
-				EST = {
-					country_event = {
-						id = poland.15
-						days = 1
-					}
-				}
-			}
-			else = {
-				191 = {
-					add_claim_by = POL
-				}
-				13 = {
-					add_claim_by = POL
-				}
-				811 = {
-					add_claim_by = POL
-				}
-				812 = {
-					add_claim_by = POL
-				}
-				813 = {
-					add_claim_by = POL
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = EST
-				}
-			}
-		}
-	}
-	focus = {
-		id = POL_Ponatowski_Reintergrate_Baltics
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = POL_demand_Baltics_Ponitowski }
-		prerequisite = { focus = POL_demand_Baltics_Ponitowski }
-		relative_position_id = POL_demand_Baltics_Ponitowski
-
-		x = 0
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 2.5
-		}
-		
-		available = {
-		}
-		
-		bypass = {
-		}
-
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-				every_state = {
-					limit = {
-						OR = {
-							is_core_of = LIT
-							is_core_of = LAT
-							is_core_of = EST
-						}
-					}
-					add_core_of = POL
-				}
-			}
-		}
-	focus = {
-		id = POL_support_monarchy_in_CZE_Ponatwoski
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = POL_Ponatowski_Exspansion }
-		relative_position_id = POL_Ponatowski_Exspansion
-
-		x = 2
-		y = 1
-		cost = 10
-
-		ai_will_do = {
-			factor = 2.5
-		}
-
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = CZE
-				}
-			if = {
-				limit = { NOT = { has_country_flag = POL_banned_monarchy_flag } }
-				CZE = { country_event = NSB_poland_monarchist_events.5 }
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					POL = {
-						set_autonomy = {
-							target = CZE
-							autonomy_state = autonomy_personal_union
-						}
-					}
-				}
-			}
-			else = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = CZE
-				}
-			}
-		}
-	}
-	focus = {
-		id = POL_Ponatowski_restore_IMP_Boarders
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = POL_Ponatowski_Reintergrate_Baltics }
-		prerequisite = { focus = POL_unite_west_slavia_ponatowski }
-		relative_position_id = POL_Ponatowski_Reintergrate_Baltics
-		x = 1
-		y = 1
-		cost = 7
-		available = {
-		 has_army_manpower = { size > 500000 }
-		}
-		completion_reward = {
-				create_wargoal = {
-					type = annex_everything
-					target = ROM
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = SOV
-				}
-		}
-	}
 
 	focus = {
-		id = POL_unite_west_slavia_ponatowski
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = POL_support_monarchy_in_CZE_Ponatwoski }
-		prerequisite = { focus = POL_support_monarchy_in_CZE_Ponatwoski }
-		relative_position_id = POL_support_monarchy_in_CZE_Ponatwoski
-		x = 0
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 2.5
-		}
-		available_if_capitulated = yes
-		available = {
-			CZE = { has_civil_war = false }
-			or = {
-				CZE = { has_government = neutrality }
-				CZE = { is_subject_of = ROOT }
-				AND = {
-					all_state = {
-						OR = {
-							NOT = { is_core_of = CZE }
-							is_owned_by = ROOT
-						}
-					}
-				}
-			}
-		}
-		completion_reward = {
-				CZE = {
-					every_character = {
-						limit = {
-							OR = {
-								is_corps_commander = yes 
-								is_navy_leader = yes
-								is_field_marshal = yes
-							}
-							has_unit_leader_flag = POL_monarchy_sympathies_flag	
-						}
-						set_nationality = POL
-					}
-				}				
-				annex_country = {
-					target = CZE
-					transfer_troops = yes
-			
-		}
-			hidden_effect = {
-				every_state = {
-					limit = {
-						OR = {
-							is_core_of = CZE
-							is_core_of = SLO
-						}
-					}
-					add_core_of = POL
-				}
-			}
-			custom_effect_tooltip = form_country_czechoslovakia_coring_states_tt
-	}
-	}
-	focus = {
-		id = POL_Ponatowski_internal_affairs
-		icon = GFX_focus_generic_self_management
+		id = POL_remember_the_prussian_failure
+		icon = placeholder
 		prerequisite = { focus = POL_Ponatowski }
 		relative_position_id = POL_Ponatowski
-		x = 7
-		y = 1
-		cost = 5
+		cost = 10
+
+		x=0
+		y=1
+
+		available_if_capitulated = yes
+
 		completion_reward = {
-			add_political_power = 150
-		}
-	}
-	focus = {
-		id = POL_Ponatowski_ministary_of_defence
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = POL_Ponatowski_internal_affairs }
-		relative_position_id = POL_Ponatowski_internal_affairs
-		x = -1
-		y = 1
-		cost = 5
-		completion_reward = {
-		add_ideas =  POL_Ponatowski_ministary_of_defence
-	}
-	}
-	focus = {
-		id = POL_Ponatowski_internal_affairs
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = POL_Ponatowski_internal_affairs }
-		relative_position_id = POL_Ponatowski_internal_affairs
-		x = 1
-		y = 1
-		cost = 5
-		completion_reward = {
-			add_timed_idea = {
-				idea = POL_Ponatowski_economic_reform
-				days = 1460
+			add_dynamic_modifier = {
+				modifier = POL_Poniatowski_Military_Reform_1
 			}
-	}
-	}
-	focus = {
-		id = POL_Ponatowski_ministary_of_defence_advanced
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = POL_Ponatowski_ministary_of_defence }
-		relative_position_id = POL_Ponatowski_ministary_of_defence
-		x = 0
-		y = 1
-		cost = 7
-		completion_reward = {
-		swap_ideas = { 
-			remove_idea = POL_Ponatowski_ministary_of_defence
-			add_idea = POL_Ponatowski_ministary_of_defence_advanced
+			hidden_effect = {
+				country_lock_all_division_template = yes
+				### Left Branch
+				set_variable = {POL_inf_attack_var = 0}
+				set_variable = {POL_inf_def_var = 0}
+				set_variable = {POL_army_org_fac_var = 0}
+				set_variable = {POL_cas_reduction_var = 0}
+
+				### Right Branch
+				set_variable = {POL_tank_attack_var = 0}
+				set_variable = {POL_tank_attack_var = 0}
+				set_variable = {POL_air_attack_var = 0}
+				set_variable = {POL_air_defence_var = 0}
+				set_variable = {POL_cas_effectiveness_var = 0}
+
+				## shared
+				set_variable = {POL_army_morale_var = 0}
+			}
 		}
 	}
-	}
+
 	focus = {
-		id = POL_Ponatowski_adress_the_army
-		icon = GFX_focus_generic_manpower
-		prerequisite = { focus = POL_Ponatowski_ministary_of_defence_advanced }
-		relative_position_id = POL_Ponatowski_ministary_of_defence_advanced
-		x = 0
-		y = 1
-		cost = 20
+		id = POL_infantry_elites
+		icon = placeholder
+		prerequisite = {focus = POL_remember_the_prussian_failure}
+		relative_position_id = POL_remember_the_prussian_failure
+		mutually_exclusive = {focus = POL_preempt_the_modern_battlefield}
+		cost = 10
+
+		x=-2
+		y=1
+
 		completion_reward = {
-			add_ideas = POL_Ponatowski_army_primacy_idea
+			add_to_variable = {
+				var = POL_inf_attack_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = POL_inf_def_var
+				value = 0.05
+			}
+			custom_effect_tooltip = POL_inf_branch_1_tt
+		}
 	}
-	}
+
 	focus = {
-		id = POL_Ponatowski_adress_the_airforce
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = { focus = POL_Ponatowski_ministary_of_defence_advanced }
-		relative_position_id = POL_Ponatowski_ministary_of_defence_advanced
-		x = 6
-		y = 1
-		cost = 17
+		id = POL_preempt_the_modern_battlefield
+		icon = placeholder
+		prerequisite = {focus = POL_remember_the_prussian_failure}
+		relative_position_id = POL_remember_the_prussian_failure
+		mutually_exclusive = {focus = POL_infantry_elites}
+		cost = 10
+
+		x=2
+		y=1
+
 		completion_reward = {
-			add_ideas = generic_air_primacy_idea
+			add_to_variable = {
+				var = POL_tank_attack_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = POL_tank_def_var
+				value = 0.05
+			}
+			custom_effect_tooltip = POL_modern_branch_1_tt
+		}
 	}
-	}
+
 	focus = {
-		id = POL_Ponatowski_adress_the_navy
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = POL_Ponatowski_ministary_of_defence_advanced }
-		relative_position_id = POL_Ponatowski_ministary_of_defence_advanced
-		x = 3
-		y = 1
-		cost = 15
+		id = POL_push_for_air_supremacy
+		icon = placeholder
+		prerequisite = {focus = POL_preempt_the_modern_battlefield}
+		relative_position_id = POL_preempt_the_modern_battlefield
+		cost = 10
+		x=-1
+		y=1
+
 		completion_reward = {
-			add_ideas = generic_navy_primacy_idea
+			add_to_variable = {
+				var = POL_air_attack_var
+				value = 0.1
+			}
+			add_to_variable = {
+				var = POL_air_defence_var
+				value = 0.1
+			}
+			custom_effect_tooltip = POL_modern_branch_2_tt
+		}
 	}
+
+	focus = {
+		id = POL_enshrine_the_ground_support_doctorine
+		icon = placeholder
+		prerequisite = {focus = POL_push_for_air_supremacy}
+		relative_position_id = POL_push_for_air_supremacy
+		y=1
+		cost = 10
+
+		completion_reward = {
+			add_to_variable = {
+				var = POL_cas_effectiveness_var
+				value = 0.15
+			}
+			custom_effect_tooltip = POL_modern_branch_3_tt
+		}
 	}
+
+	focus = {
+		id = POL_armory_officer_training
+		icon = placeholder
+		prerequisite = {focus = POL_preempt_the_modern_battlefield}
+		relative_position_id = POL_preempt_the_modern_battlefield
+		x=1
+		y=1
+		cost = 10
+
+		completion_reward = {
+			add_to_variable = {
+				var = POL_tank_attack_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = POL_tank_def_var
+				value = 0.05
+			}
+			army_experience = 50
+			custom_effect_tooltip = POL_modern_branch_1_tt
+		}
+	}
+
+	focus = {
+		id = POL_uncontested_war_machines
+		icon = placeholder
+		prerequisite = {focus = POL_armory_officer_training}
+		relative_position_id = POL_armory_officer_training
+		y=1
+		cost = 10
+
+		completion_reward = {
+			add_to_variable = {
+				var = POL_tank_attack_var
+				value = 0.1
+			}
+			add_to_variable = {
+				var = POL_tank_def_var
+				value = 0.1
+			}
+			army_experience = 50
+			custom_effect_tooltip = POL_modern_branch_4_tt
+		}
+	}
+#focus = {
+		#id = POL_Ponatowski_Exspansion
+		#icon = GFX_focus_generic_military_dictatorship
+		#prerequisite = { focus = POL_Ponatowski }
+		#relative_position_id = POL_Ponatowski 
+#
+		#x = 1
+		#y = 1
+		#cost = 5
+#
+		#ai_will_do = {
+			#factor = 2.5
+		#}
+#		
+		#available_if_capitulated = yes
+		#completion_reward = {
+			#add_ideas = POL_Ponatowski_Exspansion
+		#}
+	#}
+
+	#focus = {
+		#id = POL_demand_Baltics_Ponitowski
+		#icon = GFX_goal_demand_sudetenland
+		#prerequisite = { focus = POL_Ponatowski_Exspansion }
+		#relative_position_id = POL_Ponatowski_Exspansion
+		#will_lead_to_war_with = LIT
+#
+		#x = 0
+		#y = 1
+		#cost = 10
+#
+		#ai_will_do = {
+			#factor = 2.5
+		#}
+#		
+#
+		#available_if_capitulated = no
+#		
+		#available = {
+			#is_subject = no 
+			#IF = {
+				#limit = { has_completed_focus = POL_romanov }
+				#has_government = neutrality
+			#}
+			#784 = {
+				#owns_or_subject_of = yes
+			#}
+			#has_army_manpower = { size > 399999 }
+		#}
+		#search_filters = { FOCUS_FILTER_ANNEXATION }
+		#completion_reward = {
+			##Poland demands Lithuanian annexation
+			#if = {
+				#limit = {
+					#LIT = { has_war = no }
+				#}
+				#LIT = {
+					#country_event = {
+						#id = poland.15
+						#days = 1
+					#}
+				#}
+			#}
+			#else = {
+				#11 = {
+					#add_claim_by = POL
+				#}
+				#814 = {
+					#add_claim_by = POL
+				#}
+				#815 = {
+					#add_claim_by = POL
+				#}
+				#189 = {
+					#add_claim_by = POL
+				#}
+				#create_wargoal = {
+					#type = annex_everything
+					#target = LIT
+				#}
+			#}
+			#if = {
+				#limit = {
+					#LAT = { has_war = no }
+				#}
+				#LAT = {
+					#country_event = {
+						#id = poland.15
+						#days = 1
+					#}
+				#}
+			#}
+			#else = {
+				#222 = {
+					#add_claim_by = POL
+				#}
+				#12 = {
+					#add_claim_by = POL
+				#}
+				#808 = {
+					#add_claim_by = POL
+				#}
+				#809 = {
+					#add_claim_by = POL
+				#}
+				#190 = {
+					#add_claim_by = POL
+				#}
+				#create_wargoal = {
+					#type = annex_everything
+					#target = LAT
+				#}
+			#}
+			#if = {
+				#limit = {
+					#EST = { has_war = no }
+				#}
+				#EST = {
+					#country_event = {
+						#id = poland.15
+						#days = 1
+					#}
+				#}
+			#}
+			#else = {
+				#191 = {
+					#add_claim_by = POL
+				#}
+				#13 = {
+					#add_claim_by = POL
+				#}
+				#811 = {
+					#add_claim_by = POL
+				#}
+				#812 = {
+					#add_claim_by = POL
+				#}
+				#813 = {
+					#add_claim_by = POL
+				#}
+				#create_wargoal = {
+					#type = annex_everything
+					#target = EST
+				#}
+			#}
+		#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_Reintergrate_Baltics
+		#icon = GFX_goal_generic_more_territorial_claims
+		#prerequisite = { focus = POL_demand_Baltics_Ponitowski }
+		#prerequisite = { focus = POL_demand_Baltics_Ponitowski }
+		#relative_position_id = POL_demand_Baltics_Ponitowski
+#
+		#x = 0
+		#y = 1
+		#cost = 5
+#
+		#ai_will_do = {
+			#factor = 2.5
+		#}
+#		
+		#available = {
+		#}
+#		
+		#bypass = {
+		#}
+#
+		#available_if_capitulated = yes
+#
+		#search_filters = { FOCUS_FILTER_ANNEXATION }
+		#completion_reward = {
+				#every_state = {
+					#limit = {
+						#OR = {
+							#is_core_of = LIT
+							#is_core_of = LAT
+							#is_core_of = EST
+						#}
+					#}
+					#add_core_of = POL
+				#}
+			#}
+		#}
+	#focus = {
+		#id = POL_support_monarchy_in_CZE_Ponatwoski
+		#icon = GFX_goal_generic_forceful_treaty
+		#prerequisite = { focus = POL_Ponatowski_Exspansion }
+		#relative_position_id = POL_Ponatowski_Exspansion
+#
+		#x = 2
+		#y = 1
+		#cost = 10
+#
+		#ai_will_do = {
+			#factor = 2.5
+		#}
+#
+		#available_if_capitulated = yes
+#
+		#search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		#completion_reward = {
+				#create_wargoal = {
+					#type = puppet_wargoal_focus
+					#target = CZE
+				#}
+			#if = {
+				#limit = { NOT = { has_country_flag = POL_banned_monarchy_flag } }
+				#CZE = { country_event = NSB_poland_monarchist_events.5 }
+				#custom_effect_tooltip = if_they_accept_tt
+				#effect_tooltip = {
+					#POL = {
+						#set_autonomy = {
+							#target = CZE
+							#autonomy_state = autonomy_personal_union
+						#}
+					#}
+				#}
+			#}
+			#else = {
+				#create_wargoal = {
+					#type = puppet_wargoal_focus
+					#target = CZE
+				#}
+			#}
+		#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_restore_IMP_Boarders
+		#icon = GFX_goal_generic_more_territorial_claims
+		#prerequisite = { focus = POL_Ponatowski_Reintergrate_Baltics }
+		#prerequisite = { focus = POL_unite_west_slavia_ponatowski }
+		#relative_position_id = POL_Ponatowski_Reintergrate_Baltics
+		#x = 1
+		#y = 1
+		#cost = 7
+		#available = {
+		 #has_army_manpower = { size > 500000 }
+		#}
+		#completion_reward = {
+				#create_wargoal = {
+					#type = annex_everything
+					#target = ROM
+				#}
+				#create_wargoal = {
+					#type = annex_everything
+					#target = SOV
+				#}
+		#}
+	#}
+#
+	#focus = {
+		#id = POL_unite_west_slavia_ponatowski
+		#icon = GFX_goal_generic_more_territorial_claims
+		#prerequisite = { focus = POL_support_monarchy_in_CZE_Ponatwoski }
+		#prerequisite = { focus = POL_support_monarchy_in_CZE_Ponatwoski }
+		#relative_position_id = POL_support_monarchy_in_CZE_Ponatwoski
+		#x = 0
+		#y = 1
+		#cost = 5
+#
+		#ai_will_do = {
+			#factor = 2.5
+		#}
+		#available_if_capitulated = yes
+		#available = {
+			#CZE = { has_civil_war = false }
+			#or = {
+				#CZE = { has_government = neutrality }
+				#CZE = { is_subject_of = ROOT }
+				#AND = {
+					#all_state = {
+						#OR = {
+							#NOT = { is_core_of = CZE }
+							#is_owned_by = ROOT
+						#}
+					#}
+				#}
+			#}
+		#}
+		#completion_reward = {
+				#CZE = {
+					#every_character = {
+						#limit = {
+							#OR = {
+								#is_corps_commander = yes 
+								#is_navy_leader = yes
+								#is_field_marshal = yes
+							#}
+							#has_unit_leader_flag = POL_monarchy_sympathies_flag	
+						#}
+						#set_nationality = POL
+					#}
+				#}				
+				#annex_country = {
+					#target = CZE
+					#transfer_troops = yes
+#			
+		#}
+			#hidden_effect = {
+				#every_state = {
+					#limit = {
+						#OR = {
+							#is_core_of = CZE
+							#is_core_of = SLO
+						#}
+					#}
+					#add_core_of = POL
+				#}
+			#}
+			#custom_effect_tooltip = form_country_czechoslovakia_coring_states_tt
+	#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_internal_affairs
+		#icon = GFX_focus_generic_self_management
+		#prerequisite = { focus = POL_Ponatowski }
+		#relative_position_id = POL_Ponatowski
+		#x = 7
+		#y = 1
+		#cost = 5
+		#completion_reward = {
+			#add_political_power = 150
+		#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_ministary_of_defence
+		#icon = GFX_focus_generic_military_academy
+		#prerequisite = { focus = POL_Ponatowski_internal_affairs }
+		#relative_position_id = POL_Ponatowski_internal_affairs
+		#x = -1
+		#y = 1
+		#cost = 5
+		#completion_reward = {
+		#add_ideas =  POL_Ponatowski_ministary_of_defence
+	#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_internal_affairs
+		#icon = GFX_focus_generic_military_academy
+		#prerequisite = { focus = POL_Ponatowski_internal_affairs }
+		#relative_position_id = POL_Ponatowski_internal_affairs
+		#x = 1
+		#y = 1
+		#cost = 5
+		#completion_reward = {
+			#add_timed_idea = {
+				#idea = POL_Ponatowski_economic_reform
+				#days = 1460
+			#}
+	#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_ministary_of_defence_advanced
+		#icon = GFX_focus_generic_military_academy
+		#prerequisite = { focus = POL_Ponatowski_ministary_of_defence }
+		#relative_position_id = POL_Ponatowski_ministary_of_defence
+		#x = 0
+		#y = 1
+		#cost = 7
+		#completion_reward = {
+		#swap_ideas = { 
+			#remove_idea = POL_Ponatowski_ministary_of_defence
+			#add_idea = POL_Ponatowski_ministary_of_defence_advanced
+		#}
+	#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_adress_the_army
+		#icon = GFX_focus_generic_manpower
+		#prerequisite = { focus = POL_Ponatowski_ministary_of_defence_advanced }
+		#relative_position_id = POL_Ponatowski_ministary_of_defence_advanced
+		#x = 0
+		#y = 1
+		#cost = 20
+		#completion_reward = {
+			#add_ideas = POL_Ponatowski_army_primacy_idea
+	#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_adress_the_airforce
+		#icon = GFX_goal_generic_air_fighter2
+		#prerequisite = { focus = POL_Ponatowski_ministary_of_defence_advanced }
+		#relative_position_id = POL_Ponatowski_ministary_of_defence_advanced
+		#x = 6
+		#y = 1
+		#cost = 17
+		#completion_reward = {
+			#add_ideas = generic_air_primacy_idea
+	#}
+	#}
+	#focus = {
+		#id = POL_Ponatowski_adress_the_navy
+		#icon = GFX_goal_generic_construct_naval_dockyard
+		#prerequisite = { focus = POL_Ponatowski_ministary_of_defence_advanced }
+		#relative_position_id = POL_Ponatowski_ministary_of_defence_advanced
+		#x = 3
+		#y = 1
+		#cost = 15
+		#completion_reward = {
+			#add_ideas = generic_navy_primacy_idea
+	#}
+	#}
 }

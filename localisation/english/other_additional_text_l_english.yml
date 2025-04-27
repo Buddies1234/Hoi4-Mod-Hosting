@@ -167,3 +167,12 @@
   markworld.1.a:0 "Accept"
   markworld.1.b:0 "Decline"
   markworld.3.a:0 "Understood"
+
+  POL_Mil_Reform_tt:0 "§RCannot train, disband, or change unit templates\n§W"
+
+  POL_inf_branch_1_tt:0 "The infantry wing will be strengthened...\nEffective Change:\nInfantry Attack: +5%\nInfantry Defence: +5%"
+
+  POL_modern_branch_1_tt:0 "Modify Poniatowski's Military Reforms\nEffective Change:\nArmor Attack: +5%\nArmor Defence: +5%"
+  POL_modern_branch_2_tt:0 "Modify Poniatowski's Military Reforms\nEffective Change:\nAir Attack: +10%\nAir Defence: +10%"
+  POL_modern_branch_3_tt:0 "Modify Poniatowski's Military Reforms\nEffective Change:\nCAS Damage: +15%"
+  POL_modern_branch_4_tt:0 "Modify Poniatowski's Military Reforms\nEffective Change:\nArmor Attack: +10%\nArmor Defence: +10%"
