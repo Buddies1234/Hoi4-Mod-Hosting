@@ -1,9 +1,7 @@
 POL_Poniatowski_Military_Reform_1 = {
-	icon = GFX_idea_unknown
-	enable {always = yes}
-	remove_trigger = {
-			has_idea = POL_Poniatowski_Military_Reform_Final
-	}
+	icon = RAJ_private_military_complex
+	#enable {always = yes}
+	
 	custom_modifier_tooltip = POL_Mil_Reform_tt
 
 	### Left Branch
