@@ -16319,11 +16319,11 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 				create_wargoal = {
-					type = puppet_wargoal_focus
+					type = annex_country
 					target = CZE
 				}
 				CZE = {
-					country_event = poland.99999
+					country_event = poland.15
 				}
 		}
 	}
