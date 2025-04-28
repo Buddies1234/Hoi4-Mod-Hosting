@@ -1,0 +1,4 @@
+intermariumcosmetictag = {
+	color = rgb {122 50 57}
+	color_ui = rgb {122 50 57}
+}

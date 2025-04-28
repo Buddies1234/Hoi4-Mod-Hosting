@@ -15757,7 +15757,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_remember_the_prussian_failure
-		icon = placeholder
+		icon = GFX_focus_GER_prussian_legacy
 		prerequisite = { focus = POL_Ponatowski }
 		relative_position_id = POL_Ponatowski
 		cost = 10
@@ -15796,7 +15796,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_infantry_elites
-		icon = placeholder
+		icon = GFX_focus_RAJ_a_private_military
 		prerequisite = {focus = POL_remember_the_prussian_failure}
 		relative_position_id = POL_remember_the_prussian_failure
 		mutually_exclusive = {focus = POL_preempt_the_modern_battlefield}
@@ -15828,7 +15828,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_intensify_training
-		icon = placeholder
+		icon = GFX_goal_continuous_reduce_training_time
 		prerequisite = {focus = POL_infantry_elites}
 		relative_position_id = POL_infantry_elites
 		cost = 10
@@ -15859,7 +15859,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_finalise_the_infantry_doctrine
-		icon = placeholder
+		icon = GFX_focus_FIN_parmis_devils
 		prerequisite = {focus = POL_intensify_training}
 		relative_position_id = POL_intensify_training
 		cost = 10
@@ -15889,7 +15889,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_embrace_professionalism
-		icon = placeholder
+		icon = GFX_focus_AFG_royal_guard
 		prerequisite = {focus = POL_infantry_elites}
 		relative_position_id = POL_infantry_elites
 		cost = 10
@@ -15915,7 +15915,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_keep_away_the_sky_demons
-		icon = placeholder
+		icon = GFX_focus_PER_construct_air_defenses
 		prerequisite = {focus = POL_embrace_professionalism}
 		relative_position_id = POL_embrace_professionalism
 		cost = 10
@@ -15940,7 +15940,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_preempt_the_modern_battlefield
-		icon = placeholder
+		icon = GFX_focus_generic_tank_air_support
 		prerequisite = {focus = POL_remember_the_prussian_failure}
 		relative_position_id = POL_remember_the_prussian_failure
 		mutually_exclusive = {focus = POL_infantry_elites}
@@ -15972,7 +15972,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_push_for_air_supremacy
-		icon = placeholder
+		icon = GFX_focus_generic_multi_role_aircraft
 		prerequisite = {focus = POL_preempt_the_modern_battlefield}
 		relative_position_id = POL_preempt_the_modern_battlefield
 		cost = 10
@@ -16002,7 +16002,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_enshrine_the_ground_support_doctorine
-		icon = placeholder
+		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = {focus = POL_push_for_air_supremacy}
 		relative_position_id = POL_push_for_air_supremacy
 		y=1
@@ -16027,7 +16027,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_armory_officer_training
-		icon = placeholder
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
 		prerequisite = {focus = POL_preempt_the_modern_battlefield}
 		relative_position_id = POL_preempt_the_modern_battlefield
 		x=1
@@ -16058,7 +16058,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_uncontested_war_machines
-		icon = placeholder
+		icon = GFX_focus_generic_tank_production
 		prerequisite = {focus = POL_armory_officer_training}
 		relative_position_id = POL_armory_officer_training
 		y=1
@@ -16088,7 +16088,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_finalise_the_reforms
-		icon = placeholder
+		icon = GFX_focus_chi_army_reform
 		prerequisite = {
 			focus = POL_enshrine_the_ground_support_doctorine
 			focus = POL_finalise_the_infantry_doctrine
@@ -16429,6 +16429,169 @@ focus = {
 			custom_effect_tooltip = form_country_czechoslovakia_coring_states_tt
 	}
 	}
+
+	focus = {
+		id = POL_dreams_of_intermarium
+		icon = GFX_focus_POL_expand_polish_intelligence
+		prerequisite = {focus = POL_finalise_the_reforms}
+		prerequisite = {focus = POL_Ponatowski_restore_IMP_Boarders}
+		relative_position_id = POL_uncontested_war_machines
+		y=2
+		cost = 5
+
+		completion_reward = {
+			FRA = {
+				country_event = assorted.1
+				days = 15
+			}
+		}
+	}
+
+	focus = {
+		id = POL_demand_belarussian_clay
+		icon = GFX_focus_POL_belarus_army
+		prerequisite = {focus = POL_dreams_of_intermarium}
+		relative_position_id = POL_dreams_of_intermarium
+		y=1
+		x=-1
+		cost = 5
+
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = assorted.4
+					days = 7
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = POL_demand_ukrainian_clay
+		icon = GFX_focus_POL_ukrainian_army
+		prerequisite = {focus = POL_demand_belarussian_clay}
+		relative_position_id = POL_demand_belarussian_clay
+		y=1
+		cost = 5
+
+		completion_reward = {
+			SOV = {
+				country_event = {
+					id = assorted.5
+					days = 7
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = POL_prop_up_loyalist_regimes #adds decision category to create personal unions in danubian and balkan intermarium countries
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		prerequisite = {focus = POL_dreams_of_intermarium}
+		relative_position_id = POL_dreams_of_intermarium
+		x=1
+		y=1
+		cost = 0
+	}
+
+	focus = {
+		id = POL_intermarium_expansion #adds decision category to declare war on as-of-yet uncontrolled intermarium countries
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = {focus = POL_prop_up_loyalist_regimes}
+		relative_position_id = POL_prop_up_loyalist_regimes
+		y=1
+		cost = 0
+	}
+
+	focus = {
+		id = POL_realise_the_intermarium_dream
+		icon = GFX_focus_AUS_bring_phonix_insurance_from_the_ashes
+		prerequisite = {focus = POL_demand_ukrainian_clay}
+		prerequisite = {focus = POL_intermarium_expansion}
+		relative_position_id = POL_dreams_of_intermarium
+		y=3
+		cost = 15
+
+		completion_reward = {
+			custom_effect_tooltip = POL_blr_ukr_cores_tt
+			set_cosmetic_tag = intermariumcosmetictag
+			hidden_effect = {
+				199= {
+					add_core_of = POL
+				}
+				201= {
+					add_core_of = POL
+				}
+				198= {
+					add_core_of = POL
+				}
+				202= {
+					add_core_of = POL
+				}
+				203= {
+					add_core_of = POL
+				}
+				197= {
+					add_core_of = POL
+				}
+				192= {
+					add_core_of = POL
+				}
+				834= {
+					add_core_of = POL
+				}
+				196= {
+					add_core_of = POL
+				}
+				226= {
+					add_core_of = POL
+				}
+				193= {
+					add_core_of = POL
+				}
+				259= {
+					add_core_of = POL
+				}
+				221= {
+					add_core_of = POL
+				}
+				228= {
+					add_core_of = POL
+				}
+				227= {
+					add_core_of = POL
+				}
+				200= {
+					add_core_of = POL
+				}
+				196= {
+					add_core_of = POL
+				}
+				137= {
+					add_core_of = POL
+				}
+				225= {
+					add_core_of = POL
+				}
+
+				241 = {
+					add_core_of = POL
+				}
+				204 = {
+					add_core_of = POL
+				}
+				206 = {
+					add_core_of = POL
+				}
+				207 = {
+					add_core_of = POL
+				}
+				194 = {
+					add_core_of = POL
+				}
+			}
+		}
+	}
 	#focus = {
 		#id = POL_Ponatowski_internal_affairs
 		#icon = GFX_focus_generic_self_management
@@ -16453,21 +16616,21 @@ focus = {
 		#add_ideas =  POL_Ponatowski_ministary_of_defence
 	#}
 	#}
-	focus = {
-		id = POL_Ponatowski_internal_affairs
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = POL_Ponatowski_internal_affairs }
-		relative_position_id = POL_Ponatowski_internal_affairs
-		x = 5
-		y = 1
-		cost = 5
-		completion_reward = {
-			add_timed_idea = {
-				idea = POL_Ponatowski_economic_reform
-				days = 1460
-			}
-	}
-	}
+	#focus = {
+		#id = POL_Ponatowski_internal_affairs
+		#icon = GFX_focus_generic_military_academy
+		#prerequisite = { focus = POL_Ponatowski_internal_affairs }
+		#relative_position_id = POL_Ponatowski_internal_affairs
+		#x = 5
+		#y = 1
+		#cost = 5
+		#completion_reward = {
+			#add_timed_idea = {
+				#idea = POL_Ponatowski_economic_reform
+				#days = 1460
+			#}
+	#}
+	#}
 	#focus = {
 		#id = POL_Ponatowski_ministary_of_defence_advanced
 		#icon = GFX_focus_generic_military_academy
