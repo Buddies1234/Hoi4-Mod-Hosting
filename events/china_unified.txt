@@ -17,22 +17,24 @@ country_event = {
 	fire_only_once = yes 
 	option = {
 		name = "Do it"
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 90 }
 		annex_country = { target = GXC transfer_troops = yes }
 		annex_country = { target = XSM transfer_troops = yes }
 		annex_country = { target = YUN transfer_troops = yes }
 		annex_country = { target = SHX transfer_troops = yes }
 		annex_country = { target = SIK transfer_troops = yes }
 		annex_country = { target = PRC transfer_troops = yes }
+		#debuffs for china uniting (you know balance reasons)
 		add_stability = -0.5
-		add_war_support = -0.3
+		add_war_support = -0.5
+		dd_political_power = -100
 		unlock_national_focus = CHI_prioritize_the_interior
 		unlock_national_focus = CHI_anti_communism
 		unlock_national_focus = CHI_subjugate_the_warlords
 	}
 	option = {
 		name = "Its to Risky"
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 10 }
 	}
 }
 
