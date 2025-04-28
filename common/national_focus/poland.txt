@@ -16322,25 +16322,9 @@ focus = {
 					type = puppet_wargoal_focus
 					target = CZE
 				}
-			if = {
-				limit = { NOT = { has_country_flag = POL_banned_monarchy_flag } }
-				CZE = { country_event = NSB_poland_monarchist_events.5 }
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					POL = {
-						set_autonomy = {
-							target = CZE
-							autonomy_state = autonomy_personal_union
-						}
-					}
+				CZE = {
+					country_event = poland.99999
 				}
-			}
-			else = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = CZE
-				}
-			}
 		}
 	}
 	focus = {
