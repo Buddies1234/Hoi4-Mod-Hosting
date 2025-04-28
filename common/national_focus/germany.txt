@@ -9722,6 +9722,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_army_manpower = { size > 724999 } #80 div
+			date > 1938.1.1
 		}
 		
 		cancel = {
@@ -10494,7 +10495,8 @@ focus_tree = {
 		}
 		
 		available = { 
-			is_subject = no 
+			is_subject = no
+			date > 1938.1.1
 		}
 
 		will_lead_to_war_with = LIT
@@ -10564,6 +10566,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			date > 1938.6.1
 		}
 
 		ai_will_do = {
@@ -11409,7 +11412,8 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 949999 } #100 div			
+			has_army_manpower = { size > 949999 } #100 div
+			date > 1938.5.1	
 			#Make custom trigger tooltip here
 			85 = {
 				owner = {
@@ -13108,6 +13112,7 @@ focus_tree = {
 			controls_state = 4
 			controls_state = 152
 			has_army_manpower = { size > 749999 } #ca 80 div
+			date > 1938.1.1
 		}
 
 		ai_will_do = {
