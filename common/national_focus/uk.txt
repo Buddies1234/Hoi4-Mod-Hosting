@@ -8691,6 +8691,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_motion_of_no_confidence }
 		available = { 
 			is_subject = no
+			date > 1938.1.1
 		}
 
 		continue_if_invalid = yes
