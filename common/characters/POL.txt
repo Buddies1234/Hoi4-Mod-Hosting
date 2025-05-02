@@ -1716,16 +1716,14 @@ characters = {
 		name="Poniatowski"
 		portraits = {
 			civilian = {
-				large="GFX_portrait_POL_anna_anderson"
+				large="GFX_portrait_large_ponnazi"
 			}
 		}
 		country_leader = {
 			ideology=despotism
+		traits = { aristocrat_3 }
 			expire="1965.1.1.1"
 			id=-1
-		}
-		traits = {
-			aristocrat_3
 		}
 	}
 }
