@@ -1,0 +1,335 @@
+
+category = 
+{
+ name = "Voices" 
+ soundeffects = {
+	FRA_infantry_idle
+	FRA_infantry_neutral_combat
+	FRA_infantry_positive_combat
+	FRA_infantry_retreat
+	FRA_infantry_move_out	
+ }
+  compressor = 
+ {
+	enabled = yes
+	pregain = 0.0
+	postgain = 2.0
+	ratio = 10.0
+	threshold = -10.0
+	attacktime = 0.030
+	releasetime = 1.2
+ }
+}
+
+########## OUI
+
+soundeffect = 
+{
+    name = "FRA_infantry_idle"
+    sounds = {
+	sound = FRA_Idle_001
+        sound = FRA_Idle_002
+        sound = FRA_Idle_003
+        sound = FRA_Idle_004
+        sound = FRA_Idle_005
+        sound = FRA_Idle_006  
+		sound = FRA_Idle_007
+		sound = FRA_Idle_008 
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+soundeffect = 
+{
+    name = "FRA_infantry_neutral_combat"
+    sounds = {
+        sound = FRA_Combat_001
+		sound = FRA_Combat_002
+		sound = FRA_Combat_003
+	    sound = FRA_Combat_004
+		sound = FRA_Combat_005
+		sound = FRA_Combat_006
+		sound = FRA_Combat_007
+		sound = FRA_Combat_008
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "FRA_infantry_positive_combat"
+    sounds = {
+        sound = FRA_Winning_001
+        sound = FRA_Winning_002
+        sound = FRA_Winning_003
+	sound = FRA_Winning_004
+	sound = FRA_Winning_005
+	sound = FRA_Winning_006
+	sound = FRA_Winning_007
+	sound = FRA_Winning_008
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "FRA_infantry_retreat"
+    sounds = {
+        sound = FRA_Retreat_001
+        sound = FRA_Retreat_002
+        sound = FRA_Retreat_003
+        sound = FRA_Retreat_004
+        sound = FRA_Retreat_005
+        sound = FRA_Retreat_006
+		sound = FRA_Retreat_007
+		sound = FRA_Retreat_008
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "FRA_infantry_move_out"
+    sounds = {
+        sound = FRA_Move_001
+        sound = FRA_Move_002
+        sound = FRA_Move_003
+	sound = FRA_Move_004
+	sound = FRA_Move_005
+	sound = FRA_Move_006
+	sound = FRA_Move_007
+	sound = FRA_Move_008
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+
+############## AUDIO ASSETS
+
+sound = 
+{
+	name = "FRA_Idle_001"
+	file = "FRA/loudhon.wav"
+}
+sound = 
+{
+	name = "FRA_Idle_002"
+	file = "FRA/ouioui.wav"
+}
+sound = 
+{
+	name = "FRA_Idle_003"
+	file = "FRA/mad.wav"
+}
+sound = 
+{
+	name = "FRA_Idle_004"
+	file = "FRA/honoui.wav"
+}
+sound = 
+{
+	name = "FRA_Idle_005"
+	file = "FRA/woah.wav"
+}
+sound = 
+{
+	name = "FRA_Idle_006"
+	file = "FRA/snob.wav"
+}
+sound = 
+{
+	name = "FRA_Idle_007"
+	file = "FRA/baget.wav"
+}
+sound = 
+{
+	name = "FRA_Idle_008"
+	file = "FRA/honhonhon.wav"
+}
+
+
+
+sound = 
+{
+	name = "FRA_Combat_001"
+	file = "FRA/loudhon.wav"
+}
+
+sound = 
+{
+	name = "FRA_Combat_002"
+	file = "FRA/honhonhon.wav"
+}
+sound = 
+{
+	name = "FRA_Combat_003"
+	file = "FRA/ouioui.wav"
+}
+sound = 
+{
+	name = "FRA_Combat_004"
+	file = "FRA/woah.wav"
+}
+sound = 
+{
+	name = "FRA_Combat_005"
+	file = "FRA/snob.wav"
+}
+sound = 
+{
+	name = "FRA_Combat_006"
+	file = "FRA/mad.wav"
+}
+sound = 
+{
+	name = "FRA_Combat_007"
+	file = "FRA/baget.wav"
+}
+sound = 
+{
+	name = "FRA_Combat_008"
+	file = "FRA/honoui.wav"
+}
+
+
+sound = 
+{
+	name = "FRA_Winning_001"
+	file = "FRA/baget.wav"
+}
+sound = 
+{
+	name = "FRA_Winning_002"
+	file = "FRA/woah.wav"
+}
+sound = 
+{
+	name = "FRA_Winning_003"
+	file = "FRA/snob.wav"
+}
+sound = 
+{
+	name = "FRA_Winning_004"
+	file = "FRA/ouioui.wav"
+}
+sound = 
+{
+	name = "FRA_Winning_005"
+	file = "FRA/honhonhon.wav"
+}
+sound = 
+{
+	name = "FRA_Winning_006"
+	file = "FRA/loudhon.wav"
+}
+sound = 
+{
+	name = "FRA_Winning_007"
+	file = "FRA/honoui.wav"
+}
+sound = 
+{
+	name = "FRA_Winning_008"
+	file = "FRA/mad.wav"
+}
+
+
+
+sound = 
+{
+	name = "FRA_Retreat_001"
+	file = "FRA/honhonhon.wav"
+}
+sound = 
+{
+	name = "FRA_Retreat_002"
+	file = "FRA/mad.wav"
+}
+sound = 
+{
+	name = "FRA_Retreat_003"
+	file = "FRA/loudhon.wav"
+}
+sound = 
+{
+	name = "FRA_Retreat_004"
+	file = "FRA/honoui.wav"
+}
+sound = 
+{
+	name = "FRA_Retreat_005"
+	file = "FRA/woah.wav"
+}
+sound = 
+{
+	name = "FRA_Retreat_006"
+	file = "FRA/snob.wav"
+}
+sound = 
+{
+	name = "FRA_Retreat_007"
+	file = "FRA/ouioui.wav"
+}
+sound = 
+{
+	name = "FRA_Retreat_008"
+	file = "FRA/baget.wav"
+}
+
+sound = 
+{
+	name = "FRA_Move_001"
+	file = "FRA/loudhon.wav"
+}
+sound = 
+{
+	name = "FRA_Move_002"
+	file = "FRA/baget.wav"
+}
+
+sound = 
+{
+	name = "FRA_Move_003"
+	file = "FRA/honhonhon.wav"
+}
+sound = 
+{
+	name = "FRA_Move_004"
+	file = "FRA/ouioui.wav"
+}
+sound = 
+{
+	name = "FRA_Move_005"
+	file = "FRA/honoui.wav"
+}
+sound = 
+{
+	name = "FRA_Move_006"
+	file = "FRA/woah.wav"
+}
+sound = 
+{
+	name = "FRA_Move_007"
+	file = "FRA/snob.wav"
+}
+sound = 
+{
+	name = "FRA_Move_008"
+	file = "FRA/mad.wav"
+}
