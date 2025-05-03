@@ -15751,6 +15751,7 @@ focus_tree = {
 		completion_reward = {
 			effect_tooltip = {
 				promote_character = POL_Ponatowski
+		custom_effect_tooltip = Poland will count as a major from now on.
 			}
 		}
 	}

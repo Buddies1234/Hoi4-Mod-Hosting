@@ -1418,6 +1418,7 @@ country_event = {
 		}
 		complete_national_focus = POL_fulfil_fifth_of_november
 		unlock_national_focus = POL_Ponatowski
+		custom_effect_tooltip = Poland will count as a major from now on.
 		hidden_effect = {
 			set_country_flag = achievement_POL_elected_monarch
 			news_event = {
