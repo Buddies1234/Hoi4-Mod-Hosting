@@ -79,6 +79,10 @@ spriteTypes = {
 
 	# Polish #######
 	spriteType = {
+		name = "GFX_portrait_large_ponnazi"
+		texturefile = "gfx/leaders/POL/Portrait_large_ponnazi.dds"
+	}
+	spriteType = {
 		name = "GFX_portrait_POL_ignacy_moscicki"
 		texturefile = "gfx/leaders/POL/Portrait_Poland_Ignacy_Moscicki.dds"
 	}
@@ -8823,9 +8827,6 @@ spriteTypes = {
 		name = GFX_portrait_LEB_abdallah_beyhum
 		texturefile = "gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
 	}
-	spriteType = {
-		name = "GFX_portrait_Poniatowski"
-		texturefile = "gfx/leaders/POL/portrait_large_ponnazi.dds"
-	}
+
 
 }
