@@ -19,11 +19,6 @@ ideas = {
 				army_attack_factor = 0.2
 				army_org_Factor = 0.1
 				planning_speed = 0.25
-				join_faction_tension = 250
-				democratic_acceptance = -100000
-				communism_acceptance = -100000
-				fascism_acceptance = -100000
-				neutrality_acceptance = -100000
 
 			}
 			

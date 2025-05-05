@@ -3,17 +3,25 @@
 add_namespace = ai.buff
 country_event = {
 	id = ai.buff.4
-	title = "AI buff"
-	desc = " Ai buff"
+	title = "Remove Colonies"
+	desc = " Annex Colonies into you for imporved performance "
 	picture = GFX_report_event_chinese_soldiers_fighting
 	trigger = {
-		is_ai = yes
 		original_tag = ENG
 		date < 1936.2.1
 	}
 	option = {
-		name = "Test"
+		name = "Remove Colonies"
+		hidden_effect = {
 		add_ideas = NON_Player_Buff
+		}
+
+		ENG = {
+		annex_country = { target = PAL transfer_troops = yes }
+		annex_country = { target = JOR transfer_troops = yes }
+		annex_country = { target = KUW transfer_troops = yes }
+		annex_country = { target = OMA transfer_troops = yes }
+		}
 
 	}
 }
