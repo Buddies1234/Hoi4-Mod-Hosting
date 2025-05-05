@@ -2685,7 +2685,8 @@ focus_tree = {
 			has_offensive_war = no
 			ITA = {
 				ENG_focus_available_war = yes
-			}	
+			}
+			date > 1938.6.1	
 		}
 		bypass = {
 			has_war_with = ITA
