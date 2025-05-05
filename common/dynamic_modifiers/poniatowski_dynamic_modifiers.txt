@@ -19,4 +19,6 @@ POL_Poniatowski_Military_Reform_1 = {
 
 	## shared
 	army_morale_factor = POL_army_morale_var
+	army_core_attack_factor = POL_core_att_var
+	army_core_defence_factor = POL_core_def_var
 }

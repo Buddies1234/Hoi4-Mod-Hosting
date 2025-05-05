@@ -15816,11 +15816,11 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = {flag = POL_poniatowski_mil_reform_timer_flag value = 1 days = 69}
 			add_to_variable = {
-				var = POL_inf_attack_var
+				var = POL_core_att_var
 				value = 0.05
 			}
 			add_to_variable = {
-				var = POL_inf_def_var
+				var = POL_core_def_var
 				value = 0.05
 			}
 			custom_effect_tooltip = POL_inf_branch_1_tt
@@ -15854,7 +15854,7 @@ focus_tree = {
 				value = 0.05
 			}
 			army_experience = 50
-			custom_effect_tooltip = POL_inf_branch_1_tt
+			custom_effect_tooltip = POL_inf_branch_5_tt
 		}
 	}
 
@@ -15876,11 +15876,11 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = {flag = POL_poniatowski_mil_reform_timer_flag value = 1 days = 69}
 			add_to_variable = {
-				var = POL_inf_attack_var
+				var = POL_core_att_var
 				value = 0.1
 			}
 			add_to_variable = {
-				var = POL_inf_def_var
+				var = POL_core_def_var
 				value = 0.1
 			}
 			army_experience = 50
@@ -15961,11 +15961,11 @@ focus_tree = {
 			set_country_flag = {flag = POL_poniatowski_mil_reform_timer_flag value = 1 days = 69}
 			add_to_variable = {
 				var = POL_tank_attack_var
-				value = 0.05
+				value = 0.025
 			}
 			add_to_variable = {
 				var = POL_tank_def_var
-				value = 0.05
+				value = 0.025
 			}
 			custom_effect_tooltip = POL_modern_branch_1_tt
 		}
@@ -16046,11 +16046,11 @@ focus_tree = {
 			set_country_flag = {flag = POL_poniatowski_mil_reform_timer_flag value = 1 days = 69}
 			add_to_variable = {
 				var = POL_tank_attack_var
-				value = 0.05
+				value = 0.025
 			}
 			add_to_variable = {
 				var = POL_tank_def_var
-				value = 0.05
+				value = 0.025
 			}
 			army_experience = 50
 			custom_effect_tooltip = POL_modern_branch_1_tt
@@ -16076,11 +16076,11 @@ focus_tree = {
 			set_country_flag = {flag = POL_poniatowski_mil_reform_timer_flag value = 1 days = 69}
 			add_to_variable = {
 				var = POL_tank_attack_var
-				value = 0.1
+				value = 0.05
 			}
 			add_to_variable = {
 				var = POL_tank_def_var
-				value = 0.1
+				value = 0.05
 			}
 			army_experience = 50
 			custom_effect_tooltip = POL_modern_branch_4_tt
@@ -16502,6 +16502,36 @@ focus = {
 		y=3
 		cost = 15
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_intermarium_reqs_tt
+				controls_state = 199
+				controls_state = 201
+				controls_state = 198
+				controls_state = 202
+				controls_state = 203
+				controls_state = 197
+				controls_state = 192
+				controls_state = 834
+				controls_state = 196
+				controls_state = 226
+				controls_state = 193
+				controls_state = 259
+				controls_state = 221
+				controls_state = 228
+				controls_state = 227
+				controls_state = 200
+				controls_state = 196
+				controls_state = 137
+				controls_state = 225
+
+				controls_state = 241
+				controls_state = 204
+				controls_state = 206
+				controls_state = 207
+				controls_state = 194
+			}
+		}
 		completion_reward = {
 			custom_effect_tooltip = POL_blr_ukr_cores_tt
 			set_cosmetic_tag = intermariumcosmetictag
