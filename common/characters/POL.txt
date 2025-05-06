@@ -1721,7 +1721,7 @@ characters = {
 		}
 		country_leader = {
 			ideology=despotism
-		traits = { aristocrat_3 }
+		traits = { aristocrat_3 oldest_king }
 			expire="1965.1.1.1"
 			id=-1
 		}
