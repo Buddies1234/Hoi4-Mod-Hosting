@@ -887,7 +887,7 @@ country_event = {
 	option = { #Sure!
 		name = poland.15.a
 		ai_chance = {
-			base = 90
+			base = 70
 			modifier = {
 				add = -25
 				POL = { has_army_size = { size < 40 } }
@@ -914,7 +914,7 @@ country_event = {
 	option = { #No thank you
 		name = poland.15.b
 		ai_chance = {
-			base = 10
+			base = 30
 			modifier = {
 				POL = { has_army_size = { size > 39 } }
 				factor = 0.5
