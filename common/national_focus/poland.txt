@@ -16478,6 +16478,7 @@ focus = {
 		id = POL_prop_up_loyalist_regimes #adds decision category to create personal unions in danubian and balkan intermarium countries
 		icon = GFX_focus_GER_integration_of_puppet_economies
 		prerequisite = {focus = POL_dreams_of_intermarium}
+		available = { date > 1939.1.1 }
 		relative_position_id = POL_dreams_of_intermarium
 		x=1
 		y=1
@@ -16495,7 +16496,6 @@ focus = {
 		relative_position_id = POL_prop_up_loyalist_regimes
 		y=1
 		cost = 5
-
 		completion_reward = {
 			custom_effect_tooltip = POL_intermarium_expansion_tt
 		}
