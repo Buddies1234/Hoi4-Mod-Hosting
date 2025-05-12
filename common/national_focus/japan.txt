@@ -1077,7 +1077,7 @@
 		y = 1
 		relative_position_id = JAP_greater_east_asian_co_prosperity_sphere
 
-		cost = 10
+		cost = 0
 
 		available = { 
 			is_subject = no 
@@ -1132,48 +1132,19 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			if = {
-				limit = {
-					CHI = { #if CHI owns one of these states, they get the event
-						OR = {
-							controls_state = 608
-							controls_state = 597
-							controls_state = 614
-						}
-					}
-				}
-				CHI = {
-					country_event = china.1
-				}
+			create_wargoal = {
+				target = "CHI"
+				type = puppet_wargoal_focus
+				expire = 0
+				expire = 0
 			}
-			if = {
-				limit = {
-					PRC = { #only fires the event for PRC if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
-						AND = {
-							controls_state = 608
-							controls_state = 597
-							controls_state = 614
-						}
-					}
-				}
-				PRC = {
-					country_event = china.1
-				}
+			create_wargoal = {
+				target = "SHX"
+				type = puppet_wargoal_focus
+				expire = 0
+				expire = 0
 			}
-			if = {
-				limit = {
-					SHX = { #only fires the event for SHX if they control ALL of the states (to ensure that only one of them gets it, to avoid issues when one selects to turn over the states and the other doesn't)
-						AND = {
-							controls_state = 608
-							controls_state = 597
-							controls_state = 614
-						}
-					}
-				}
-				SHX = {
-					country_event = china.1
-				}
-			}
+
 			add_named_threat = { threat = 1 name = JAP_intervene_in_china }
 			add_ideas = JAP_intervene_in_china_5
 			unlock_decision_tooltip = JAP_china_step_up_war_effort
@@ -4364,9 +4335,9 @@
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			MAN = {				
-				add_stability = 0.15
-				add_war_support = 0.15
-				add_political_power = 200
+				add_stability = 0.25
+				add_war_support = 0.25
+				add_political_power = 250
 			}
 		}
 	}
@@ -4379,7 +4350,7 @@
 		y = 1
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 2
@@ -4407,7 +4378,7 @@
 					}
 					add_resource = {
 						type = steel
-						amount = 16
+						amount = 50
 					}				
 				}
 				add_extra_state_shared_building_slots = 2
@@ -4432,7 +4403,7 @@
 			MAN = { has_focus_tree = generic_focus }
 		}
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 2
@@ -4460,7 +4431,7 @@
 					}
 					add_resource = {
 						type = aluminium
-						amount = 12
+						amount = 30
 					}
 				}
 				add_extra_state_shared_building_slots = 2
@@ -4542,7 +4513,7 @@
 		y = 1
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 2
@@ -4566,10 +4537,10 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			715 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -4584,7 +4555,7 @@
 		y = 1
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
