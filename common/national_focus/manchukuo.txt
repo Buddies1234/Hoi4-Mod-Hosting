@@ -610,7 +610,7 @@
 		y = 1
 		relative_position_id = MAN_invite_japanese_investors
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -731,7 +731,7 @@
 		y = 1
 		relative_position_id = MAN_invite_japanese_investors
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -777,7 +777,7 @@
 		y = 1
 		relative_position_id = MAN_develop_aluminum_sources
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -849,12 +849,10 @@
 	focus = {
 		id = MAN_second_five_year_plan
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = MAN_social_research_unit }
-		prerequisite = { focus = MAN_expand_showa_steel_works }
-		prerequisite = { focus = MAN_mamc }
+		prerequisite = { focus = MAN_national_defense_state }
 		x = 0
-		y = 4
-		relative_position_id = MAN_first_five_year_plan
+		y = 1
+		relative_position_id = MAN_national_defense_state
 
 		cost = 10
 
@@ -904,10 +902,12 @@
 	focus = {
 		id = MAN_national_defense_state
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = MAN_second_five_year_plan }
+		prerequisite = { focus = MAN_social_research_unit }
+		prerequisite = { focus = MAN_expand_showa_steel_works }
+		prerequisite = { focus = MAN_mamc }
 		x = 0
-		y = 1
-		relative_position_id = MAN_second_five_year_plan
+		y = 4
+		relative_position_id = MAN_first_five_year_plan
 
 		cost = 10
 
@@ -932,6 +932,9 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = MAN_national_defense_state
+			add_ideas = tot_economic_mobilisation
+			activate_decision = women_in_the_workforce
+			add_ideas = extensive_conscription
 		}
 	}
 
@@ -1211,8 +1214,7 @@
 		}
 
 		available = {
-			is_subject_of = JAP
-			compare_autonomy_state > autonomy_wtt_imperial_protectorate			
+			is_subject_of = JAP	
 			MAN = { 
 				ic_ratio = {
 					tag = JAP
