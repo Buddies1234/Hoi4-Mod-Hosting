@@ -1,4 +1,4 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -194,7 +194,7 @@ focus_tree = {
 
 		}
 	}
-	
+
 	focus = {
 		id = GER_currency_reforms
 		icon = GFX_focus_generic_currency_reforms
@@ -11747,7 +11747,6 @@ focus_tree = {
 				NOT = { BEL = { is_in_faction_with = GER } }
 				NOT = { LUX = { is_in_faction_with = GER } }
 			}
-			date > 1939.1.1
 		}
 
 		historical_ai = {
@@ -11896,7 +11895,6 @@ focus_tree = {
 
 					is_ai = no
 				}
-			date > 1939.1.1
 			}
 
 			10 = {
