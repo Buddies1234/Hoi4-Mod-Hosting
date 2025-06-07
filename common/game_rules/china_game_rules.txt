@@ -1,0 +1,16 @@
+china_game_rules = {
+	name = "China unified"
+	group = "Host Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = YES
+		text = "YES"
+		desc = "China Will be unified"
+	}
+
+	option = {
+		name = NO
+		text = "NO"
+		desc = "China Will not be unified"
+	}
+}
