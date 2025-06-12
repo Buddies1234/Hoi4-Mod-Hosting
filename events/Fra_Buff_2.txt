@@ -11,6 +11,10 @@ country_event = {
 		original_tag = FRA
 		date < 1950.1.1
 		date > 1936.2.1
+		has_game_rule = { rule =
+			buffs_game_rules 
+			option = YES
+		}
 	}
 	option = {
 		name = "Test"

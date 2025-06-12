@@ -9,6 +9,10 @@ country_event = {
 	trigger = {
 		original_tag = ENG
 		date < 1936.2.1
+		has_game_rule = { rule =
+			buffs_game_rules 
+			option = YES
+		}
 	}
 	option = {
 		name = "Remove Colonies"
