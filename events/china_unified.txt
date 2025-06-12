@@ -13,6 +13,10 @@ country_event = {
 	trigger = {
 		original_tag = chi
 		date < 1936.2.1
+		has_game_rule = { rule =
+			china_game_rules 
+			option = YES
+		}
 	}
 	fire_only_once = yes 
 	option = {
