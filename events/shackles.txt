@@ -1317,10 +1317,4 @@ country_event = {
 			}
 		}
 	}
-	#No shackles
-	option = {
-		name = shackles.1.b
-		custom_effect_tooltip = shackles.1.b.d
-		set_global_flag = shackles_event_happened
-	}	
 }
