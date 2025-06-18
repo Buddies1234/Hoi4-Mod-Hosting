@@ -6211,7 +6211,10 @@
 					add_state_claim = 7
 					add_state_claim = 35
 					add_state_claim = 36
-					add_to_faction = ROOT
+					give_guarantee = FRA
+				}
+				FRA = {
+					give_guarantee = GER
 				}
 				ROOT = {
 					add_state_claim = 34
