@@ -1886,6 +1886,13 @@
 
 
 		completion_reward = {
+			random_country = {
+				limit = {
+					original_tag = GER
+					has_government = fascism
+				}
+				country_event = { id = wtt_japan.109 days = 1 }
+			}
 		}
 	}
 
