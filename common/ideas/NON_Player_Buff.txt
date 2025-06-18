@@ -6,9 +6,11 @@ ideas = {
 				tag = CHI
 			}
 			cancel = {
+			OR = {	
 				is_ai = no
 				has_civil_war = yes
 				is_subject = yes
+			}
 			}
 			modifier = {
 				conscription_factor = 0.5
