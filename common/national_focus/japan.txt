@@ -2928,7 +2928,7 @@
 		y = 1
 		relative_position_id = JAP_prepare_for_war_with_the_soviet_union
 
-		cost = 10
+		cost = 0
 
 		ai_will_do = {
 			factor = 1
@@ -2974,7 +2974,7 @@
 		y = 1
 		relative_position_id = JAP_prepare_for_war_with_the_soviet_union
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3129,7 +3129,7 @@
 		y = 1
 		relative_position_id = JAP_join_the_london_naval_treaty
 
-		cost = 10
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -3240,7 +3240,7 @@
 		y = 1
 		relative_position_id = JAP_non_aggression_pact_with_china
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3296,14 +3296,14 @@
 		y = 1
 		relative_position_id = JAP_technological_exchange
 
-		cost = 10
+		cost = 0
 
 		ai_will_do = {
 			factor = 3
 		}
 
 		available = {
-
+			date > 1939.01.01
 		}
 
 		bypass = {
@@ -3319,10 +3319,13 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			create_wargoal = {
-				target = SOV
-				type = annex_everything
-				expire = 0
+			declare_war_on = {
+                target = SOV
+                type = annex_everything
+            }
+			add_timed_idea = {
+				idea = JAP_preemptive_war
+				days = 365
 			}
 			IF = {
 				limit = {

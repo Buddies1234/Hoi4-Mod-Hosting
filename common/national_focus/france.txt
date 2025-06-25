@@ -7810,7 +7810,10 @@
 			}
 			else = {
 				any_state = {
-					is_core_of = SPB
+					OR = {
+						is_core_of = SPB
+						is_core_of = SPR
+					}
 					is_controlled_by = ROOT
 				}
 			}
@@ -7834,7 +7837,11 @@
 			}
 			every_state = {
 				limit = {
-					is_core_of = SPB
+					OR = {
+						is_core_of = SPB
+						is_core_of = SPR
+						is_in_array = { SPR.game_start_core_states = THIS }	
+					}
 				}
 				add_core_of = ROOT
 			}

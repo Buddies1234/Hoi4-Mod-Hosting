@@ -4193,4 +4193,5 @@ ideas = {
 	#		traits = { captain_of_industry }
 	#	}
 	#}
+
 }
