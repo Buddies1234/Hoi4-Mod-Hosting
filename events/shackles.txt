@@ -175,36 +175,6 @@ country_event = {
 				}	
 			}
 			
-			BRA = { 
-				if = {
-					limit = {
-						has_dlc = "Trial of Allegiance"
-						NOT = {
-							any_other_country = {
-								AND = {
-									is_ai = no
-									capital_scope = {
-										is_on_continent = south_america
-									}
-								}
-							}
-						}
-					}
-					add_ideas = {
-						uninterested		
-					}	
-				}
-				else_if = {
-					limit = {
-						NOT = {
-							has_dlc = "Trial of Allegiance"
-						}
-					}		
-					add_ideas = {
-						uninterested			
-					}
-				}					
-			}
 					
 			BRD = { 
 				add_ideas = {
