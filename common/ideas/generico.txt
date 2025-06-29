@@ -4181,9 +4181,26 @@ ideas = {
 			modifier = {
 				send_volunteer_divisions_required = -0.75
 				send_volunteers_tension = -0.50
+				can_send_volunteers = yes
+				send_volunteer_size = 5
 			}
 		}
 	}
+		benelux_unification_idea = {
+			allowed = {
+				always = no
+			}
+			available = {}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+					
+			modifier = {
+				weekly_manpower = 5000
+				Division_attack_factor = 0.25
+			}
+		}
 
 	#political_advisor = {
 	#	generic_advisor_pol_1
@@ -4193,5 +4210,4 @@ ideas = {
 	#		traits = { captain_of_industry }
 	#	}
 	#}
-
 }

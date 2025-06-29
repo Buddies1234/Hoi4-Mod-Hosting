@@ -7058,14 +7058,14 @@ focus_tree = {
 
 		completion_reward = {
 			effect_tooltip = {
-				add_ideas = SPR_war_involvement
+				add_ideas = SPR_war_involvement_spr
 			}
 			if = {
 				limit = {
 					has_government = fascism
 				}
 				hidden_effect = {
-					add_ideas = SPR_war_involvement_spa
+					add_ideas = SPR_war_involvement_spr
 				}
 				SPA = {
 					add_opinion_modifier = {
@@ -10237,5 +10237,31 @@ focus_tree = {
 			factor = 1
 		}
 	}
-
+	focus = {
+		id = Benulux_Unfication
+		icon = GFX_focus_generic_influence_benelux
+		x = 0
+		y = 1
+		relative_position_id = seized_industry_focus
+		cost = 0
+		allow_branch = { original_tag = LUX }
+		available = {
+		original_tag = LUX
+		OR = {
+		has_government = fascism
+		has_government = communism
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+		completion_reward = {
+			declare_war_on = {
+				target = HOL
+				type = annex_wargoal
+			}
+			original_tag = NLD
+			declare_war_on = {
+				target = BEL
+				type = annex_wargoal
+			}
+		}
 }
