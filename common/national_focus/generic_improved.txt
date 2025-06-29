@@ -10254,14 +10254,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 		completion_reward = {
-			declare_war_on = {
-				target = HOL
-				type = annex_wargoal
-			}
-			original_tag = NLD
-			declare_war_on = {
-				target = BEL
-				type = annex_wargoal
-			}
+				create_wargoal = {
+					type = annex_everything
+					target = BEL
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = HOL
+				}
 		}
 }
