@@ -2179,7 +2179,7 @@
 	focus = {
 		id = JAP_national_mobilization_law
 		icon = GFX_goal_generic_axis_build_infantry
-		prerequisite = { focus = JAP_guide_the_zaibatsus focus = JAP_challenge_the_zaibatsus }
+		prerequisite = { focus = JAP_guide_the_zaibatsus focus = JAP_challenge_the_zaibatsus focus = JAP_the_showa_constitution }
 		x = 2
 		y = 1
 		relative_position_id = JAP_guide_the_zaibatsus
@@ -3260,6 +3260,7 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			set_rule = { can_create_factions = yes }
 			if = {
 				limit = {
 					has_country_leader = { id = 700 } #Hirohito
@@ -5975,5 +5976,74 @@
 			}
 		}
 	}
+	focus = {
+		id = JAP_for_the_Emperor
+		icon = GFX_SOV_desperate_measures_ccp_2d_sov_compatibility
+		prerequisite = { focus = JAP_preemptive_war }
+		x = 1
+		y = 2
+		relative_position_id = JAP_preemptive_war
 
+		cost = 0
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+				has_defensive_war_with = SOV
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_war_support = 0.1
+			add_timed_idea = {
+				idea = JAP_for_the_Emperor_idea
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = JAP_Defend_the_Homeland
+		name = "Defend the Homeland"
+		icon = GFX_focus_AST_war_japan
+
+		x = 30
+		y = 5
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			surrender_progress > 0.01
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_war_support = 0.25
+			add_timed_idea = {
+				idea = Jap_Defend_the_Homeland_idea
+				days = 180
+			}
+		}
+	}
 }

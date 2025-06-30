@@ -101,6 +101,49 @@ ideas = {
 					defense_bonus_against = 0.05
 			}
 		}
+		JAP_for_the_Emperor_idea = {
+			name = "For the Emperor"
+			allowed = {
+				always = no
+			}
+
+			picture = generic_attack_soviet_union
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				supply_factor = 0.25
+				winter_attrition = -0.25
+				army_org = 15
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}
+
+		}
+		Jap_Defend_the_Homeland_idea = {
+			name = "Defend the Homeland"
+			allowed = {
+				always = no
+			}
+
+			picture = generic_attack_soviet_union
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_org = 20
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				surrender_limit = 0.1
+			}
+
+		}
 
 		# POLITICAL
 		student_mobilization_idea = {
