@@ -835,7 +835,7 @@
 		y = 1
 		relative_position_id = CHI_united_front
 
-		cost = 10
+		cost = 0
 
 		ai_will_do = {
 			factor = 1
@@ -850,7 +850,7 @@
 		available = {
 			NOT = { is_in_faction_with = JAP }
 			is_subject = no
-			date > 1940.1.1
+			date > 1937.1.1
 		}
 
 		bypass = {
