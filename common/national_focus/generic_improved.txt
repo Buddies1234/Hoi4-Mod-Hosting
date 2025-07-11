@@ -10244,7 +10244,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = seized_industry_focus
 		cost = 0
-		allow_branch = { original_tag = LUX }
 		available = {
 		original_tag = LUX
 		OR = {
