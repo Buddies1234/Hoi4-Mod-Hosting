@@ -16246,57 +16246,6 @@ ai_will_do = {
 		}
 	}
 
-	focus = {
-		id = SOV_request_imperial_protection 
-		icon = GFX_SOV_request_imperial_protection_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_call_for_aid }
-		x = 0
-		y = 1
-		relative_position_id = SOV_call_for_aid
-		cost = 10
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0 # No point asking for japanese help if we are winning, unless we get stuck
-				surrender_progress < 0.1
-				SOS = { surrender_progress > 0.5 }
-				date < 1938.6.1
-			}
-			modifier = {
-				factor = 0 # Never ask if we are close to winning, unless we are close to 1940
-				SOS = { surrender_progress > 0.75 }
-				date < 1939.8.1
-			}
-			modifier = {
-				factor = 0 # Don't risk getting dragged into Chinese war unless desperate
-				surrender_progress < 0.5
-				JAP = { has_war = yes }
-			}
-		}
-		available = {
-			has_global_flag = SOV_soviet_civil_war
-			OR = { 
-				has_country_flag = SOV_CSW_transfer_vladivostok_flag
-				has_country_flag = SOV_CSW_transfer_sakhalin_flag
-			}
-			
-		}
-
-		available_if_capitulated = yes
-		
-		search_filters = {}
-
-		completion_reward = {
-			JAP = {
-				country_event = {
-					id = NSB_soviet_civil_war_common.121
-					days = 2
-					random_days = 3
-				}
-			}
-			custom_effect_tooltip = SOV_request_imperial_protection_tt
-		}
-	} 
 
 	focus = {
 		id = SOV_sabotage_behind_enemy_lines
@@ -16896,10 +16845,10 @@ ai_will_do = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = SOV_russian_corporate_state_2IC }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 20
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 20
 					instant_build = yes
 				}
 			}
@@ -16916,10 +16865,10 @@ ai_will_do = {
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 20
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 20
 					instant_build = yes
 				}
 				set_state_flag = SOV_russian_corporate_state_2IC
@@ -16934,10 +16883,10 @@ ai_will_do = {
 					NOT = { has_state_flag = SOV_russian_corporate_state_2IC }
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 20
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 20
 					instant_build = yes
 				}
 				set_state_flag = SOV_russian_corporate_state_2IC
@@ -16963,9 +16912,8 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = SOV_romanov_reconstruction
-				days = 730
+			add_ideas = {
+			SOV_romanov_reconstruction
 			}
 			IF = { 
 				limit = { has_idea = SOV_uncertain_counter_revolution_idea }
@@ -17439,7 +17387,7 @@ ai_will_do = {
 		y = 1
 		relative_position_id = SOV_dismantle_the_zemsky_sobor
 
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -17753,7 +17701,7 @@ ai_will_do = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17789,7 +17737,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_westward_bound 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17826,7 +17774,7 @@ ai_will_do = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
