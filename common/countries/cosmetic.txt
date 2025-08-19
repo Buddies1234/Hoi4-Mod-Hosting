@@ -821,6 +821,66 @@ ETH_ethiopian_federation = {
 	color_ui = rgb { 198 169 248 }
 }
 
+ETH_African_Union = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+HAR_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+SOM_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+ORO_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+SID_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+GBA_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+BEG_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+QEM_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+AFA_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+TIG_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+ERI_afu_green = {
+	color = rgb {29 84 43}
+	color_ui = rgb {29 84 43}
+}
+
+ETH_biblically_accurate = {
+	color = rgb {47 15 107}
+	color_ui = rgb {47 15 107}
+}
+
 gojjam = {
 	color = rgb { 255 255 128 }
 	color_ui = rgb { 55 255 128 }
