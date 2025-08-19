@@ -10097,7 +10097,7 @@ focus_tree = {
 			add_offsite_building = { type = arms_factory level = 2 }
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 	}
 
@@ -10210,7 +10210,6 @@ focus_tree = {
 		cost = 10
 		available = {
 			is_puppet = yes
-			compare_autonomy_state > autonomy_integrated_puppet
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10218,9 +10217,21 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			declare_war_on = {
-			    target = overlord
-			    type = independence_wargoal
+
+			OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_free } }
+			effect_tooltip = {		
+				if = {
+					limit = {
+						is_in_faction_with = OVERLORD
+					}
+					leave_faction = yes
+				}
+			}
+			OVERLORD = { 
+				create_wargoal = {
+					type = annex_everything
+					target = ROOT
+				}
 			}
 			swap_ideas = {
 				remove_idea = puppet_uncooperate_idea_3
