@@ -450,7 +450,7 @@
 		cost = 0
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		available = {
@@ -1259,7 +1259,7 @@
 		cost = 0
 
 		ai_will_do = {
-			factor = 4
+			factor = 0
 		}
 
 		available = {
