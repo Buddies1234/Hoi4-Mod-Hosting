@@ -3,14 +3,12 @@ add_namespace = afu_rework
 #message to uk
 country_event = {
 	id = afu_rework.1
-	title = "[ETH.GetName] is Demanding Control Over Our African Holdings!"
-	desc = "[ETH.GetName] is demanding that we put our African colonies from Egypt to Rhodesia into their care. This will undoubtedly strengthen their position. Handing over the territory could benefit us in the long run, making [ETH.GetName] more receptive to any diplomatic overtures we decide to make. Nonetheless, our grip on Africa will be weakened.\n\nThey have made it explicitly clear that the Suez will stay in our posession."
+	title = "[FROM.GetName] is Demanding Control Over Our African Holdings!"
+	desc = afu_rework.1.d
 	is_triggered_only = yes
 	picture = placeholder
 	option = {
 		name = "Yeah sure, why not"
-		IF = {
-			limit = {tag = ENG}
 			ETH = {
 				transfer_state = 907
 				transfer_state = 447
@@ -46,9 +44,26 @@ country_event = {
 				transfer_state = 701
 			country_event = afu_rework.4
 			}
+		
+	}
+	option = {
+		name = "Uhh... How about no?"
+		FROM = {
+			country_event = afu_rework.5
 		}
-		ELSE_IF = {
-			limit = {tag = FRA}
+		
+	}
+}
+
+#message to france
+country_event = {
+	id = afu_rework.2
+	title = "[FROM.GetName] is Demanding Our African Holdings!"
+	desc = afu_rework.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = "Yeah sure, why not"
 			ETH = {
 				transfer_state = 665
 				transfer_state = 458
@@ -83,15 +98,11 @@ country_event = {
 				transfer_state = 706
 				country_event = afu_rework.4
 			}
-		}
 		
 	}
 
 	option = {
 		name = "Sure, but we're keeping Algeria."
-		trigger = {
-			tag = FRA
-		}
 		ETH = {
 			transfer_state = 665
 			transfer_state = 458
@@ -161,5 +172,34 @@ country_event = {
 				type = liberate_wargoal
 				target = FROM
 			}
+	}
+}
+
+#south africa business
+country_event = {
+	id = afu_rework.6
+	title = "[FROM.GetName] Requests control over South Africa."
+	desc = afu_rework.6.d
+	is_triggered_only = yes
+	picture = placeholder
+	option = {
+		name = "I don't see what can possibly go wrong."
+		hidden_effect = {
+			end_puppet = SAF
+		}
+		FROM = {
+			set_autonomy = {
+				target = SAF
+				autonomous_state = autonomy_african_union_member_state
+				end_wars = yes
+				end_civil_wars = yes
+			}
+		}
+	}
+	option = {
+		name = "Tell them enough is enough."
+		FROM = {
+			country_event = afu_rework.5
+		}
 	}
 }

@@ -4826,7 +4826,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ETH_restore_the_empire_of_axum
-		cost = 10
+		cost = 5
 		available = {
 			is_subject = no
 		}
@@ -4846,23 +4846,6 @@ focus_tree = {
 			add_ideas = organization_of_african_unity_member_idea
 			set_country_flag = org_of_african_unity_founder
 			set_country_flag = org_of_african
-			custom_effect_tooltip = ETH_pan-africanism_liberate_tt
-			every_other_country = {
-				limit = {
-					NOT = { capital_scope = { is_on_continent = africa } } 
-					NOT = { is_in_faction_with = ROOT }
-					any_owned_state = {
-						is_on_continent = africa
-						NOT = { is_core_of = PREV }
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						target = PREV
-						type = liberate_wargoal
-					}
-				}			
-			}
 			news_event = {
 				id = bba_africa_news.3
 				hours = 2
@@ -7348,7 +7331,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		
-		cost = 10
+		cost = 5
 		available = {}
 		
 		search_filters = {}
@@ -7380,7 +7363,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 10
+		cost = 5
 		available = {
 			is_subject = no
 		}
@@ -7489,6 +7472,29 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ETH_request_control_over_south_africa
+		prerequisite = {focus = ETH_demand_uk_clay}
+		relative_position_id = ETH_demand_uk_clay
+		icon = GFX_goal_generic_territory_or_war
+		y = 1
+		cost = 10
+
+		available = {
+			SAF = {
+				is_subject = yes
+			}
+		}
+
+		completion_reward = {
+			SAF = {
+				overlord = {
+					country_event = afu_rework.6
+				}
+			}
+		}
+	}
+
 		focus = {
 		id = ETH_demand_french_clay
 		prerequisite = {focus = ETH_african_union}
@@ -7539,7 +7545,36 @@ focus_tree = {
 
 		completion_reward = {
 			FRA = {
-				country_event = afu_rework.1
+				country_event = afu_rework.2
+			}
+		}
+	}
+
+	focus = {
+		id = ETH_liberate_colonies_from_the_minor_powers
+		prerequisite = {focus = ETH_demand_french_clay}
+		relative_position_id = ETH_demand_french_clay
+		y=1
+		cost = 10
+		icon = GFX_focus_generic_africa_liberation
+
+		completion_reward = {
+			custom_effect_tooltip = ETH_pan-africanism_liberate_tt
+			every_other_country = {
+				limit = {
+					NOT = { capital_scope = { is_on_continent = africa } } 
+					NOT = { is_in_faction_with = ROOT }
+					any_owned_state = {
+						is_on_continent = africa
+						NOT = { is_core_of = PREV }
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = liberate_wargoal
+					}
+				}			
 			}
 		}
 	}
