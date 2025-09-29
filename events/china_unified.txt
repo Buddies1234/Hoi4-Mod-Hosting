@@ -1,0 +1,44 @@
+﻿###########################
+# Chinese Events
+###########################
+
+add_namespace = china.unified
+
+# Japanese Stage Border Incident
+country_event = {
+	id = china.unified.1
+	title = "China unified"
+	desc = "We have recived an unprecedented oppertunity to unite China under our rule. Although while it would strengthen us it would also make us more unstable"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	trigger = {
+		original_tag = chi
+		date < 1936.2.1
+		has_game_rule = { rule =
+			china_game_rules 
+			option = YES
+		}
+	}
+	fire_only_once = yes 
+	option = {
+		name = "Do it"
+		ai_chance = { factor = 100 }
+		annex_country = { target = GXC transfer_troops = yes }
+		annex_country = { target = XSM transfer_troops = yes }
+		annex_country = { target = YUN transfer_troops = yes }
+		annex_country = { target = SHX transfer_troops = yes }
+		annex_country = { target = SIK transfer_troops = yes }
+		annex_country = { target = PRC transfer_troops = yes }
+		#debuffs for china uniting (you know balance reasons)
+		add_stability = -0.25
+		add_war_support = -0.25
+		unlock_national_focus = CHI_prioritize_the_interior
+		unlock_national_focus = CHI_anti_communism
+		unlock_national_focus = CHI_subjugate_the_warlords
+	}
+	option = {
+		name = "Its to Risky"
+		ai_chance = { factor = 0 }
+	}
+}
+
+
