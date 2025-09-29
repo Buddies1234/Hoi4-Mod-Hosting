@@ -1,0 +1,71 @@
+ger_cw_skip = {
+	name = "GER_CW_SKIP"
+	text = GER_CW_SKIP_OPTION
+	desc = "GER_CW_SKIP_DESC"
+	group = "CW_SKIP_GROUP"
+	icon = placeholder
+	option = {
+		name = "GER_CW_SKIP_ALLOWED"
+		text = GER_CW_SKIP_OPTION_ALLOWED
+		desc = "GER_CW_SKIP_OPTION_ALLOWED_DESC"
+	}
+	default = {
+		name = "GER_CW_SKIP_NOT_ALLOWED"
+		text = GER_CW_SKIP_OPTION_NOT_ALLOWED
+		desc = "GER_CW_SKIP_OPTION_NOT_ALLOWED_DESC"
+	}
+}
+
+sov_cw_skip = {
+	name = "SOV_CW_SKIP"
+	text = SOV_CW_SKIP_OPTION
+	desc = "SOV_CW_SKIP_DESC"
+	group = "CW_SKIP_GROUP"
+	icon = placeholder
+	option = {
+		name = "SOV_CW_SKIP_ALLOWED"
+		text = SOV_CW_SKIP_OPTION_ALLOWED
+		desc = "SOV_CW_SKIP_OPTION_ALLOWED_DESC"
+	}
+	default = {
+		name = "SOV_CW_SKIP_NOT_ALLOWED"
+		text = SOV_CW_SKIP_OPTION_NOT_ALLOWED
+		desc = "SOV_CW_SKIP_OPTION_NOT_ALLOWED_DESC"
+	}
+}
+
+jap_cw_skip = {
+	name = "JAP_CW_SKIP"
+	text = JAP_CW_SKIP_OPTION
+	desc = "JAP_CW_SKIP_DESC"
+	group = "CW_SKIP_GROUP"
+	icon = placeholder
+	option = {
+		name = "JAP_CW_SKIP_ALLOWED"
+		text = JAP_CW_SKIP_OPTION_ALLOWED
+		desc = "JAP_CW_SKIP_OPTION_ALLOWED_DESC"
+	}
+	default = {
+		name = "JAP_CW_SKIP_NOT_ALLOWED"
+		text = JAP_CW_SKIP_OPTION_NOT_ALLOWED
+		desc = "JAP_CW_SKIP_OPTION_NOT_ALLOWED_DESC"
+	}
+}
+
+#usa_cw_skip = {
+#	name = "USA_CW_SKIP"
+#	text = USA_CW_SKIP_OPTION
+#	desc = "USA_CW_SKIP_DESC"
+#	group = "CW_SKIP_GROUP"
+#	icon = placeholder
+#	option = {
+#		name = "USA_CW_SKIP_ALLOWED"
+#		text = USA_CW_SKIP_OPTION_ALLOWED
+#		desc = "USA_CW_SKIP_OPTION_ALLOWED_DESC"
+#	}
+#	default = {
+#		name = "USA_CW_SKIP_NOT_ALLOWED"
+#		text = USA_CW_SKIP_OPTION_NOT_ALLOWED
+#		desc = "USA_CW_SKIP_OPTION_NOT_ALLOWED_DESC"
+#	}
+#}
