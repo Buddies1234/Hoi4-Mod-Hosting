@@ -22,12 +22,12 @@ country_event = {
 	option = {
 		name = "Do it"
 		ai_chance = { factor = 100 }
-		annex_country = { target = GXC transfer_troops = no }
-		annex_country = { target = XSM transfer_troops = no }
-		annex_country = { target = YUN transfer_troops = no }
-		annex_country = { target = SHX transfer_troops = no }
-		annex_country = { target = SIK transfer_troops = no }
-		annex_country = { target = PRC transfer_troops = no }
+		annex_country = { target = GXC transfer_troops = yes }
+		annex_country = { target = XSM transfer_troops = yes }
+		annex_country = { target = YUN transfer_troops = yes }
+		annex_country = { target = SHX transfer_troops = yes }
+		annex_country = { target = SIK transfer_troops = yes }
+		annex_country = { target = PRC transfer_troops = yes }
 		#debuffs for china uniting (you know balance reasons)
 		add_stability = -0.25
 		add_war_support = -0.25
