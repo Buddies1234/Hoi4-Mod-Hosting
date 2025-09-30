@@ -1,0 +1,12 @@
+simple_category = {		#ID of category
+	priority = 100
+	icon = GFX_category_icon	#Icon to be used for the category, defined in decisions_graphics.gfx or other .gfx file you create
+	
+	allowed = {
+		original_tag = SOV
+	}
+	visible = {		
+		original_tag = SOV
+	}
+}
+
