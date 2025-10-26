@@ -1,0 +1,58 @@
+
+simple_category_MON = {		
+	simple_decision_MON = {		#ID of the decision, must not contain spaces!
+	name = "Annex Tannu Tuva"		
+		icon = GFX_decision_icon_default		#The left side icon to show for this decision.
+		
+		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
+		
+		available = {		
+			is_ai = no
+			origin_tag = MON
+			TAN = { is_ai = yes }
+			date < 1936.2.1
+			}
+		
+		fire_only_once = yes		#If set to yes, the decision will only appear once, after execution will not appear again.
+
+		visible = {		#Conditions to make this decision visible, can be left blank to make it always appear.
+			ROOT = {
+				is_ai = no
+			}
+		}		
+
+		cost = 0		#The cost to execute the decision, by default its political power.
+
+		# EFFECTS OF THIS DECISION/MISSION
+
+		complete_effect = {		#The effects to execute once the envelope icon is clicked.
+			MON = {
+				add_state_core = 329 # Tannu Tuva
+			}
+			MON = {
+				annex_country = { target = TAN transfer_troops = yes }
+					}
+			329 = {
+				add_extra_state_shared_building_slots = 100
+				add_building_construction = {
+					type = industrial_complex
+					level = 11
+					instant_build = yes
+				}
+			329 = {
+				add_manpower = 1000000
+				add_extra_state_shared_building_slots = 100
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			330 = { add_manpower = 1000000 }
+			818 = { add_manpower = 1000000 }
+			820 = { add_manpower = 1000000 }
+			819 = { add_manpower = 1000000 }
+			817 = { add_manpower = 1000000 }
+		}
+
+	}
+}
