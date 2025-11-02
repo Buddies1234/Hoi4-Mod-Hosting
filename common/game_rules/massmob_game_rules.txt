@@ -1,0 +1,16 @@
+massmob_game_rules = {
+	name = "Mass Mob Banned?"
+	group = "Host Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = YES
+		text = "YES"
+		desc = "Mass Mobilization is banned"
+	}
+
+	option = {
+		name = NO
+		text = "NO"
+		desc = "Mass Mobilization is allowed"
+	}
+}

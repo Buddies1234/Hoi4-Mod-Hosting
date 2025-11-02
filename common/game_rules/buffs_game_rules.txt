@@ -2,13 +2,13 @@ buffs_game_rules = {
 	name = "NON Player Buffs"
 	group = "Host Rules"
 	icon = "GFX_volunteers"
-	default = {
+	option = {
 		name = YES
 		text = "YES"
 		desc = "NON Player Buffs are Turned on"
 	}
 
-	option = {
+	default = {
 		name = NO
 		text = "NO"
 		desc = "NON Player Buffs are Turned off"

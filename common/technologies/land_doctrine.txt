@@ -3204,7 +3204,11 @@ technologies = {
 		xor = {
 			large_front_operations
 		}
-
+		allow = {
+			OR = {
+				game_rule = { rule = massmob_game_rules option = NO }
+			}
+		}
 		xp_research_type = army
 		xp_unlock_cost = 100
 		
