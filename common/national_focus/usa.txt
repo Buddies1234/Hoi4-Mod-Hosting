@@ -171,6 +171,10 @@ focus_tree = {
 		}
 		available = {
 			date > 1937.1.1
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 		
 		bypass = {
@@ -1555,6 +1559,10 @@ focus_tree = {
 			has_government = democratic
 			NOT = { has_idea_with_trait = fascist_demagogue }
 			NOT = { has_idea_with_trait = communist_revolutionary }
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 		bypass = {
 			
@@ -2997,6 +3005,10 @@ focus_tree = {
 		}
 
 		available = {
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 			has_government = democratic
 			NOT = {
 				has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }

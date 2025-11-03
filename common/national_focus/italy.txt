@@ -8349,6 +8349,10 @@ focus_tree = {
 		relative_position_id = ITA_struggle_in_ethiopia
 		cost = 5
 		available = {
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		allow_branch = {
@@ -13719,6 +13723,10 @@ focus_tree = {
 				dockyard > 0
 			}
 			is_subject = no
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -15313,6 +15321,10 @@ focus_tree = {
 		available = {
 			country_exists = AUS
 			NOT = { has_war_with = AUS }
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		bypass = {
@@ -15975,6 +15987,10 @@ focus_tree = {
 				853 = { owner = { is_subject_of = ROOT } }
 			}
 			is_in_faction = no
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -16173,6 +16189,10 @@ focus_tree = {
 			NOT = { has_guaranteed = FRA }
 			NOT = { has_non_aggression_pact_with = FRA }
 			NOT = { FRA = { is_subject_of = ROOT } }
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		will_lead_to_war_with = FRA
@@ -16229,6 +16249,10 @@ focus_tree = {
 		relative_position_id = ITA_war_with_france
 		cost = 10
 		available = {
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 
 			846 = {
 				is_owned_and_controlled_by = SWI
@@ -16405,6 +16429,10 @@ focus_tree = {
 			NOT = {
 				has_war_with = GRE
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		search_filters = {}
@@ -16449,6 +16477,10 @@ focus_tree = {
 			TUR = {
 				owns_state = 342
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 		
 		will_lead_to_war_with = TUR
@@ -16492,6 +16524,10 @@ focus_tree = {
 			NOT = {
 				has_war_with = TUR
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		search_filters = {}
@@ -16728,7 +16764,11 @@ focus_tree = {
 					has_capitulated = yes
 					has_government = fascism
 				}
-			}			
+			}		
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}	
 		}		
 
 		search_filters = {}
@@ -16777,6 +16817,10 @@ focus_tree = {
 				}
 			}
 			is_puppet = no
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 		cancel = {
 			if = {
@@ -18549,6 +18593,10 @@ focus_tree = {
 		available = {
 			NOT = { has_completed_focus = ITA_foreign_affairs }
 			has_civil_war = no
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}

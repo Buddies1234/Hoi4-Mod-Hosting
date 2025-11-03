@@ -2951,6 +2951,10 @@ focus_tree = {
 				has_government = democratic
 				has_government = communism
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		continue_if_invalid = yes
@@ -8449,7 +8453,10 @@ focus_tree = {
 		}
 
 		available = {
-
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		continue_if_invalid = yes
@@ -10004,7 +10011,10 @@ focus_tree = {
 		}
 
 		available = {
-
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 		icon = GFX_focus_generic_strike_at_democracy2
 		x = 18

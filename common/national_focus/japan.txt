@@ -51,7 +51,10 @@
 		}
 
 		available = {
-
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		bypass = {
@@ -2579,7 +2582,10 @@
 		}
 
 		available = {
-
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		bypass = {
@@ -3467,7 +3473,10 @@
 		}
 
 		available = {
-
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		bypass = {

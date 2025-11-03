@@ -8226,6 +8226,10 @@ focus_tree = {
 		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
 		available = {
+			has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -10565,6 +10569,10 @@ focus_tree = {
 		available = {
 			is_subject = no
 			date > 1938.6.1
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		ai_will_do = {
@@ -10831,12 +10839,16 @@ focus_tree = {
 		will_lead_to_war_with = ITA
 
 		available = {
-			is_subject = no
 			is_neighbor_of = ITA
 			NOT = { is_in_faction_with = ITA }
 			NOT = { has_guaranteed = ITA }
 			NOT = { has_non_aggression_pact_with = ITA }
 			NOT = { ITA = { is_subject_of = ROOT } }
+			is_subject = no
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		ai_will_do = {
@@ -10910,6 +10922,10 @@ focus_tree = {
 					is_in_faction = no
 				}
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
@@ -11075,6 +11091,10 @@ focus_tree = {
 				exists = yes
 				has_civil_war = no
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 		
 		bypass = {
@@ -11349,6 +11369,10 @@ focus_tree = {
 			NOT = { owns_state = 85 }
 			NOT = { has_war_with = POL }
 			POL = { owns_state = 72 }
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		bypass = {
@@ -12090,7 +12114,10 @@ focus_tree = {
 			is_subject = no
 			144 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
 			918 = { is_fully_controlled_by = SWE }
-
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		ai_will_do = {
@@ -12264,6 +12291,10 @@ focus_tree = {
 				exists = yes
 				NOT = { is_ally_with = ROOT }
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		ai_will_do = {
@@ -12430,6 +12461,10 @@ focus_tree = {
 					NOT = { has_government = neutrality }
 				}
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		will_lead_to_war_with = FIN
@@ -14905,6 +14940,10 @@ focus_tree = {
 					}
 				}
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		ai_will_do = {
@@ -20771,6 +20810,10 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 
 		allow_branch = {

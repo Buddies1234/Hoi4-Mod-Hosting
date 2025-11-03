@@ -1710,7 +1710,12 @@
 				has_completed_focus = FRA_review_foreign_policy	
 			}
 			is_subject = no
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
 		}
+		}
+
 		
 		bypass = {
 			has_government = communism
@@ -3788,6 +3793,10 @@
 					has_war_with = CZE
 				}
 			}
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 		
 		bypass = {
@@ -4439,6 +4448,10 @@
 		available = {
 			is_subject = no
 			is_in_faction = no
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}
 		
 		bypass = {
@@ -5246,6 +5259,10 @@
 		}
 
 		available = {
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 			NOT = {
 				has_completed_focus = FRA_review_foreign_policy
 			}
