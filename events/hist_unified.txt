@@ -41,6 +41,7 @@ country_event = {
 		annex_country = { target = ARG transfer_troops = no }
 		annex_country = { target = CHL transfer_troops = no }
 		annex_country = { target = URG transfer_troops = no }
+		annex_country = { target = SAU transfer_troops = no }
 		BHU = {
 			add_ideas = closed_economy
 			add_ideas = Reversed_NON_Player_Buff
