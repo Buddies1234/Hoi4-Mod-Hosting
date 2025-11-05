@@ -5710,6 +5710,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			is_subject = no
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 		}	
 
 		completion_reward = {
@@ -7605,6 +7609,10 @@ focus_tree = {
 		#relative_position_id =
 		cost = 5
 		available = {
+		has_game_rule = { rule =
+			hist_game_rules 
+			option = NON_HISTORICAL
+		}
 			controls_half_ethiopian_owned_states = yes 
 			has_global_flag = second_italo_ethiopian_war_flag
 			ITA = { has_civil_war = no }
