@@ -3059,6 +3059,13 @@ focus_tree = {
 			focus = iron_blood_focus
 		}
 		available = {
+			IF = { 
+				limit = { TAG = SIA }
+				has_game_rule = { rule =
+					hist_game_rules 
+					option = NON_HISTORICAL
+				}
+			}
 			hidden_trigger = {
 				OR = {
 					is_ai = no
@@ -3166,6 +3173,13 @@ focus_tree = {
 			focus = sickle_sword_focus
 		}
 		available = {
+			IF = { 
+				limit = { TAG = MON }
+				has_game_rule = { rule =
+					hist_game_rules 
+					option = NON_HISTORICAL
+				}
+			}
 			hidden_trigger = {
 				OR = {
 					is_ai = no
@@ -5637,6 +5651,13 @@ focus_tree = {
 			}
 		}
 		available = {	
+			IF = { 
+				limit = { TAG = MON }
+				has_game_rule = { rule =
+					hist_game_rules 
+					option = NON_HISTORICAL
+				}
+			}
 			hidden_trigger = {
 				OR = {
 					is_ai = no
@@ -5715,6 +5736,13 @@ focus_tree = {
 			focus = maintain_regime_focus
 		}
 		available = {
+			IF = { 
+				limit = { TAG = SIA }
+				has_game_rule = { rule =
+					hist_game_rules 
+					option = NON_HISTORICAL
+				}
+			}
 			hidden_trigger = {
 				OR = {
 					is_ai = no
