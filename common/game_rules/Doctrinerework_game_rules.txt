@@ -1,0 +1,16 @@
+Doctrinerework_rules = {
+	name = "Doctrine Rework Enabled?"
+	group = "Tech Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = YES
+		text = "YES"
+		desc = "Doctrine Rework is enabled"
+	}
+
+	option = {
+		name = NO
+		text = "NO"
+		desc = "Doctrine Rework is not enabled"
+	}
+}

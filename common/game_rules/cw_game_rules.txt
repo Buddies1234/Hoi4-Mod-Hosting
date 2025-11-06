@@ -7,12 +7,12 @@ ger_cw_skip = {
 	option = {
 		name = "GER_CW_SKIP_ALLOWED"
 		text = GER_CW_SKIP_OPTION_ALLOWED
-		desc = "GER_CW_SKIP_OPTION_ALLOWED_DESC"
+		desc = "NOT WORKING"
 	}
 	default = {
 		name = "GER_CW_SKIP_NOT_ALLOWED"
 		text = GER_CW_SKIP_OPTION_NOT_ALLOWED
-		desc = "GER_CW_SKIP_OPTION_NOT_ALLOWED_DESC"
+		desc = "NOT WORKING"
 	}
 }
 
@@ -25,12 +25,12 @@ sov_cw_skip = {
 	option = {
 		name = "SOV_CW_SKIP_ALLOWED"
 		text = SOV_CW_SKIP_OPTION_ALLOWED
-		desc = "SOV_CW_SKIP_OPTION_ALLOWED_DESC"
+		desc = "NOT WORKING"
 	}
 	default = {
 		name = "SOV_CW_SKIP_NOT_ALLOWED"
 		text = SOV_CW_SKIP_OPTION_NOT_ALLOWED
-		desc = "SOV_CW_SKIP_OPTION_NOT_ALLOWED_DESC"
+		desc = "NOT WORKING"
 	}
 }
 
@@ -43,12 +43,12 @@ jap_cw_skip = {
 	option = {
 		name = "JAP_CW_SKIP_ALLOWED"
 		text = JAP_CW_SKIP_OPTION_ALLOWED
-		desc = "JAP_CW_SKIP_OPTION_ALLOWED_DESC"
+		desc = "NOT WORKING"
 	}
 	default = {
 		name = "JAP_CW_SKIP_NOT_ALLOWED"
 		text = JAP_CW_SKIP_OPTION_NOT_ALLOWED
-		desc = "JAP_CW_SKIP_OPTION_NOT_ALLOWED_DESC"
+		desc = "NOT WORKING"
 	}
 }
 
@@ -61,11 +61,11 @@ jap_cw_skip = {
 #	option = {
 #		name = "USA_CW_SKIP_ALLOWED"
 #		text = USA_CW_SKIP_OPTION_ALLOWED
-#		desc = "USA_CW_SKIP_OPTION_ALLOWED_DESC"
+#		desc = "NOT WORKING"
 #	}
 #	default = {
 #		name = "USA_CW_SKIP_NOT_ALLOWED"
 #		text = USA_CW_SKIP_OPTION_NOT_ALLOWED
-#		desc = "USA_CW_SKIP_OPTION_NOT_ALLOWED_DESC"
+#		desc = "NOT WORKING"
 #	}
 #}
