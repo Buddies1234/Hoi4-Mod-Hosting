@@ -1,11 +1,11 @@
-Doctrinerework_rules = {
+Doctrinerework_game_rules = {
 	name = "Doctrine Rework Enabled?"
 	group = "Tech Rules"
 	icon = "GFX_volunteers"
 	default = {
 		name = YES
 		text = "YES"
-		desc = "Doctrine Rework is enabled"
+		desc = "Doctrine Rework is enabled (not working properly yet)"
 	}
 
 	option = {
