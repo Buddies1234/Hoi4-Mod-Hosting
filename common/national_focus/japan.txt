@@ -2397,6 +2397,7 @@
 				add_political_power = 150
 			}
 			else = {
+				add_political_power = 100
 				add_ideas = tot_economic_mobilisation
 				add_ideas = extensive_conscription
 				activate_decision = women_in_the_workforce
