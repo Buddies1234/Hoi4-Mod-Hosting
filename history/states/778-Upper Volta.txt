@@ -4,10 +4,6 @@ state={
 	name="STATE_778" # Upper Volta
 	manpower = 3186184
 	
-	resources = {
-		coal = 20
-	}
-
 	state_category = pastoral
 	history={
 		owner = FRA
