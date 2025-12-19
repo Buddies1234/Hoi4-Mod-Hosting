@@ -5,6 +5,10 @@ state={
 	
 	name="STATE_545"
 
+	resources={
+		coal = 10 # initial distribution
+	}
+
 	history={
 		owner = ENG
 		buildings = {

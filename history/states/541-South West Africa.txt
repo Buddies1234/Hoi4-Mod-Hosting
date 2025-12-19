@@ -5,6 +5,10 @@ state={
 	manpower = 254100
 	state_category = pastoral
 
+	resources={
+		coal = 10 # initial distribution
+	}
+
 	history={
 		owner = SAF
 		buildings = {

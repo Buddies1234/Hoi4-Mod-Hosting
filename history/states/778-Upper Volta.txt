@@ -3,6 +3,10 @@ state={
 	id=778
 	name="STATE_778" # Upper Volta
 	manpower = 3186184
+
+	resources={
+		coal = 30 # initial distribution
+	}
 	
 	state_category = pastoral
 	history={
