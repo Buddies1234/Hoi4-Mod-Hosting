@@ -16891,10 +16891,10 @@ ai_will_do = {
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = SOV_russian_corporate_state_2IC }
-				add_extra_state_shared_building_slots = 20
+				add_extra_state_shared_building_slots = 15
 				add_building_construction = {
 					type = industrial_complex
-					level = 20
+					level = 15
 					instant_build = yes
 				}
 			}
@@ -16911,10 +16911,10 @@ ai_will_do = {
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 20
+				add_extra_state_shared_building_slots = 15
 				add_building_construction = {
 					type = industrial_complex
-					level = 20
+					level = 15
 					instant_build = yes
 				}
 				set_state_flag = SOV_russian_corporate_state_2IC
@@ -16929,10 +16929,10 @@ ai_will_do = {
 					NOT = { has_state_flag = SOV_russian_corporate_state_2IC }
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 20
+				add_extra_state_shared_building_slots = 15
 				add_building_construction = {
 					type = industrial_complex
-					level = 20
+					level = 15
 					instant_build = yes
 				}
 				set_state_flag = SOV_russian_corporate_state_2IC
