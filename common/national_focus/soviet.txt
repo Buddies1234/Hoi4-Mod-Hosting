@@ -16156,7 +16156,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_tolkachi
-		cost = 5
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -16198,7 +16198,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_eyes_fear
-		cost = 5
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -16360,13 +16360,13 @@ ai_will_do = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SOV_aristocratic_investments_idea
-				days = 730
+				days = 1200
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = SOV_national_unification_factory_bonus_flag
@@ -16375,12 +16375,13 @@ ai_will_do = {
 				limit = {
 					Not = { has_state_flag = SOV_national_unification_factory_bonus_flag}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
+
 			}
 			#TODO jo remove this once the civil war ends
 		}
@@ -16549,7 +16550,7 @@ ai_will_do = {
 		x = 4
 		y = 1
 		relative_position_id = SOV_beaten_but_not_defeated
-		cost = 5
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -16570,7 +16571,7 @@ ai_will_do = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_article_124
-		cost = 5
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
@@ -16599,7 +16600,7 @@ ai_will_do = {
 		x = -2
 		y = 2
 		relative_position_id = SOV_reopen_novodevichi
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
