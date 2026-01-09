@@ -1,176 +1,165 @@
 horst_host_country = {
-	name = "Select Host"
+	name = "1host"
 	group = "Host Rules"
 	icon = "GFX_volunteers"
 	default = {
 		name = GER
-		text = "Germany"
+		text = "GER_fascism"
 		desc = ""
 	}
-
 	option = {
 		name = ITA
-		text = "Italy"
+		text = "ITA_fascism"
 		desc = ""
 	}
 	option = {
 		name = ROM
-		text = "Romania"
+		text = "ROM_neutrality"
 		desc = ""
 	}
 	option = {
 		name = HUN
-		text = "Hungary"
+		text = "HUN_neutrality"
 		desc = ""
 	}
 	option = {
 		name = BUL
-		text = "Bulgaria"
+		text = "BUL_neutrality"
 		desc = ""
 	}
 	option = {
 		name = FIN
-		text = "Finland"
+		text = "FIN_neutrality"
 		desc = ""
 	}
 	option = {
 		name = ENG
-		text = "Great Britain"
+		text = "ENG_democratic"
 		desc = ""
 	}
 	option = {
 		name = USA
-		text = "USA"
+		text = "USA_democratic"
 		desc = ""
 	}
 	option = {
 		name = CAN
-		text = "Canada"
+		text = "CAN_democratic"
 		desc = ""
 	}
 	option = {
 		name = SAF
-		text = "South Africa"
+		text = "SAF_democratic"
 		desc = ""
 	}
 	option = {
 		name = RAJ
-		text = "Raj"
+		text = "RAJ_neutrality"
 		desc = ""
 	}
 	option = {
 		name = AST
-		text = "Australia"
+		text = "AST_democratic"
 		desc = ""
 	}
 	option = {
 		name = JAP
-		text = "Japan"
+		text = "JAP_fascism"
 		desc = ""
 	}
 	option = {
 		name = SOV
-		text = "Soviet Union"
+		text = "SOV_communism"
 		desc = ""
 	}
 	option = {
 		name = FRA
-		text = "France"
+		text = "FRA_democratic"
+		desc = ""
+	}
+	option = {
+		name = SIA
+		text = "SIA_neutrality"
 		desc = ""
 	}
 	option = {
 		name = SPR
-		text = "Spain"
+		text = "SPR_democratic"
 		desc = ""
 	}
 	option = {
 		name = BRA
-		text = "Brazil"
+		text = "BRA_democratic"
 		desc = ""
 	}
 	option = {
 		name = SWE
-		text = "Sweden"
-		desc = ""
-	}
-	option = {
-		name = AUS
-		text = "Austria"
+		text = "SWE_democratic"
 		desc = ""
 	}
 	option = {
 		name = SWI
-		text = "Switzerland"
-		desc = ""
-	}
-	option = {
-		name = LAT
-		text = "Latvia"
-		desc = ""
-	}
-	option = {
-		name = LIT
-		text = "Lithuania"
-		desc = ""
-	}
-	option = {
-		name = EST
-		text = "Estonia"
+		text = "SWI_democratic"
 		desc = ""
 	}
 	option = {
 		name = DEN
-		text = "Denmark"
+		text = "DEN_democratic"
 		desc = ""
 	}
 	option = {
 		name = YUG
-		text = "Yugoslavia"
-		desc = ""
-	}
-	option = {
-		name = BLR
-		text = "Belarus"
-		desc = ""
-	}
-	option = {
-		name = CZE
-		text = "Czechoslovakia"
+		text = "YUG_neutrality"
 		desc = ""
 	}
 	option = {
 		name = POL
-		text = "Poland"
+		text = "POL_neutrality"
 		desc = ""
 	}
 	option = {
 		name = CHI
-		text = "China"
+		text = "CHI_neutrality"
 		desc = ""
 	}
 	option = {
 		name = PRC
-		text = "Communist China"
-		desc = ""
-	}
-	option = {
-		name = ALB
-		text = "Albania"
+		text = "PRC_communism"
 		desc = ""
 	}
 	option = {
 		name = GRE
-		text = "Greece"
+		text = "GRE_neutrality"
 		desc = ""
 	}
 	option = {
-		name = TUR
-		text = "Turkey"
+		name = AUS
+		text = "AUS_neutrality"
+		desc = ""
+	}
+	option = {
+		name = CZE
+		text = "CZE_democratic"
+		desc = ""
+	}
+	option = {
+		name = HOL
+		text = "HOL_democratic"
+		desc = ""
+	}
+	option = {
+		name = HON
+		text = "HON_democratic"
+		desc = ""
+	}
+	option = {
+		name = MON
+		text = "MON_communism"
 		desc = ""
 	}
 	option = {
 		name = BEL
-		text = "Belgium"
+		text = "BEL_democratic"
 		desc = ""
 	}
 }
