@@ -18434,6 +18434,11 @@ focus = {
 			DECISIONS = prospect_for_resources
 			EXPLANATION = RAJ_exploit_the_frontier_decisions_tt
 		}
+		custom_effect_tooltip = {
+			localization_key = generic_unlocks_decisions_explanation_tt
+			DECISIONS = "Annex Bruma"
+			EXPLANATION = "You can Annex Burma."
+		}
 	}
 }
 
