@@ -168,4 +168,9 @@ horst_host_country = {
 		text = "Turkey"
 		desc = ""
 	}
+	option = {
+		name = BEL
+		text = "Belgium"
+		desc = ""
+	}
 }
