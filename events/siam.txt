@@ -1,0 +1,54 @@
+add_namespace = siam
+
+country_event = {
+	id = siam.1
+	title = "Siam Requests Alliance"
+	desc = "Siam has approached us with a request for an alliance against the growing threat of communism in the region. Should we accept their proposal and strengthen our ties in Southeast Asia?"
+	picture = placeholder
+
+	is_triggered_only = yes
+	option = {
+		ai_chance = { factor = 100 }
+		name = "We gladly welcome them" #hell yea
+        add_to_faction = SIA
+        SIA = {
+            country_event = {
+                id = siam.3
+                days = 1
+            }
+        }
+	}
+
+	option = {
+        ai_chance = { factor = 0 }
+        name = "We must decline" #hell nah
+        SIA = {
+            country_event = {
+                id = siam.2
+                days = 1
+            }
+        }
+	}
+}
+country_event = {
+	id = siam.2
+	title = "Japan Refused"
+	desc = "Japan has refused our request for an alliance. This is a setback for our diplomatic efforts in the region."
+	picture = placeholder
+
+	is_triggered_only = yes
+	option = {
+        name = "Damm Them"
+	}
+}
+country_event = {
+    id = siam.3
+    title = "Japan Accepted"
+    desc = "Japan has accepted our request for an alliance. This marks a significant step in strengthening our diplomatic ties in Southeast Asia."
+    picture = placeholder
+
+    is_triggered_only = yes
+    option = {
+        name = "Hooray"
+    }
+}

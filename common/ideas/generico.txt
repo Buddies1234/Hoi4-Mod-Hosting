@@ -4185,6 +4185,34 @@ ideas = {
 				send_volunteer_size = 5
 			}
 		}
+		Manpower_exchange = {
+			allowed = {
+				always = no
+			}
+			available = {}
+
+			removal_cost = -1
+
+			picture = generic_supply_depot
+					
+			modifier = {
+				weekly_manpower = 3000
+			}
+		}
+		Manpower_exchange2 = {
+			allowed = {
+				always = no
+			}
+			available = {}
+
+			removal_cost = -1
+
+			picture = generic_supply_depot
+					
+			modifier = {
+				weekly_manpower = -3000
+			}
+		}
 	}
 		benelux_unification_idea = {
 			allowed = {
@@ -4197,7 +4225,7 @@ ideas = {
 			picture = generic_army_war_college
 					
 			modifier = {
-				weekly_manpower = 5000
+				weekly_manpower = 3000
 				Division_attack_factor = 0.25
 			}
 		}

@@ -1,0 +1,44 @@
+Siam_Dependence_desicion_category = {
+    Offer_Subjecthood = {
+        visible = {
+            always = yes
+        }
+        available = {
+			is_subject = no
+			is_in_faction_with = JAP
+        }
+        complete_effect = {
+            custom_effect_tooltip = "We will offer to Become Japans Puppet in return for aid"
+        }
+    }
+
+
+}
+
+Siam_expansion_desicion_category = {
+    requestindochina = {
+        visible = {
+            always = yes
+        }
+        available = {
+            or = {
+                JAP = { controls_province = 670 }
+                JAP = { controls_province = 671 }
+                JAP = { controls_province = 1017 }
+                JAP = { controls_province = 286 }
+                JAP = { controls_province = 741 }
+                JAP = { owns_state = 670 }
+                JAP = { owns_state = 671 }
+                JAP = { owns_state = 1017 }
+                JAP = { owns_state = 286 }
+                JAP = { owns_state = 741 }
+            }
+        }
+        complete_effect = {
+            custom_effect_tooltip = "Japan will be asked to hand over Indochina"
+        }
+    }
+
+
+
+}

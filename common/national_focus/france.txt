@@ -3698,7 +3698,6 @@
 		available = {
 			SPR_scw_in_progress = yes
 			is_subject = no
-			date > 1937.6.1
 		}
 		
 		bypass = {

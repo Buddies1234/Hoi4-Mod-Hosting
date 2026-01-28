@@ -4,13 +4,105 @@ focus_tree = {
 	country = {
 		factor = 5
 	}
-	
+
 	default = yes
 	reset_on_civilwar = yes
 
 	initial_show_position = {
 		focus = generic_industrial_effort
 	}
+	focus = {
+		id = Siam1
+		icon = GFX_goal_generic_alliance
+		prerequisite = {  
+		}
+		available = {
+			is_in_faction = no
+			is_subject = no
+			JAP = { is_faction_leader = yes }
+		}
+		bypass = { 
+			is_in_faction_with = JAP
+		 }
+		allow_branch = {
+			original_tag = SIA
+		}
+		x = 25
+		y = 0
+		relative_position_id = political_sphere
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = "Request an Alliance with Japan."
+			JAP = {
+				country_event = {
+					id = siam.1
+					days = 1
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = Siam2
+		icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+		prerequisite = { focus = Siam1 }
+		available = {
+			is_in_faction_with = JAP
+		}
+		x = 1
+		y = 1
+		relative_position_id = Siam1
+		cost = 5
+		allow_branch = {
+			original_tag = SIA
+		}
+		completion_reward = {
+			custom_effect_tooltip = "(Unfinished)Unlocks Desicions to Request Territory from Japan or DEMAND it from our neigbours."
+		}
+	}
+		focus = {
+		id = Siam3
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		prerequisite = { focus = Siam1 }
+		available = {
+			is_subject = no
+			is_in_faction_with = JAP
+		}
+		x = -1
+		y = 1
+		relative_position_id = Siam1
+		cost = 5
+		allow_branch = {
+			original_tag = SIA
+		}
+		completion_reward = {
+			custom_effect_tooltip = "(Unfinished)Unlocks desicions to sell Resource rights and more in return for Bonuses."
+		}
+	}
+		focus = {
+		id = Siam4
+		icon = GFX_SOV_eastern_expansion_ccp_2d_sov_compatibility
+		prerequisite = { focus = Siam2 }
+		available = {
+			is_in_faction_with = JAP
+		}
+		allow_branch = {
+			original_tag = SIA
+		}
+		x = 0
+		y = 1
+		relative_position_id = Siam2
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = "(Unfinished)Unlocks Desicions to Core with Burma, Indochina, Malay and Yunnan"
+		}
+	}
+
 
 	focus = {
 		id = generic_army_effort

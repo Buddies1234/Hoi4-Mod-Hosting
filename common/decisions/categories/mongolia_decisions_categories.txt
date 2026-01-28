@@ -4,10 +4,17 @@ simple_category_MON = {
 
 	
 	allowed = {
-		original_tag = MON
+		or = {
+			original_tag = MON
+			original_tag = SOV
+		}
 	}
 	visible = {		
-		original_tag = MON
+		or = {
+			original_tag = MON
+			original_tag = SOV
+		}
+
 	}
 }
 
