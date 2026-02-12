@@ -2,7 +2,7 @@ guiTypes = {
 
 ####################### 
 	containerWindowType = {
-		name = "Hosttool_open_container"
+		name = "horsttool_open_container"
 		position = { x = -503 y = 4 }
 		Orientation = UPPER_RIGHT
 		buttonType = {
@@ -28,7 +28,7 @@ guiTypes = {
 	}
 		
 	containerWindowType = { 
-		name = "Hosttool_container"
+		name = "horsttool_container"
 		position = {x=1200 y=20}
 		size = { width=750 height=750}
 		
@@ -189,7 +189,7 @@ guiTypes = {
 		buttonType = {
 			name = "add_cheat" 
 			position = {x=10 y=90}
-			spriteType = "GFX_Host_addcheat"
+			spriteType = "GFX_horst_addcheat"
             scale = 0.3
 			pdx_tooltip = "ADD_CHEAT"
 			pdx_tooltip_delayed = "ADD_CHEAT_DELAYED"
@@ -403,7 +403,7 @@ guiTypes = {
 		buttonType = {
 			name = "mill_add"	
 			position = {x=120 y=275}
-			spriteType = "GFX_Host_civ_plus"
+			spriteType = "GFX_horst_civ_plus"
 			pdx_tooltip = "MILADD"
 			pdx_tooltip_delayed = "MILADD_DELAYED"
 			scale = 0.9
@@ -411,7 +411,7 @@ guiTypes = {
 		buttonType = { 
 			name = "civ_add"	
 			position = {x=120 y=325}
-			spriteType = "GFX_Host_civ_pluss"
+			spriteType = "GFX_horst_civ_pluss"
 			pdx_tooltip = "CIVADD"
 			pdx_tooltip_delayed = "CIVADD_DELAYED"
 			scale = 0.9
@@ -420,7 +420,7 @@ guiTypes = {
 		buttonType = {
 		name = "pingtool"	
 			position = {x=120 y=370}
-			spriteType = "GFX_Host_naval_pluss"
+			spriteType = "GFX_horst_naval_pluss"
 		scale = 0.9
 			pdx_tooltip = "PINGTOOL"
 			pdx_tooltip_delayed = "PINGTOOL_DELAYED"
@@ -430,7 +430,7 @@ guiTypes = {
 		buttonType = {
 			name = "remove_mill_add"	
 			position = {x=170 y=275}
-			spriteType = "GFX_Host_remove_civ_plus"
+			spriteType = "GFX_horst_remove_civ_plus"
 			pdx_tooltip = "remove_MILADD"
 			pdx_tooltip_delayed = "remove_MILADD_DELAYED"
 			scale = 0.9
@@ -438,7 +438,7 @@ guiTypes = {
 		buttonType = { 
 			name = "remove_civ_add"	
 			position = {x=170 y=325}
-			spriteType = "GFX_Host_remove_civ_pluss"
+			spriteType = "GFX_horst_remove_civ_pluss"
 			pdx_tooltip = "remove_CIVADD"
 			pdx_tooltip_delayed = "remove_CIVADD_DELAYED"
 			scale = 0.9
@@ -447,7 +447,7 @@ guiTypes = {
 		buttonType = {
 		name = "remove_pingtool"	
 			position = {x=170 y=370}
-			spriteType = "GFX_Host_remove_naval_pluss"
+			spriteType = "GFX_horst_remove_naval_pluss"
 		scale = 0.9
 			pdx_tooltip = "remove_PINGTOOL"
 			pdx_tooltip_delayed = "remove_PINGTOOL_DELAYED"
@@ -456,7 +456,7 @@ guiTypes = {
 		buttonType = { 
 			name = "wt_add"	
 			position = {x=73 y=330}
-			spriteType = "GFX_Host_increase_wt"
+			spriteType = "GFX_horst_increase_wt"
 			pdx_tooltip = "WTADD"
 			pdx_tooltip_delayed = "WTADD_DELAYED"
 			scale = 0.8
@@ -465,7 +465,7 @@ guiTypes = {
 		buttonType = { 
 			name = "wt_remove"	
 			position = {x=25 y=330}
-			spriteType = "GFX_Host_decrease_wt"
+			spriteType = "GFX_horst_decrease_wt"
 			pdx_tooltip = "WTREMOVE"
 			pdx_tooltip_delayed = "WTREMOVE_DELAYED"
 			scale = 0.8
@@ -473,7 +473,7 @@ guiTypes = {
 		buttonType = {
 			name = "addpp"	
 			position = {x=15 y=365}
-			spriteType = "GFX_Host_addpp"
+			spriteType = "GFX_horst_addpp"
             scale=0.95
 			pdx_tooltip = "ADDPP"
 			pdx_tooltip_delayed = "ADDPP_DELAYED"
@@ -481,7 +481,7 @@ guiTypes = {
 		buttonType = {
 			name = "remove_addpp"	
 			position = {x=65 y=365} 
-			spriteType = "GFX_Host_remove_addpp"
+			spriteType = "GFX_horst_remove_addpp"
             scale=0.95
 			pdx_tooltip = "remove_ADDPP"
 			pdx_tooltip_delayed = "remove_ADDPP_DELAYED"
