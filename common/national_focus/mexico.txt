@@ -6204,7 +6204,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_rescind_the_mexican_cession
 
-		cost = 30
+		cost = 10
 
 		ai_will_do = {
 			factor = 100

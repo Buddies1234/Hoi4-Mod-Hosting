@@ -1,4 +1,4 @@
-horst_host_country = {
+Host_host_country = {
 	name = "1host"
 	group = "Host Rules"
 	icon = "GFX_volunteers"
