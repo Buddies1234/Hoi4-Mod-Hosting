@@ -733,13 +733,13 @@ technologies = {
 	antiair1 = {
 
 		anti_air = {
-			air_attack = 0.5
+			air_attack = 0.2
 		}
 		anti_air_brigade = {
-			air_attack = 0.3
+			air_attack = 0.2
 		}
 		mot_anti_air_brigade = {
-			air_attack = 0.3
+			air_attack = 0.2
 		}
 		category_self_propelled_anti_air = {
 			air_attack = 0.30

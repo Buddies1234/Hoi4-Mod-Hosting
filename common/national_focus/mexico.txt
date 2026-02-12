@@ -799,7 +799,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_end_land_reform
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -1052,7 +1052,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = MEX_focus_oil_field_expansion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -1095,7 +1095,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_oil_revenue_reinvestment
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1 # Don't think the AI bothers with licences
@@ -1256,7 +1256,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_community_of_nations
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -2719,7 +2719,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_xefo
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -2763,7 +2763,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_law_on_industrial_promotion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -2867,10 +2867,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_engineering_school
 
-		cost = 20
+		cost = 10
 
 		available = {
-			num_of_factories > 50
+			num_of_factories > 40
 		}
 		
 		ai_will_do = {
@@ -3495,7 +3495,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_plan_of_agua_prieta
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -3739,7 +3739,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_plan_of_agua_prieta
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -6204,7 +6204,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_rescind_the_mexican_cession
 
-		cost = 10
+		cost = 20
 
 		ai_will_do = {
 			factor = 100
@@ -6278,7 +6278,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_political_power = -300
 			every_state = {
 				limit = {
 					OR = {
@@ -6359,7 +6358,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_military_budget_review
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -6438,7 +6437,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_military_budget_review
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -6703,7 +6702,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MEX_focus_military_budget_review
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
