@@ -3660,7 +3660,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = HOL_cave_to_the_germans
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
@@ -4559,7 +4559,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = HOL_maintain_trade_neutrality
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -5466,7 +5466,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = HOL_maintain_trade_neutrality
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -5978,7 +5978,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = HOL_cave_to_the_british
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
