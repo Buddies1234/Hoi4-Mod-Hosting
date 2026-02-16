@@ -1,0 +1,20 @@
+on_actions = {
+
+	on_state_control_changed = {
+		effect = {
+			
+				limit = {  
+                    is_controlled_by = COG
+					OR = {
+						is_on_continent = africa 
+						is_core_of = EGY
+					}	
+				}
+				FROM.FROM = {
+				add_dynamic_modifier = {
+                        modifier = idea_COG_congo_influence
+                    }
+				}
+		}
+}
+}
