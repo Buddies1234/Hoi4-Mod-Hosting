@@ -1,9 +1,6 @@
 on_actions = {
     on_weekly = {
         effect = {
-			every_country = {
-				add_ideas = less_cas_yay
-			}
     		add_mastery = {
 				amount = 7
 				track = infantry
