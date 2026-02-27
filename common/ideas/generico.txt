@@ -304,6 +304,14 @@ ideas = {
 			}
 		}
 
+		less_cas_yay = {
+			name = "Less Cas Damage Yay"
+			picture = generic_anti_air
+			modifier = {
+				cas_damage_reduction = 0.25
+			}
+		}
+
 		generic_air_primacy_idea = {
 			allowed = {
 				always = no
