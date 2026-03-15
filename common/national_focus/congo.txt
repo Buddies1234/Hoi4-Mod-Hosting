@@ -5482,6 +5482,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
 
 			
 			every_state = {
@@ -5498,7 +5499,7 @@ focus_tree = {
                     }
 			}
 			
-
+			custom_effect_tooltip = "Every African State controlled by congo will recive the same Moddifier"
 			
 
 		}

@@ -4,6 +4,9 @@ on_actions = {
 		effect = {
 			
 				limit = {  
+					COG = {
+						has_completed_focus = COG_hold_the_pan_african_congress
+					}
                     is_controlled_by = COG
 					OR = {
 						is_on_continent = africa 
