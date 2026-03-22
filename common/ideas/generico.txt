@@ -309,6 +309,9 @@ ideas = {
 			picture = generic_anti_air
 			modifier = {
 				cas_damage_reduction = 0.25
+				industry_air_damage_factor = -0.25
+				static_anti_air_damage_factor = 0.25
+				static_anti_air_hit_chance_factor = 0.25
 			}
 		}
 

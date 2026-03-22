@@ -14892,7 +14892,7 @@ focus_tree = {
 				has_completed_focus = ITA_unite_the_opposition
 				has_completed_focus = ITA_defy_the_duce
 			}
-			date > 1938.1.1
+
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}

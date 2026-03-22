@@ -9724,7 +9724,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_army_manpower = { size > 724999 } #80 div
-			date > 1938.1.1
+
 		}
 		
 		cancel = {
@@ -10498,7 +10498,7 @@ focus_tree = {
 		
 		available = { 
 			is_subject = no
-			date > 1938.1.1
+
 		}
 
 		will_lead_to_war_with = LIT
@@ -13147,7 +13147,7 @@ focus_tree = {
 			controls_state = 4
 			controls_state = 152
 			has_army_manpower = { size > 749999 } #ca 80 div
-			date > 1938.1.1
+
 		}
 
 		ai_will_do = {
@@ -23629,7 +23629,7 @@ focus_tree = {
 				is_subject = no
 				has_government = communism
 			}
-			date > 1938.1.1
+
 		}
 
 		bypass = {
@@ -26777,7 +26777,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_civil_war = no
-			date > 1938.1.1
 		}
 
 		bypass = {

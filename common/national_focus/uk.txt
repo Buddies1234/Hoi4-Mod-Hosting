@@ -8699,7 +8699,6 @@ focus_tree = {
 		prerequisite = { focus = ENG_motion_of_no_confidence }
 		available = { 
 			is_subject = no
-			date > 1938.1.1
 		}
 
 		continue_if_invalid = yes
@@ -11124,39 +11123,8 @@ focus_tree = {
 	focus = {
 		id = ENG_ceylon_forward_operating_base
 		prerequisite = { focus = ENG_god_save_the_king }
-		available = {
-			has_full_control_of_state = 422
-			hidden_trigger = {
-					if = {
-						limit = {
-							has_dlc = "Graveyard of Empires"
-							has_event_target = UK_INDIA
-						}
-						event_target:UK_INDIA = { is_subject_of = ENG }
-					}
-				}
-			}
 		bypass = {
-			OR = {
-				RAJ = {
-					is_in_faction_with = ENG
-					OR = {
-						has_country_flag = ENG_dominions_stayed_with_fascist_britain_flag
-						has_country_flag = britain_enforced_our_loyalty
-					}
-				}
-				has_completed_focus = ENG_towards_indian_independence
-			}
-			if = {
-					limit = {
-						has_dlc = "Graveyard of Empires"
-						has_event_target = UK_INDIA
-					}
-					event_target:UK_INDIA = {
-						exists = no
-						NOT = { is_subject_of = ROOT }
-					}
-				}
+			always = yes
 			}
 		icon = GFX_goal_generic_position_armies
 		x = -1
