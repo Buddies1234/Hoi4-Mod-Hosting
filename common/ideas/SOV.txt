@@ -2564,7 +2564,41 @@ ideas = {
 				}
 			}
 		}
+		SOV_the_iron_wall_of_soviet_resolve = {
+			picture = SOV_the_iron_wall_of_russian_resolve_nsb_ccp_sov_compatibility
+			removal_cost = -1
+			name = "Iron Wall of Soviet Resolve"
 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				original_tag = SOV
+			}
+
+			equipment_bonus = {
+				super_heavy_tank_chassis = {
+					build_cost_ic = -0.2
+					reliability = 0.15 instant = yes
+					armor_value = 0.05
+				}
+				heavy_tank_chassis = {
+					build_cost_ic = -0.1
+					reliability = 0.10 instant = yes
+					armor_value = 0.10
+				}
+				medium_tank_chassis = {
+					build_cost_ic = -0.15
+					reliability = 0.15 instant = yes
+					armor_value = 0.15
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.20
+					reliability = 0.20 instant = yes
+					armor_value = 0.20
+				}
+			}
+		}
 		SOV_russian_corporate_state = {
 			picture = SOV_russian_corporate_state_ccp_sov_compatibility
 			removal_cost = -1

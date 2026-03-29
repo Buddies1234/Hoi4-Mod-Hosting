@@ -3,7 +3,6 @@ characters={
 		name="José Agripino Barnet"
 		portraits={
 			civilian={
-				large="GFX_portrait_cuba_jose_barnet"
 			}
 		}
 		country_leader={
@@ -13,10 +12,10 @@ characters={
 		}
 	}
 	CUB_guillermo_cabral={
-		name="Guillermo Cabral"
+		name="Fidel Castro"
 		portraits={
 			civilian={
-				large=GFX_portrait_Guillermo_Cabral
+				large="GFX_portrait_cuba_jose_barnet"
 			}
 		}
 		country_leader={

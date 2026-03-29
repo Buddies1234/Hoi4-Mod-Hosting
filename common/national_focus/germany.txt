@@ -21179,6 +21179,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
 			if = {
 				limit = {
 					has_active_mission = GER_growing_public_dissent_mission
@@ -21351,7 +21355,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = GER_start_the_proletarian_revolution
-		cost = 5
+		cost = 2
 		available = {
 		}
 
@@ -21364,8 +21368,12 @@ focus_tree = {
 				}
 				add_days_mission_timeout = {
 					mission = GER_imminent_proletarian_revolution_mission
-					days = 15
+					days = 30
 				}
+				add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -21393,7 +21401,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_formalize_the_intelligence_wing
-		cost = 10
+		cost = 2
 		available = {
 			has_government = communism
 		}
@@ -21401,7 +21409,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
-
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			IF = {
 				limit = { has_dlc = "La Resistance" }
 
@@ -21488,13 +21499,17 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_formalize_the_intelligence_wing
-		cost = 5
+		cost = 2
 		available = {
 		}
 
 		search_filters = {}
 
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			IF = {
 				limit = {
 					has_dynamic_modifier = {
@@ -21530,14 +21545,17 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_effective_operations
-		cost = 5
+		cost = 2
 		available = {
 		}
 
 		search_filters = {}
 
 		completion_reward = {
-
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			IF = {
 				limit = { has_dlc = "La Resistance"}
 
@@ -21603,7 +21621,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_start_the_proletarian_revolution
-		cost = 5
+		cost = 2
 		available = {
 		}
 
@@ -21616,14 +21634,14 @@ focus_tree = {
 				}
 				add_days_mission_timeout = {
 					mission = GER_imminent_proletarian_revolution_mission
-					days = 15
+					days = 30
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
 			add_popularity = {
 				ideology = communism
-				popularity = 0.03
+				popularity = 0.1
 			}
 			add_war_support = 0.05
 
@@ -21714,7 +21732,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_ressurect_the_red_front_fighters_league
-		cost = 5
+		cost = 2
 		available = {
 			has_civil_war = no
 		}
@@ -21722,13 +21740,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 			if = {
 				limit = {
 					NOT = { has_completed_focus = GER_the_peoples_victory }
 				}
 				add_days_mission_timeout = {
 					mission = GER_imminent_proletarian_revolution_mission
-					days = 15
+					days = 30
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -21789,7 +21811,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_ressurect_the_red_front_fighters_league
-		cost = 5
+		cost = 2
 		available = {
 		}
 
@@ -21802,7 +21824,7 @@ focus_tree = {
 				}
 				add_days_mission_timeout = {
 					mission = GER_imminent_proletarian_revolution_mission
-					days = 15
+					days = 30
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -21811,7 +21833,7 @@ focus_tree = {
 
 			add_popularity = {
 				ideology = communism
-				popularity = 0.03
+				popularity = 0.05
 			}
 			add_war_support = 0.05
 			add_command_power = 15
@@ -21833,14 +21855,17 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_reorganize_nationale_volksarmee
-		cost = 10
+		cost = 2
 		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 
 			GER_add_or_modify_politburo = yes
 			add_to_variable = { GER_politburo_mobilization_laws_cost_factor = -0.15 tooltip = mobilization_laws_cost_factor_tt }
@@ -23352,7 +23377,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_expand_social_welfare
-		cost = 5
+		cost = 1
 		available = {
 			NOT = { has_decision = women_in_the_workforce }
 		}

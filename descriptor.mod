@@ -3,5 +3,5 @@ tags={
 	"Utilities"
 }
 name="Republic of the Newest Order Host Tool"
-supported_version="1.17.5.1"
+supported_version="1.17.5.2"
 remote_file_id="3458038389"

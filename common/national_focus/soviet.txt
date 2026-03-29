@@ -472,7 +472,7 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_2_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_2 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -536,7 +536,7 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_3_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_3 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -598,7 +598,7 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_4_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_4 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -630,7 +630,7 @@ focus_tree = {
 
 		available = {
 			SOV_third_five_year_plan_available = yes
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -734,7 +734,7 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_3_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_3 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -787,7 +787,7 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_4_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_4 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -830,7 +830,7 @@ focus_tree = {
 				}
 			}
 			SOV_third_five_year_plan_available = yes
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -922,7 +922,7 @@ focus_tree = {
 		available = {
 			has_tech = rubber_processing
 			SOV_third_five_year_plan_available = yes
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 			has_full_control_of_state = 219 #MOSCOW
 			OR = {
 				has_full_control_of_state = 260 #VORONEZH
@@ -995,7 +995,7 @@ focus_tree = {
 
 		available = {
 			SOV_third_five_year_plan_available = yes
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1074,7 +1074,7 @@ focus_tree = {
 
 		available = {
 			SOV_fourth_five_year_plan_available = yes
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_PROPAGANDA}
@@ -1113,7 +1113,7 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_5_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_5 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1190,7 +1190,7 @@ focus_tree = {
 
 		available = {
 			num_subjects > 0
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -9325,6 +9325,33 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			set_technology = {
+				basic_medium_tank_chassis = 1
+				improved_medium_tank_chassis = 1
+			}
+			create_equipment_variant = {
+				name = "The New Soviet Tank"
+				design_team = mio:SOV_okmo
+				parent_version = 0
+				type = medium_tank_destroyer_chassis_2
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_2
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_diesel_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = secondary_turret_small_cannon
+					special_type_slot_4 = sloped_armor
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 5
+					tank_nsb_armor_upgrade = 17
+				}
+				icon = "GFX_GER_basic_medium_art_medium"
+			}
+
 			add_tech_bonus = {
 				name = SOV_strengthen_heavy_industry
 				ahead_reduction = 1
@@ -9381,7 +9408,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_ideas = SOV_the_iron_wall_of_soviet_resolve
 		}
+
 	}
 
 	focus = {
@@ -9716,9 +9745,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+			custom_effect_tooltip = "The Bloodless Coup is Guaranteed to Succeed"
 			add_political_power = 75
 			# SOV_paranoia_medium_increase_effect = yes 
-			custom_effect_tooltip = SOV_the_right_opposition_tt
 			set_variable = { SOV_right_opposition_army_support = 0.1 }
 			set_variable = { SOV_right_opposition_navy_support = 0.05 }
 			set_variable = { SOV_right_opposition_air_support = 0.1 }
@@ -9817,12 +9846,14 @@ focus_tree = {
 		relative_position_id = SOV_the_need_for_policy_changes
 		cost = 10
 		available = {
-			SOV_soviet_civil_war_not_started = yes 
+			SOV_soviet_civil_war_not_started = yes
+			date > 1940.1.1 
 		}
 		                
 		search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
+			custom_effect_tooltip = "The Bloodless Coup is Guaranteed to Succeed without this just to do the Coup"
 			SOV_paranoia_low_increase_effect = yes 
 			add_stability = -0.05
 			hidden_effect = {
@@ -10165,9 +10196,6 @@ focus_tree = {
 		completion_reward = {
 			# Stalin dead
 			IF = {
-				limit = {
-					NOT = { has_character = SOV_iosif_stalin }
-				}
 				custom_effect_tooltip = SOV_coup_detat_success_tt
 				hidden_effect = {
 					set_global_flag = SOV_soviet_civil_war_over
@@ -10214,20 +10242,6 @@ focus_tree = {
 			}
 			
 			# NOT Ready
-			ELSE = {
-				SOV_opposition_support_medium_increase_effect = yes
-				custom_effect_tooltip = SOV_coup_detat_civil_war_tt
-				add_to_variable = { SOV.SOV_right_opposition_army_support = 0.1 }
-				add_to_variable = { SOV.SOV_right_opposition_navy_support = 0.1 }
-				add_to_variable = { SOV.SOV_right_opposition_air_support = 0.1 }
-				hidden_effect = {
-					country_event = {
-						id = NSB_soviet_communist_civil_war.003
-						hours = 1
-					}
-				}
-				SOV_get_centre_military_support = yes 
-			}
 			custom_effect_tooltip = SOV_exiled_advisors_available_tt
 
 			if = {
@@ -10283,7 +10297,6 @@ focus_tree = {
 		relative_position_id = SOV_coup_detat
 		cost = 10
 		available = {
-			NOT = { has_global_flag = SOV_soviet_civil_war_over }
 		}
 		                
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
@@ -10314,7 +10327,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_curtailment_of_the_collective_farms_tt
 			add_ideas = SOV_curtailment_collective_farms_idea
 		}
 	}
@@ -10921,7 +10933,7 @@ focus_tree = {
 	focus = {
 		id = SOV_military_support
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = SOV_the_left_opposition focus = SOV_the_right_opposition } 
+		prerequisite = { focus = SOV_the_left_opposition } 
 		x = 9
 		y = 1
 		relative_position_id = SOV_the_left_opposition
@@ -11032,7 +11044,7 @@ focus_tree = {
 	focus = {
 		id = SOV_divert_attention_towards_military
 		icon = GFX_focus_SOV_military_purge
-		prerequisite = { focus = SOV_the_left_opposition focus = SOV_the_right_opposition } 
+		prerequisite = { focus = SOV_the_left_opposition  } 
 		mutually_exclusive = { focus = SOV_military_support }
 		x = 11
 		y = 1
@@ -11096,7 +11108,7 @@ focus_tree = {
 	focus = {
 		id = SOV_sway_the_railway_workers
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = SOV_the_left_opposition focus = SOV_the_right_opposition } 
+		prerequisite = { focus = SOV_the_left_opposition  } 
 		x = 3
 		y = 1
 		relative_position_id = SOV_the_left_opposition
@@ -11118,7 +11130,7 @@ focus_tree = {
 	focus = {
 		id = SOV_infiltrate_the_nkvd
 		icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_the_left_opposition focus = SOV_the_right_opposition } 
+		prerequisite = { focus = SOV_the_left_opposition  } 
 		x = 5
 		y = 1
 		relative_position_id = SOV_the_left_opposition
