@@ -2583,9 +2583,9 @@ ideas = {
 					armor_value = 0.05
 				}
 				heavy_tank_chassis = {
-					build_cost_ic = -0.1
-					reliability = 0.10 instant = yes
-					armor_value = 0.10
+					build_cost_ic = -0.05
+					reliability = 0.05 instant = yes
+					armor_value = 0.05
 				}
 				medium_tank_chassis = {
 					build_cost_ic = -0.15
@@ -2593,10 +2593,47 @@ ideas = {
 					armor_value = 0.15
 				}
 				light_tank_chassis = {
-					build_cost_ic = -0.20
-					reliability = 0.20 instant = yes
-					armor_value = 0.20
+					build_cost_ic = -0.05
+					reliability = 0.10 instant = yes
 				}
+			}
+		}
+
+		SOV_expand_naval_industries_idea = { # Comes from focus
+			removal_cost = -1
+ 
+			allowed = {
+				always = no # Added via focus
+			}
+ 
+			allowed_civil_war = {
+				tag = SOV
+			}
+ 
+			picture = SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility
+ 
+			modifier = {
+				production_speed_dockyard_factor = 0.5
+				production_speed_buildings_factor = -0.25
+			}
+		}
+ 
+		SOV_naval_production_drive_idea = { # Comes from focus
+			removal_cost = -1
+ 
+			allowed = {
+				always = no # Added via focus
+			}
+ 
+			allowed_civil_war = {
+				tag = SOV
+			}
+ 
+			picture = SOV_expand_the_red_fleet_ccp_2d_sov_compatibility
+ 
+			modifier = {
+				industrial_capacity_dockyard = 0.5
+				industrial_capacity_factory = -0.15
 			}
 		}
 		SOV_russian_corporate_state = {

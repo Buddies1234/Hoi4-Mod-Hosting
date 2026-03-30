@@ -9325,32 +9325,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			set_technology = {
-				basic_medium_tank_chassis = 1
-				improved_medium_tank_chassis = 1
-			}
-			create_equipment_variant = {
-				name = "The New Soviet Tank"
-				design_team = mio:SOV_okmo
-				parent_version = 0
-				type = medium_tank_destroyer_chassis_2
-				modules = {
-					main_armament_slot = tank_high_velocity_cannon_2
-					turret_type_slot = tank_medium_three_man_tank_turret
-					suspension_type_slot = tank_torsion_bar_suspension
-					armor_type_slot = tank_welded_armor
-					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_3
-					special_type_slot_2 = secondary_turret_small_cannon
-					special_type_slot_3 = secondary_turret_small_cannon
-					special_type_slot_4 = sloped_armor
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 5
-					tank_nsb_armor_upgrade = 17
-				}
-				icon = "GFX_GER_basic_medium_art_medium"
-			}
 
 			add_tech_bonus = {
 				name = SOV_strengthen_heavy_industry
@@ -9410,7 +9384,104 @@ focus_tree = {
 			}
 			add_ideas = SOV_the_iron_wall_of_soviet_resolve
 		}
+	}
 
+	focus = {
+		id = SOV_expand_naval_industries
+ 
+		icon = GFX_SOV_expand_shipbuilding_plants_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_expand_the_red_fleet }
+		x = 6
+		y = 1
+		relative_position_id = SOV_expand_the_red_fleet
+		cost = 7
+ 
+		ai_will_do = {
+			factor = 1
+		}
+ 
+		available = {
+ 
+		}
+ 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+ 
+		completion_reward = {
+			add_timed_idea = {
+				idea = SOV_expand_naval_industries_idea
+				days = 365
+			}
+		}
+	}
+ 
+	focus = {
+		id = SOV_naval_production_drive
+ 
+		icon = GFX_SOV_expand_the_red_fleet_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_expand_naval_industries }
+		x = 0
+		y = 1
+		relative_position_id = SOV_expand_naval_industries
+		cost = 7
+ 
+		ai_will_do = {
+			factor = 1
+		}
+ 
+		available = {
+ 
+		}
+ 
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+ 
+		completion_reward = {
+			add_timed_idea = {
+				idea = SOV_naval_production_drive_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = The_New_Soviet_Tank
+		name = "The New Soviet Tank"
+		icon = GFX_SOV_development_of_tankograd_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_depoliticize_the_military}
+		relative_position_id = SOV_depoliticize_the_military
+		x = 0
+		y = 2
+		cost = 5
+		available = {
+			date > 1939.1.1
+		}
+		completion_reward = {
+			set_technology = {
+				basic_medium_tank_chassis = 1
+				improved_medium_tank_chassis = 1
+			}
+			create_equipment_variant = {
+				name = "The New Soviet Tank"
+				design_team = mio:SOV_okmo
+				parent_version = 0
+				type = medium_tank_destroyer_chassis_2
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_2
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_diesel_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = secondary_turret_small_cannon
+					special_type_slot_4 = sloped_armor
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 5
+					tank_nsb_armor_upgrade = 17
+				}
+				icon = "GFX_GER_basic_medium_art_medium"
+			}
+		}
 	}
 
 	focus = {
