@@ -54,6 +54,7 @@ ideas = {
 				can_send_volunteers = no
 				fascism_drift = 100
 				consumer_goods_factor = 500
+				enemy_justify_war_goal_time = 5000
 			}
 			
 		}

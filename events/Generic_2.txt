@@ -1,7 +1,27 @@
 ﻿###########################
 # generic Events
 ###########################
+add_namespace = April_Fools
+country_event = {
+	id = April_Fools.1
+	title = "April Fools?"
+	desc = { 
+		text = "every player will get this event the majority decision will count"
+	}
+	picture = GFX_report_event_generic_read_write
 
+	is_triggered_only = yes
+
+	option = {
+		name = "No I have a stick up my ass"
+	}
+	option = {
+		name = "Lay it on me (something will happen during the Game if its mp)"
+		hidden_effect = {
+			set_global_flag = april_fools
+		}
+	}
+}
 add_namespace = ai_ideology
 
 # COUNTRY INFLUENCING OUR POLITICS
@@ -30,7 +50,6 @@ country_event = {
 		}
 	}
 }
-
 country_event = {
 	id = ai_ideology.2
 	title = generic.1.t

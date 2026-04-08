@@ -9551,7 +9551,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_political_power = 150 
+			add_political_power = 250
+			add_stability = 0.1 
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -9574,7 +9575,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 10
 			}
 		}
 	}
@@ -9596,69 +9597,7 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_autonomous_soviet_republics_tt
-			# Georgia
-			IF = {
-				limit = { 231 = { is_owned_and_controlled_by = ROOT }}
-				release_autonomy = {
-					target = GEO
-					autonomy_state = autonomy_puppet
-					freedom_level = 0.5
-				}
-				GEO = {
-					add_ideas = {
-						SOV_system_decentralization_idea
-						SOV_the_local_soviets_idea
-					}
-				}
-			}
-			# Armenia
-			IF = {
-				limit = { 230 = { is_owned_and_controlled_by = ROOT }}
-				release_autonomy = {
-					target = ARM
-					autonomy_state = autonomy_puppet
-					freedom_level = 0.5
-				}
-				ARM = {
-					add_ideas = {
-						SOV_system_decentralization_idea
-						SOV_the_local_soviets_idea
-					}
-				}
-			}
-
-			# Axerbaijan
-			IF = {
-				limit = { 229 = { is_owned_and_controlled_by = ROOT }}
-				release_autonomy = {
-					target = AZR
-					autonomy_state = autonomy_puppet
-					freedom_level = 0.5
-				}
-				AZR = {
-					add_ideas = {
-						SOV_system_decentralization_idea
-						SOV_the_local_soviets_idea
-					}
-				}
-			}
-
-			# Belarus
-			IF = {
-				limit = { 206 = { is_owned_and_controlled_by = ROOT }}
-				release_autonomy = {
-					target = BLR
-					autonomy_state = autonomy_puppet
-					freedom_level = 0.5
-				}
-				BLR = {
-					add_ideas = {
-						SOV_system_decentralization_idea
-						SOV_the_local_soviets_idea
-					}
-				}
-			}
+			add_stability = 0.1
 		}
 	}
 
@@ -10709,10 +10648,10 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			set_variable = { SOV_planned_economy_party_popularity_stability_factor = 0.15 } #Victory Over Devastation
+			set_variable = { SOV_planned_economy_party_popularity_stability_factor = 0.2 } #Victory Over Devastation
 			set_variable = { SOV_planned_economy_max_surrender_limit_offset = 0.1 } #Victory Over Devastation
-			set_variable = { SOV_planned_economy_industry_repair_factor = 0.1 } #Victory Over Devastation
-			set_variable = { SOV_planned_economy_consumer_goods_factor = -0.02 } #Victory Over Devastation
+			set_variable = { SOV_planned_economy_industry_repair_factor = 0.2 } #Victory Over Devastation
+			set_variable = { SOV_planned_economy_consumer_goods_factor = -0.05 } #Victory Over Devastation
 			custom_effect_tooltip = SOV_victory_over_devastation_tt
 
 			#Industrial Relocation duration halved
@@ -10737,36 +10676,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.1
-			add_war_support = -0.1
+			add_war_support = 0.1
 			add_research_slot = 1
 
-			if = {
-				limit = {
-					has_idea = SOV_politicized_military
-				}
-				swap_ideas = {
-					remove_idea = SOV_politicized_military
-					add_idea = SOV_politicized_military_humanism
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SOV_politicized_military_keep
-				}
-				swap_ideas = {
-					remove_idea = SOV_politicized_military_keep
-					add_idea = SOV_politicized_military_keep_humanism
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SOV_politicized_military_swap
-				}
-				swap_ideas = {
-					remove_idea = SOV_politicized_military_swap
-					add_idea = SOV_politicized_military_swap_humanism
-				}
-			}
 		}
 	}
 
