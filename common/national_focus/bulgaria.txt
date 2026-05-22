@@ -7369,10 +7369,10 @@ focus_tree = {
 				limit = {
 					is_in_faction = yes
 				}
-				leave_faction = yes
+				leave_faction = no
 			}
 			set_rule = {
-				can_join_factions = no
+				can_join_factions = yes
 			}
 			create_faction = BUL_greater_bulgarian_federation
 			add_timed_idea = {
