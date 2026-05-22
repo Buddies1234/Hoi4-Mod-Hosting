@@ -305,7 +305,7 @@ ideas = {
 		}
 
 		less_cas_yay = {
-			name = "Less Cas Damage Yay"
+			name = "Bomber Balance"
 			picture = generic_anti_air
 			modifier = {
 				industry_air_damage_factor = -0.5
