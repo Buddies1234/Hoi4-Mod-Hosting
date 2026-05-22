@@ -308,8 +308,7 @@ ideas = {
 			name = "Less Cas Damage Yay"
 			picture = generic_anti_air
 			modifier = {
-				cas_damage_reduction = 0.25
-				industry_air_damage_factor = -0.25
+				industry_air_damage_factor = -0.5
 				static_anti_air_damage_factor = 0.25
 				static_anti_air_hit_chance_factor = 0.25
 			}
@@ -1258,7 +1257,7 @@ ideas = {
 				party_popularity_stability_factor = 0.15
 				training_time_army_factor = -0.15
 				resistance_growth = 0.05
-				local_resources_factor = 0.5
+				local_resources_factor = 0.20
 				production_speed_buildings_factor = 0.05
 			}
 		}
@@ -1282,7 +1281,7 @@ ideas = {
 				political_power_factor = 0.05
 				party_popularity_stability_factor = 0.15
 				resistance_growth = 0.05
-				local_resources_factor = 0.05
+				local_resources_factor = 0.20
 				production_speed_buildings_factor = 0.05
 			}
 		}

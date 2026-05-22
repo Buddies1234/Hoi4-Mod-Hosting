@@ -406,13 +406,6 @@ country_event = {
 				}	
 			}
 			
-			ELS = { 
-				add_ideas = {
-					uninterested
-					unindustrialized
-				}	
-				IF = {	limit = {	is_ai = yes	}	load_focus_tree = shackles_focus	}
-			}
 			
 			EQG = { 
 				add_ideas = {
@@ -1067,17 +1060,6 @@ country_event = {
 				}	
 			}
 						
-			SWI = { 		
-				if = {
-					limit = {
-						is_historical_focus_on = yes
-						is_ai = yes
-					}	
-					add_ideas = {
-						uninterested				
-					}	
-				}	
-			}
 			
 			SYR = { 
 				add_ideas = {

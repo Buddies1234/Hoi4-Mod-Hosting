@@ -9470,7 +9470,7 @@ focus_tree = {
 					suspension_type_slot = tank_torsion_bar_suspension
 					armor_type_slot = tank_welded_armor
 					engine_type_slot = tank_diesel_engine
-					special_type_slot_1 = tank_radio_3
+					special_type_slot_1 = tank_radio_2
 					special_type_slot_2 = secondary_turret_small_cannon
 					special_type_slot_3 = secondary_turret_small_cannon
 					special_type_slot_4 = sloped_armor
@@ -10190,7 +10190,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_dissent_in_the_party
-		cost = 10
+		cost = 20
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 		}
