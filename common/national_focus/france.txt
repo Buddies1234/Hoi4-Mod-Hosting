@@ -1546,7 +1546,7 @@
 		x = -2
 		y = 1
 		relative_position_id = FRA_light_medium_armor
-		cost = 5
+		cost = 15
 
 		available_if_capitulated = yes
 
