@@ -1589,6 +1589,7 @@ focus_tree = {
 		id = ROM_puppet_bulgaria
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = ROM_balkans_dominance }
+
 		x = -2
 		y = 1
 		relative_position_id = ROM_balkans_dominance
@@ -1606,8 +1607,8 @@ focus_tree = {
 				is_subject = no
 				NOT = { has_war_with = ROM }
 			}
-			strength_ratio = { tag = BUL ratio > 1.5 }
-			has_army_manpower = { size > 400000 }
+			date > 1937.6.1 
+			strength_ratio = { tag = BUL ratio > 2.5 }
 		}
 
 		bypass = {
@@ -1664,9 +1665,10 @@ focus_tree = {
 			}
 			strength_ratio = {
 				tag = HUN
-				ratio > 1.5
-			}
-			has_army_manpower = { size > 400000 }
+				ratio > 2.5
+			} 
+				date > 1937.6.1
+
 		}
 
 		bypass = {
@@ -2308,10 +2310,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			SOV = {
-				is_faction_leader = yes
-				has_government = communism
-			}
+
 		has_game_rule = { rule =
 			hist_game_rules 
 			option = NON_HISTORICAL
@@ -2503,10 +2502,6 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			GER = {
-				is_faction_leader = yes
-				has_government = fascism
-			}
 		}
 
 		bypass = {
@@ -2997,10 +2992,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			ENG = {
-				is_faction_leader = yes
-				has_government = democratic
-			}
+
 		has_game_rule = { rule =
 			hist_game_rules 
 			option = NON_HISTORICAL
