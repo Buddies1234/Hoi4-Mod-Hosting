@@ -464,7 +464,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 10
+		cost = 5
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -2675,7 +2675,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 			195 = { #LENINGRAD
@@ -2821,7 +2821,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 			OR = {
@@ -2911,7 +2911,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 			OR = {
@@ -3041,7 +3041,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 2
 
 		available = {
 			OR = {
@@ -3129,7 +3129,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_reinforce_northern_naval_bases
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -3774,8 +3774,7 @@ focus_tree = {
 		id = SOV_advanced_maneuvers
 
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = SOV_expand_shipbuilding_plants }
-		prerequisite = { focus = SOV_an_oceangoing_navy }
+		prerequisite = { focus = SOV_expand_shipbuilding_plants focus = SOV_an_oceangoing_navy}
 		x = 0
 		y = 3
 		relative_position_id = SOV_expand_shipbuilding_plants
@@ -4092,10 +4091,10 @@ focus_tree = {
 		id = SOV_naval_infantry
 
 		icon = GFX_SOV_naval_infantry_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_advanced_maneuvers }
+		prerequisite = { focus = SOV_keep_commissars_organization focus = SOV_swap_to_political_advisors focus = SOV_adjoined_battle_priests }
 		x = 0
 		y = 1
-		relative_position_id = SOV_advanced_maneuvers
+		relative_position_id = SOV_keep_commissars_organization
 		cost = 10
 
 		available = {
@@ -4906,8 +4905,7 @@ focus_tree = {
 	focus = {
 		id = SOV_leningrad_polytechnical_institute
 		icon = GFX_SOV_leningrad_polytechnical_institute_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_the_means_to_wage_war }
-		prerequisite = { focus = SOV_military_engineering_university }
+		prerequisite = { focus = SOV_the_means_to_wage_war Focus = SOV_military_engineering_university }
 		x = 2
 		y = 2
 		relative_position_id = SOV_the_means_to_wage_war
@@ -6827,7 +6825,7 @@ focus_tree = {
 		id = SOV_the_glory_of_the_red_army
 		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_keep_commissars_organization focus = SOV_swap_to_political_advisors focus = SOV_adjoined_battle_priests }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = SOV_keep_commissars_organization
 		cost = 10
@@ -9394,7 +9392,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 7
+		cost = 7.16
  
 		ai_will_do = {
 			factor = 1
@@ -9422,7 +9420,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_expand_naval_industries
-		cost = 7
+		cost = 7.16
  
 		ai_will_do = {
 			factor = 1
