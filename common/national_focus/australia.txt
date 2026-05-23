@@ -2668,7 +2668,10 @@
 		}
 
 		available = {
-			has_war = yes
+			OR = {
+				threat > 0.5
+				has_war = yes
+			}
 		}
 		
 		bypass = {
@@ -4421,7 +4424,7 @@
 		}
 		
 		bypass = {
-
+		
 		}
 
 		cancel_if_invalid = yes
@@ -4751,9 +4754,8 @@
 
 		available = {
 			ROOT = {
-				communism > 0.3
+				communism > 0.2
 			}
-			event_target:WTT_communist_china = { exists = yes }
 			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		

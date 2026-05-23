@@ -277,12 +277,12 @@ focus_tree = {
 	focus = {
 		id = CAN_canada_pacific_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = CAN_rowell_sirois_commission }
+		prerequisite = { focus = CAN_aluminium_company_of_canada }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = CAN_rowell_sirois_commission
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 75
@@ -350,7 +350,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = CAN_canada_pacific_railway }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = CAN_rowell_sirois_commission
 
 		cost = 10
@@ -412,7 +412,7 @@ focus_tree = {
 	focus = {
 		id = CAN_retool_angus_shops
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = CAN_canada_pacific_railway }
+		prerequisite = { focus = CAN_maritime_colonial_railway }
 		prerequisite = { focus = CAN_bits_and_pieces_program }
 		x = 2
 		y = 3
@@ -2771,10 +2771,10 @@ focus_tree = {
 	focus = {
 		id = CAN_aluminium_company_of_canada
 		icon = GFX_goal_generic_positive_trade_relations 
-		prerequisite = { focus = CAN_supply_the_empire }
-		x = -2
-		y = 4
-		relative_position_id = CAN_strengthen_the_commonwealth_ties
+		prerequisite = { focus = CAN_rowell_sirois_commission }
+		x = 0
+		y = 3
+		relative_position_id = CAN_rowell_sirois_commission
 
 		cost = 10
 
@@ -2814,6 +2814,84 @@ focus_tree = {
 				add_resource = {
 					type = aluminium
 					amount = 8
+				}
+			}
+		}
+	}
+
+		focus = {
+		id = Canadian-Free-Economy
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = CAN_turner_valley_oilfield }
+		x = 0
+		y = 1
+		relative_position_id = CAN_turner_valley_oilfield
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			has_war = yes
+			has_civil_war = no
+			469 = { is_fully_controlled_by = ROOT }
+			470 = { is_fully_controlled_by = ROOT }
+			467 = { is_fully_controlled_by = ROOT }
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			469 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT 
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			470 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT 
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			467 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT 
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { has_idea = CAN_great_depression_1 }
+				swap_ideas = {
+					remove_idea = CAN_great_depression_1
+					add_idea = CAN_great_depression_2		
+				}
+				custom_effect_tooltip = if_no_depression_get_stuff_TT
+			}
+			else_if = {
+				limit = { has_idea = CAN_great_depression_2 }
+				remove_ideas = CAN_great_depression_2
+				custom_effect_tooltip = if_no_depression_get_stuff_TT
+			}
+			else = {
+				add_timed_idea = {
+					idea = CAN_booming_economy
+					days = 1095
 				}
 			}
 		}
@@ -3899,16 +3977,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = { 
-					has_war = no
-					is_in_faction = yes
-				}
-				leave_faction = yes
-			}
-			set_rule = {
-				can_join_factions = no
-			}
+
 			swap_ideas = {
 				remove_idea = CAN_communist_ideals_2
 				add_idea = CAN_communist_ideals_4
