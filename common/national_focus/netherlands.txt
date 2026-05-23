@@ -181,26 +181,6 @@ focus_tree = {
 		id = HOL_open_second_paranam_bauxite_mine
 		available = {
 			has_full_control_of_state = 309
-			OR = {
-				has_war = yes
-				GER = {
-					is_in_faction_with = ROOT
-				}
-				AND = {
-					USA = {
-						has_war = yes
-						NOT = { has_war_with = ROOT }
-					}
-					ENG = {
-						has_war = yes
-						NOT = { has_war_with = ROOT }
-					}
-				}
-			}
-			OR = {
-				has_idea = free_trade
-				has_idea = export_focus
-			}
 		}
 		prerequisite = { focus = HOL_expand_curacao_oil_refineries }
 		icon = GFX_focus_generic_aluminum
@@ -286,17 +266,10 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = HOL_pre_empt_venezuelan_aggression_tt
 				NOT = {
-					OR = {
-						has_idea = HOL_shell_shocked_spectator_1
-						has_idea = HOL_shell_shocked_spectator_2
-						has_idea = HOL_shell_shocked_spectator_3
-						has_idea = HOL_shell_shocked_spectator_4
-						has_idea = HOL_shell_shocked_spectator_5
-					}
+
 				}
 			}
-			NOT = { has_idea = HOL_aloof_neutrality }
-			has_global_flag = ven_claims_abc_islands
+			
 		}
 		prerequisite = { focus = HOL_antilles_defenses }
 		will_lead_to_war_with = VEN
@@ -4365,18 +4338,7 @@ focus_tree = {
 		available = {
 			NOT = { is_in_faction_with = BEL }
 			NOT = { is_in_faction_with = LUX }
-			custom_trigger_tooltip = {
-				tooltip = HOL_pre_empt_venezuelan_aggression_tt
-				NOT = {
-					OR = {
-						has_idea = HOL_shell_shocked_spectator_1
-						has_idea = HOL_shell_shocked_spectator_2
-						has_idea = HOL_shell_shocked_spectator_3
-						has_idea = HOL_shell_shocked_spectator_4
-						has_idea = HOL_shell_shocked_spectator_5
-					}
-				}
-			}
+
 		}
 
 		bypass = {
@@ -4664,39 +4626,7 @@ focus_tree = {
 		id = HOL_decolonization
 		available = {
 			has_government = communism
-			OR = {
-				CRC = { is_subject_of = HOL }
-				695 = { is_fully_controlled_by = HOL }
-				SUR = { is_subject_of = HOL }
-				309 = { is_fully_controlled_by = HOL }
-				custom_trigger_tooltip = {
-					tooltip = HOL_decolonization_tt2
-					AND = {
-						672 = { is_fully_controlled_by = HOL }
-						335 = { is_fully_controlled_by = HOL }
-						334 = { is_fully_controlled_by = HOL }
-						667 = { is_fully_controlled_by = HOL }
-						673 = { is_fully_controlled_by = HOL }
-						668 = { is_fully_controlled_by = HOL }
-						738 = { is_fully_controlled_by = HOL }
-						669 = { is_fully_controlled_by = HOL }
-					}
-				}
-				AND = {
-					INS = { is_subject_of = HOL }
-					custom_trigger_tooltip = {
-						tooltip = HOL_decolonization_tt1
-						672 = { is_fully_controlled_by = INS }
-						335 = { is_fully_controlled_by = INS }
-						334 = { is_fully_controlled_by = INS }
-						667 = { is_fully_controlled_by = INS }
-						673 = { is_fully_controlled_by = INS }
-						668 = { is_fully_controlled_by = INS }
-						738 = { is_fully_controlled_by = INS }
-						669 = { is_fully_controlled_by = INS }
-					}
-				}
-			}
+
 			is_subject = no
 		}
 		bypass = {
@@ -4734,21 +4664,9 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					672 = { is_fully_controlled_by = HOL }
-					335 = { is_fully_controlled_by = HOL }
-					334 = { is_fully_controlled_by = HOL }
-					667 = { is_fully_controlled_by = HOL }
-					673 = { is_fully_controlled_by = HOL }
-					668 = { is_fully_controlled_by = HOL }
-					738 = { is_fully_controlled_by = HOL }
-					669 = { is_fully_controlled_by = HOL }
+
 				}
-				INS = {
-					every_unit_leader = {
-						set_nationality = HOL
-					}
-				}
-				release = INS
+
 				custom_effect_tooltip = generic_skip_one_line_tt
 				hidden_effect = {
 					INS = {
@@ -4776,8 +4694,7 @@ focus_tree = {
 					}
 				}
 				set_autonomy = {
-				    target = INS
-				    autonomy_state = autonomy_free
+
 				}
 			}
 			set_province_name = { id = 7381 name = "Jakarta" }
@@ -4790,7 +4707,6 @@ focus_tree = {
 						695 = { is_fully_controlled_by = HOL }
 					}
 				}
-				release = CRC
 			}
 			if = {
 				limit = {
@@ -4799,7 +4715,6 @@ focus_tree = {
 						309 = { is_fully_controlled_by = HOL }
 					}
 				}
-				release = SUR
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_stability = -0.1
@@ -4993,16 +4908,7 @@ focus_tree = {
  	focus = {
 		id = HOL_join_the_french
 		available = {
-			NOT = { has_war_with = FRA }
-			FRA = {
-				OR = {
-					has_completed_focus = FRA_humanite_unie
-					has_completed_focus = FRA_loyalty_to_the_cause
-					has_completed_focus = FRA_anti_fascist_coalition
-				}
-				has_government = ROOT
-				is_faction_leader = yes
-			}
+
 		}
 		bypass = {
 			is_in_faction_with = FRA
@@ -5261,18 +5167,7 @@ focus_tree = {
 		available = {
 			NOT = { is_in_faction_with = BEL }
 			NOT = { is_in_faction_with = LUX }
-			custom_trigger_tooltip = {
-				tooltip = HOL_pre_empt_venezuelan_aggression_tt
-				NOT = {
-					OR = {
-						has_idea = HOL_shell_shocked_spectator_1
-						has_idea = HOL_shell_shocked_spectator_2
-						has_idea = HOL_shell_shocked_spectator_3
-						has_idea = HOL_shell_shocked_spectator_4
-						has_idea = HOL_shell_shocked_spectator_5
-					}
-				}
-			}
+
 		}
 		bypass = {
 			has_full_control_of_state = 6
