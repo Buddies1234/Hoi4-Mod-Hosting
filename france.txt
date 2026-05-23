@@ -1233,7 +1233,7 @@
 		prerequisite = { focus = FRA_infantry_tanks }
 		mutually_exclusive = { }
 		relative_position_id = FRA_infantry_tanks
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
