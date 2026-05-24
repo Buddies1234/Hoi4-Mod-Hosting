@@ -23962,7 +23962,7 @@ focus_tree = {
 
 		focus = {
 		id = Annex_Korea
-		icon = Annex_Korea
+		icon = GFX_focus_ARG_strengthening_the_concordancia
 		prerequisite = { focus = JAP_crush_the_internal_factions  }
 		x = 2
 		y = 1
