@@ -2574,8 +2574,6 @@
 
 			MAN_low_legitimacy_level_down = yes
 
-			add_ideas = MAN_bolster_nationalism
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			unlock_decision_tooltip = MAN_recruit_bandits_generic

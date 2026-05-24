@@ -7263,7 +7263,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_IMPERIAL_INFLUENCE }
 
 		completion_reward = {
-			set_rule = { can_create_factions = yes }
+				
 			add_stability = 0.15
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -16025,7 +16025,7 @@ focus_tree = {
 				popularity = 0.05
 			}	
 
-			add_political_power = 75
+			add_political_power = 150
 
 			add_war_support = -0.05
 
@@ -17239,7 +17239,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_return_of_the_manchukuo_exiles focus = JAP_divert_military_funds } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22186,7 +22186,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_rikken_minseito_victory } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22223,7 +22223,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_rikken_minseito_victory } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22302,7 +22302,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_rikken_seiyukai_victory } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22339,7 +22339,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_rikken_seiyukai_victory } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22417,7 +22417,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_minshu_shugi } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22505,7 +22505,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_minshu_shugi } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22629,7 +22629,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_minpon_shugi focus = JAP_minshu_shugi } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22695,7 +22695,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_minpon_shugi } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -22815,7 +22815,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_minpon_shugi } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -23012,7 +23012,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_limit_the_emperors_power focus = JAP_ensure_civil_liberties } 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -23167,6 +23167,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
+		
+		Add_ideas = MAN_bolster_nationalism
 				
 			613 = {
 				OWNER = {
@@ -24066,7 +24068,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_launch_the_income_doubling_plan } 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -24161,7 +24163,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_launch_the_income_doubling_plan } 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -24345,7 +24347,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_launch_the_income_doubling_plan } 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -24434,7 +24436,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_pursue_international_trade } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -24471,7 +24473,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_pursue_international_trade } 
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -24509,7 +24511,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_invest_in_foreign_industries } 
 		prerequisite = { focus = JAP_seek_foreign_investments } 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
