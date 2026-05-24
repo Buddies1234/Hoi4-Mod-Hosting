@@ -16438,7 +16438,7 @@ focus_tree = {
 						}
 						NOT = { has_character_flag = JAP_do_not_align_me_flag }
 					}
-					random_select_amount = 4
+					random_select_amount = 999
 					remove_trait = {
 						trait = JAP_IJA_loyalist
 					}	
@@ -22054,9 +22054,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-
 			add_political_power = 50
-
+		
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			country_event = {
@@ -23961,6 +23960,44 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = Annex_Korea
+		icon = Annex_Korea
+		prerequisite = { focus = JAP_crush_the_internal_factions  }
+		x = 2
+		y = 1
+
+		relative_position_id = JAP_crush_the_internal_factions
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			JAP = {
+			annex_country = {
+				target = KOR
+				transfer_troops = yes	
+				}
+				}
+			
+		}
+	}
+
 	focus = {
 		id = JAP_democratic_womens_suffrage
 		icon = GFX_focus_AUS_womens_education_initiative
@@ -24934,6 +24971,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			hidden_effect = {
+				add_nuclear_bombs = 1
+			}
 
 			add_breakthrough_progress = {
 				specialization = specialization_nuclear
