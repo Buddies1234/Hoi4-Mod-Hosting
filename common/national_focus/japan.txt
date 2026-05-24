@@ -22401,7 +22401,7 @@ focus_tree = {
 			JAP_add_or_modify_civilian_cabinet = yes
 
 			add_to_variable = { JAP_civilian_cabinet_political_power_factor = 0.05 tooltip = political_power_factor_tt }
-			add_to_variable = { JAP_civilian_cabinet_war_support_factor = 0.1 tooltip = war_support_factor_tt }
+			add_to_variable = { JAP_civilian_cabinet_war_support_factor = 0.2 tooltip = war_support_factor_tt }
 			
 		}
 	}
@@ -22414,7 +22414,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_minshu_shugi
 
-		prerequisite = { focus = JAP_minshu_shugi } 
+	prerequisite = { focus = JAP_minpon_shugi focus = JAP_minshu_shugi } 
 
 		cost = 2
 
@@ -22502,7 +22502,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_minshu_shugi
 
-		prerequisite = { focus = JAP_minshu_shugi } 
+	prerequisite = { focus = JAP_minpon_shugi focus = JAP_minshu_shugi } 
 
 		cost = 2
 
@@ -22692,7 +22692,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_minpon_shugi
 
-		prerequisite = { focus = JAP_minpon_shugi } 
+	prerequisite = { focus = JAP_minpon_shugi focus = JAP_minshu_shugi } 
 
 		cost = 2
 
@@ -22812,7 +22812,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_minpon_shugi
 
-		prerequisite = { focus = JAP_minpon_shugi } 
+		prerequisite = { focus = JAP_minpon_shugi focus = JAP_minshu_shugi } 
 
 		cost = 2
 
