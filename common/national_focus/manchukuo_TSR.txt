@@ -2574,6 +2574,8 @@
 
 			MAN_low_legitimacy_level_down = yes
 
+			add_ideas = MAN_bolster_nationalism
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			unlock_decision_tooltip = MAN_recruit_bandits_generic
@@ -2665,7 +2667,7 @@
 		}
 
 		available = {
-			has_completed_focus = MAN_tsr_assertiveness
+			has_completed_focus = MAN_tsr_bolster_nationalism
 		}
 
 		bypass = {
@@ -2699,7 +2701,7 @@
 		}
 
 		available = {
-			has_completed_focus = MAN_tsr_assertiveness
+			has_completed_focus = MAN_tsr_bolster_nationalism
 		}
 
 		bypass = {
@@ -2970,7 +2972,7 @@
 
 	focus = {
 		id = Annex_Mangukuo
-		icon = Annex_Mangukuo
+		icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
 		prerequisite = { focus = MAN_tsr_bandit_recruitment  }
 		x = 3
 		y = 1

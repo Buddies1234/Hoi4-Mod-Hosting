@@ -7584,11 +7584,11 @@ focus_tree = {
 		id = JAP_new_order_in_east_asia
 		icon = GFX_focus_JAP_new_order_in_east_asia
 		#mutually_exclusive = { focus = JAP_reprimand_hamada_kunimatsu }
-		x = 1
+		x = -4
 		y = 1
-		relative_position_id = JAP_konoes_first_cabinet
+		relative_position_id = JAP_the_imperial_defense_plan 
 
-		prerequisite = { focus = JAP_konoes_first_cabinet }
+		prerequisite = { focus = JAP_the_imperial_defense_plan  }
 
 		cost = 5
 
@@ -12094,11 +12094,11 @@ focus_tree = {
 		id = JAP_develop_the_chinese_resources
 		icon = GFX_goal_generic_construct_civilian
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 3
-		relative_position_id = JAP_reinforce_the_beijing_garrison
+		x = -6
+		y = 1
+		relative_position_id = JAP_ministry_of_colonial_affairs
 
-		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
+		prerequisite = { focus = JAP_ministry_of_colonial_affairs }
 
 		cost = 10
 

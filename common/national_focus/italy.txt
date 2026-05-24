@@ -18953,6 +18953,89 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = Albanian_Conquest
+		icon = GFX_focus_AFG_state_atheism
+		prerequisite = { focus = ITA_the_italian_republic  }
+		x = -2
+		y = 1
+
+		relative_position_id = ITA_the_italian_republic
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ITA = {
+			create_wargoal = {
+				target = ALB
+				type = annex_everything
+			}
+				}
+			
+		}
+	}
+
+		focus = {
+		id = Yugoslav_Wars
+		icon = GFX_focus_generic_attack_yugoslavia
+		prerequisite = { focus = ITA_the_italian_republic  }
+		x = 2
+		y = 1
+
+		relative_position_id = ITA_the_italian_republic
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			ITA = {
+			create_wargoal = {
+				target = YUG
+				type = annex_everything
+			}
+				}
+			
+		}
+	}
+
+
+
+
+
+
+
+
 
 
  ######   #######  ##     ## ##     ## ##     ## ##    ## ####  ######  ######## 
@@ -18972,7 +19055,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_the_italian_republic }
 		mutually_exclusive = { focus = ITA_italian_socialism }
 		x = -5
-		y = 1
+		y = 2
 		relative_position_id = ITA_the_italian_republic
 		cost = 5
 		available = {
