@@ -16445,6 +16445,18 @@ focus_tree = {
 					add_trait = {
 						trait = JAP_government_supporter
 					}	
+					every_navy_leader = {
+					limit = {
+						has_trait = JAP_IJA_loyalist
+					}
+					random_select_amount = 4
+					remove_trait = {
+						trait = JAP_IJA_loyalist
+					}	
+					add_trait = {
+						trait = JAP_government_supporter
+					}	
+				}
 				}
 			}
 
