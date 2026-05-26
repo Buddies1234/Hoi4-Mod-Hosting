@@ -59,7 +59,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = TUR_the_montreux_convention
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -114,7 +114,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = TUR_continue_the_policy_of_etatism
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			base = 10
@@ -436,7 +436,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = TUR_holding_our_first_multi_party_election
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -494,7 +494,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TUR_democratic_transition_focus
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -618,7 +618,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TUR_expanding_our_armaments
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -754,7 +754,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_the_sanayiciler
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -813,7 +813,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_cooperate_with_the_debt_council
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -1124,7 +1124,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_peace_at_home
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -1650,7 +1650,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = TUR_revive_turkish_revolutionism
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -1830,7 +1830,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = TUR_integrate_the_fascist_council
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -2043,7 +2043,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TUR_the_pontic_redoubt
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -2214,7 +2214,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_create_the_turkish_workers_militia
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -2239,7 +2239,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_halk_ve_devlet
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -3224,42 +3224,42 @@ focus_tree = {
 			354 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
 			800 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
 			352 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
 			353 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
 			350 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
 			344 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -3521,14 +3521,14 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 2
+						size > 4
 						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -3910,7 +3910,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TUR_reaffirm_the_balkan_pact
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -5253,7 +5253,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TUR_the_balkan_academy_of_science
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -5330,7 +5330,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		relative_position_id = TUR_democratic_capstone_focus
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -6141,7 +6141,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_the_german_turkish_friendship_treaty
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -6217,7 +6217,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = TUR_the_clodius_agreement
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -6914,7 +6914,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = TUR_join_the_axis
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -7421,7 +7421,7 @@ focus_tree = {
 		x = 14
 		y = 1
 		relative_position_id = TUR_reconfigure_our_foreign_policy
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -7456,7 +7456,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_renew_the_turkish_soviet_non_aggression_pact
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -7548,7 +7548,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = TUR_the_batumi_accord
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -7595,7 +7595,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = TUR_provide_refuge_to_the_victims_of_fascism
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -7662,7 +7662,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TUR_the_batumi_accord
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -7828,7 +7828,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = TUR_anti_bolshevik_mediterranean_bloc
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
@@ -8379,7 +8379,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = TUR_the_international_of_proletarian_freethinkers
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 10
 		}
