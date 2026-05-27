@@ -4662,6 +4662,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			annex_country = {
+				target = INS
+			}
 			if = {
 				limit = {
 
