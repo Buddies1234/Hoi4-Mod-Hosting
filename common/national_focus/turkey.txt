@@ -365,7 +365,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TUR_fully_integrate_the_is_bank }
 		prerequisite = { focus = TUR_ratify_the_six_arrows }
-		x = -4
+		x = -1
 		y = 2
 		relative_position_id = TUR_fully_integrate_the_is_bank
 		cost = 5
@@ -387,7 +387,7 @@ focus_tree = {
 	focus = {
 		id = TUR_lift_the_ban_on_other_political_parties
 		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = TUR_privatize_the_anadolu_agency }
+		prerequisite = { focus = TUR_privatize_the_anadolu_agency focus = TUR_the_sanayiciler}
 		x = 0
 		y = 1
 		relative_position_id = TUR_privatize_the_anadolu_agency
@@ -413,7 +413,7 @@ focus_tree = {
 		id = TUR_holding_our_first_multi_party_election
 		icon = GFX_focus_generic_treaty
 		available = { has_country_flag = TUR_official_opposition_party_organised }
-		prerequisite = { focus = TUR_lift_the_ban_on_other_political_parties }
+		prerequisite = { focus = TUR_lift_the_ban_on_other_political_parties focus = TUR_cooperate_with_the_debt_council }
 		x = 0
 		y = 1
 		relative_position_id = TUR_lift_the_ban_on_other_political_parties
@@ -431,9 +431,9 @@ focus_tree = {
 	focus = {
 		id = TUR_democratic_transition_focus
 		icon = GFX_goal_support_democracy
-		prerequisite = { focus = TUR_holding_our_first_multi_party_election }
+		prerequisite = { focus = TUR_holding_our_first_multi_party_election } 
 		prerequisite = { focus = TUR_utilize_foreign_capital }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = TUR_holding_our_first_multi_party_election
 		cost = 10
@@ -729,7 +729,7 @@ focus_tree = {
 		available = {
 			NOT = { TUR = { has_government = communism } } 
 		}
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = TUR_ratify_the_six_arrows
 		cost = 5
@@ -747,14 +747,14 @@ focus_tree = {
 	focus = {
 		id = TUR_cooperate_with_the_debt_council
 		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = TUR_the_sanayiciler }
+		prerequisite = { focus = TUR_the_sanayiciler focus = TUR_privatize_the_anadolu_agency }
 		available = {
 			NOT = { TUR = { has_government = communism } } 
 		}
 		x = 0
 		y = 1
 		relative_position_id = TUR_the_sanayiciler
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -809,7 +809,7 @@ focus_tree = {
 	focus = {
 		id = TUR_utilize_foreign_capital
 		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = TUR_cooperate_with_the_debt_council }
+		prerequisite = { focus = TUR_cooperate_with_the_debt_council focus = TUR_lift_the_ban_on_other_political_parties }
 		x = 0
 		y = 1
 		relative_position_id = TUR_cooperate_with_the_debt_council
@@ -987,7 +987,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TUR_assess_our_future
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			base = 10
 		}
