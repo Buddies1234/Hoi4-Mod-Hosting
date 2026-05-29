@@ -3992,78 +3992,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HOL_placate_the_japanese
-		available = {
-			JAP = { has_government = fascism }
-			NOT = { has_war_with = JAP }
-			OR = {
-				AND = {
-					controls_state = 335
-					controls_state = 672
-					controls_state = 334
-					controls_state = 673
-					controls_state = 667
-				}
-				any_country = {
-					is_subject_of = HOL
-					controls_state = 335
-					controls_state = 672
-					controls_state = 334
-					controls_state = 673
-					controls_state = 667
-				}
-			}
-		}
-		bypass = {
-			has_war_with = JAP
-			NOT = {
-				OR = {
-					AND = {
-						controls_state = 335
-						controls_state = 672
-						controls_state = 334
-						controls_state = 673
-						controls_state = 667
-						controls_state = 309
-					}
-					any_country = {
-						is_subject_of = HOL
-						controls_state = 335
-						controls_state = 672
-						controls_state = 334
-						controls_state = 673
-						controls_state = 667
-						controls_state = 309
-					}
-				}
-			}
-		}
-		prerequisite = { focus = HOL_join_germany }
-		icon = GFX_focus_chi_collaboration_with_the_japanese
-		x = 0
-		y = 2
-		relative_position_id = HOL_join_germany
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			country_event = { id = mtg_netherlands.11 hours = 6 }
-		}
-	}
-
-	focus = {
 		id = HOL_assume_the_naval_burden
 		available = {
 			has_full_control_of_state = 7
 			has_full_control_of_state = 36
 		}
-		prerequisite = { focus = HOL_placate_the_japanese }
+		prerequisite = { focus = HOL_german_technological_exchange }
 		mutually_exclusive = { focus = HOL_beginnings_of_a_dutch_blitzkrieg }
 		icon = GFX_goal_generic_occupy_states_coastal
-		x = 0
-		y = 2
-		relative_position_id = HOL_placate_the_japanese
+		x = 1
+		y = 3
+		relative_position_id = HOL_german_technological_exchange
 		cost = 10
 
 		available_if_capitulated = yes
