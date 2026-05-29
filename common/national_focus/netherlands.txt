@@ -3217,7 +3217,7 @@ focus_tree = {
 
 	focus = {
 		id = HOL_escorts_for_the_new_fleet
-		prerequisite = { focus = HOL_modernize_the_cruiser_fleet }
+		prerequisite = { focus = HOL_modernize_the_cruiser_fleet focus = HOL_join_germany }
 		icon = GFX_focus_generic_destroyer
 		x = 0
 		y = 1
