@@ -2933,8 +2933,6 @@ focus = {
 				TUR_set_appropriate_cosmetic_tag = yes
 			}
 			#Set appropriate cosmetic tag to work with dynamic 3D models
-
-			unlock_decision_category_tooltip = form_ottoman_empire_category
 		}
 	}
 
