@@ -23681,7 +23681,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_democratic_war_with_china
 
-		prerequisite = { focus = JAP_democratic_war_with_china } 
+		prerequisite = { focus = JAP_crush_the_internal_factions } 
 
 		cost = 5
 
