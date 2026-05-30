@@ -2741,6 +2741,7 @@ focus_tree = {
 				type = topple_government
 				target = GRE
 			}
+		add_ideas = TUR_Kill_the_greeks
 		add_state_core = 182
 		add_state_core = 184
 		add_state_core = 731
@@ -2933,6 +2934,8 @@ focus = {
 				TUR_set_appropriate_cosmetic_tag = yes
 			}
 			#Set appropriate cosmetic tag to work with dynamic 3D models
+
+			unlock_decision_category_tooltip = form_ottoman_empire_category
 		}
 	}
 
