@@ -25266,7 +25266,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -25353,7 +25353,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -25461,7 +25461,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -25554,7 +25554,7 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 3
@@ -26462,8 +26462,7 @@ focus_tree = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_the_five_great_cities }
-		prerequisite = { focus = JAP_central_agricultural_association }
+		prerequisite = { focus = JAP_the_five_great_cities focus = JAP_central_agricultural_association  }
 		relative_position_id = JAP_the_five_great_cities
 		x = 1
 		y = 1
