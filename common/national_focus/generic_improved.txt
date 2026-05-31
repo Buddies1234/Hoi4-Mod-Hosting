@@ -97,9 +97,23 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = Siam2
-		cost = 5
+		cost = 10
 		completion_reward = {
-			custom_effect_tooltip = "(Unfinished)Unlocks Desicions to Core with Burma, Indochina, Malay and Yunnan"
+		add_state_core = 741
+		add_state_core = 286
+		add_state_core = 1017
+		add_state_core = 670
+		add_state_core = 671
+		add_state_core = 993
+		add_state_core = 999
+		add_state_core = 998
+		add_state_core = 288
+		add_state_core = 997
+		add_state_core = 995
+		add_state_core = 996
+		add_state_core = 944
+		add_state_core = 640
+
 		}
 	}
 
