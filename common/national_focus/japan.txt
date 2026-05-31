@@ -25197,7 +25197,7 @@ focus_tree = {
 		x = 5
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -30050,7 +30050,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -30193,10 +30193,6 @@ focus_tree = {
 			factor = 3
 		}
 
-		available = {
-			has_war = yes
-		}
-
 		bypass = {
 			
 		}
@@ -30209,7 +30205,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			air_experience = 15
+			air_experience = 250
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -30250,7 +30246,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+		has_war	= yes
 		}
 
 		bypass = {
@@ -30312,7 +30308,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+		has_war	= yes
 		}
 
 		bypass = {
@@ -30558,7 +30554,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -31046,7 +31042,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -31244,7 +31240,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -31438,7 +31434,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -31533,7 +31529,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -32459,7 +32455,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -32656,8 +32652,7 @@ focus_tree = {
 		#	focus = 
 		#}
 
-		prerequisite = { focus = JAP_f_go_nuclear_project }
-		prerequisite = { focus = JAP_ni_go_nuclear_project }
+		prerequisite = { focus = JAP_f_go_nuclear_project focus = JAP_ni_go_nuclear_project }
 
 		relative_position_id = JAP_f_go_nuclear_project
 		x = -9

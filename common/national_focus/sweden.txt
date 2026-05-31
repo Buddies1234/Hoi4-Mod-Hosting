@@ -2185,6 +2185,39 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = SWE_ShBB_fleet
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SWE_all_cards_on_deck }
+		prerequisite = { Focus = SWE_surface_raiders }
+		x = -1
+		y = 1
+		relative_position_id = SWE_all_cards_on_deck
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		complete_special_project = sp:sp_naval_super_heavy_battleship 
+   		}
+	}
+
 	focus = {
 		id = SWE_coastal_support
 		icon = GFX_focus_SWE_coastal_support
