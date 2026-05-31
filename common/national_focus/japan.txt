@@ -23058,11 +23058,11 @@ focus_tree = {
 		id = JAP_democratic_war_with_manchukuo
 		icon = GFX_focus_generic_attack_manchukuo
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = -3
+		x = 0
 		y = 1
-		relative_position_id = JAP_crush_the_internal_factions
+		relative_position_id = Annex_Korea
 
-		prerequisite = { focus = JAP_crush_the_internal_factions } 
+		prerequisite = { focus = Annex_Korea } 
 
 		cost = 2
 
@@ -23168,11 +23168,11 @@ focus_tree = {
 		id = JAP_democratic_war_with_china
 		icon = GFX_focus_attack_china
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = -3
+		x = -7
 		y = 1
-		relative_position_id = Annex_Mengukuo
+		relative_position_id = JAP_crush_the_internal_factions
 
-		prerequisite = { focus = Annex_Mengukuo } 
+		prerequisite = { focus = JAP_crush_the_internal_factions } 
 
 		cost = 10
 
@@ -23587,11 +23587,11 @@ focus_tree = {
 	focus = {
 		id = JAP_sea_rekindle_the_old_alliance
 		icon = GFX_focus_chi_british_cooperation
-		prerequisite = { focus = Annex_Mengukuo }
+		prerequisite = { focus = JAP_crush_the_internal_factions }
 		mutually_exclusive = { focus = JAP_create_greater_east_asian_treaty_organization }
-		x = 1
+		x = -2
 		y = 2
-		relative_position_id = Annex_Mengukuo
+		relative_position_id = JAP_crush_the_internal_factions
 
 		cost = 5
 
@@ -23713,11 +23713,11 @@ focus_tree = {
 		id = JAP_create_greater_east_asian_treaty_organization
 		icon = GFX_focus_jap_pacific_guardian
 		mutually_exclusive = { focus = JAP_sea_rekindle_the_old_alliance }
-		x = 2
-		y = 1
-		relative_position_id = JAP_democratic_war_with_china
+		x = -4
+		y = 2
+		relative_position_id = JAP_crush_the_internal_factions
 
-		prerequisite = { focus = JAP_democratic_war_with_china } 
+		prerequisite = { focus = JAP_crush_the_internal_factions } 
 
 		cost = 5
 
@@ -24012,7 +24012,7 @@ focus_tree = {
 		id = Annex_Korea
 		icon = GFX_focus_ARG_strengthening_the_concordancia
 		prerequisite = { focus = JAP_crush_the_internal_factions  }
-		x = 2
+		x = 0
 		y = 1
 
 		relative_position_id = JAP_crush_the_internal_factions
@@ -24050,7 +24050,7 @@ focus_tree = {
 		id = JAP_democratic_womens_suffrage
 		icon = GFX_focus_AUS_womens_education_initiative
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = 0
+		x = 10
 		y = 1
 		relative_position_id = JAP_crush_the_internal_factions
 
@@ -24198,11 +24198,10 @@ focus_tree = {
 		id = JAP_democratic_women_in_the_workforce
 		icon = GFX_focus_ARG_women_in_industry
 		#mutually_exclusive = { focus = JAP_mitsumasa_yonai_focus }
-		x = -2
+		x = 0
 		y = 1
-		relative_position_id = JAP_reform_the_education_system
+		relative_position_id = JAP_democratic_womens_suffrage
 
-		prerequisite = { focus = JAP_reform_the_education_system } 
 		prerequisite = { focus = JAP_democratic_womens_suffrage } 
 
 		cost = 5

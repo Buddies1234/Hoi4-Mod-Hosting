@@ -14931,6 +14931,10 @@ focus_tree = {
 			add_state_claim = 853 #LJUBLJANA
 			add_state_claim = 103 #DALMATIA
 			add_state_claim = 105 #MONTENEGRO
+			create_wargoal = {
+				target = YUG
+				type = topple_government
+			}
 
 			if = {
 				limit = {
@@ -14940,7 +14944,6 @@ focus_tree = {
 						105 = { is_fully_controlled_by = CRO }
 					}
 				}
-				activate_targeted_decision = { target = CRO decision = ITA_send_ultimatum_to_country_balkan }
 			}
 			if = {
 				limit = {
@@ -14950,7 +14953,6 @@ focus_tree = {
 						105 = { is_fully_controlled_by = MNT }
 					}
 				}
-				activate_targeted_decision = { target = MNT decision = ITA_send_ultimatum_to_country_balkan }
 			}
 			if = {
 				limit = {
@@ -14960,7 +14962,6 @@ focus_tree = {
 						105 = { is_fully_controlled_by = YUG }
 					}
 				}
-				activate_targeted_decision = { target = YUG decision = ITA_send_ultimatum_to_country_balkan }
 			}	
 		}
 	}
