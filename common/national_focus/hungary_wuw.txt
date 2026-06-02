@@ -380,7 +380,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_end_the_regency
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -432,7 +432,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_end_the_regency
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -509,7 +509,7 @@ focus_tree = {
 		icon = GFX_focus_POL_habsburg
 		prerequisite = { focus = wuw_HUN_reach_out_to_candidates }
 		mutually_exclusive = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
-		x = -6
+		x = -3
 		y = 1
 		relative_position_id = wuw_HUN_reach_out_to_candidates
 
@@ -5490,8 +5490,8 @@ focus_tree = {
 		id = wuw_HUN_establishing_a_new_dynasty
 		icon = GFX_focus_HUN_establishing_a_new_dynasty
 		prerequisite = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
-		mutually_exclusive = { focus = wuw_HUN_elect_a_democratic_king focus = wuw_HUN_elect_a_fascist_king }
-		x = -4
+		mutually_exclusive = { focus = wuw_HUN_elect_a_fascist_king }
+		x = -1
 		y = 1
 		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
 
@@ -5581,13 +5581,13 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_elect_a_democratic_king
 		icon = GFX_focus_HUN_elect_a_democratic_king
-		prerequisite = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
-		mutually_exclusive = { focus = wuw_HUN_establishing_a_new_dynasty focus = wuw_HUN_elect_a_fascist_king }
-		x = 0
+		prerequisite = { focus = wuw_HUN_elections_in_the_revolutionary_council }
+		mutually_exclusive = { focus = wuw_HUN_restore_the_socialist_federative_republic focus = wuw_HUN_establish_the_second_republic}
+		x = 9
 		y = 1
-		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
+		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 15
@@ -5602,10 +5602,20 @@ focus_tree = {
 					}
 				}
 				NOT = { has_completed_focus = wuw_HUN_continue_the_regency }
-				NOT = { has_completed_focus = wuw_HUN_end_the_white_terror }
-				NOT = { has_completed_focus = wuw_HUN_establishing_a_new_dynasty }
-				NOT = { has_completed_focus = wuw_HUN_elect_a_fascist_king }
-				NOT = { has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction }
+				NOT = { has_completed_focus = wuw_HUN_end_the_regency }
+				NOT = { has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic }
+				NOT = { has_completed_focus = wuw_HUN_establish_the_second_republic }
+			}
+		}
+		offset = {
+			x = -9
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = wuw_HUN_elect_a_democratic_king
 			}
 		}
 
@@ -5613,6 +5623,10 @@ focus_tree = {
 			OR = {
 				has_government = neutrality
 				has_government = democratic
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = HUN_mihaly_karolyi
 			}
 		}
 
@@ -5805,8 +5819,8 @@ focus_tree = {
 		id = wuw_HUN_elect_a_fascist_king
 		icon = GFX_focus_HUN_elect_a_fascist_king
 		prerequisite = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
-		mutually_exclusive = { focus = wuw_HUN_establishing_a_new_dynasty focus = wuw_HUN_elect_a_democratic_king }
-		x = 4
+		mutually_exclusive = { focus = wuw_HUN_establishing_a_new_dynasty }
+		x = 3
 		y = 1
 		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
 
@@ -6014,7 +6028,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_cancel_the_german_trade_deal
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = { focus = wuw_HUN_establishing_a_new_dynasty focus = wuw_HUN_elect_a_democratic_king }
+		prerequisite = { focus = wuw_HUN_establishing_a_new_dynasty }
 		#mutually_exclusive = { focus = wuw_HUN_elect_a_democratic_king focus = wuw_HUN_elect_a_fascist_king }
 		x = 2
 		y = 1
@@ -7491,7 +7505,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_guarantee_religious_liberties
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -11405,7 +11419,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 15
@@ -11455,7 +11469,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 5
@@ -11498,7 +11512,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 10
@@ -11535,13 +11549,15 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_reviving_the_spirit_of_1848
 		icon = GFX_focus_generic_workers_and_farmers_rise
-		prerequisite = { focus = wuw_HUN_politicize_the_levente_associations focus = wuw_HUN_undermine_the_volksbund focus = wuw_HUN_salami_slicing_tactics }
+		prerequisite = { focus = wuw_HUN_politicize_the_levente_associations }
+		prerequisite = { focus = wuw_HUN_undermine_the_volksbund }
+		prerequisite = { focus = wuw_HUN_salami_slicing_tactics }
 		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_salami_slicing_tactics
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -12076,7 +12092,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_civil_war = no
 			OR = {
 				AND = {
 					is_subject = yes
@@ -12121,125 +12136,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = wuw_HUN_join_the_comintern
-		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = wuw_HUN_elections_in_the_revolutionary_council }
-		mutually_exclusive = { focus = wuw_HUN_restore_the_socialist_federative_republic focus = wuw_HUN_establish_the_second_republic }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				SOV = { has_capitulated = yes }
-			}
-		}
-
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = wuw_HUN_continue_the_regency }
-				NOT = { has_completed_focus = wuw_HUN_end_the_regency }
-				NOT = { has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic }
-				NOT = { has_completed_focus = wuw_HUN_establish_the_second_republic }
-			}
-		}
-
-		available = {
-			ANY_comintern_joinable = yes
-			is_in_faction = no
-			IF = {
-				limit = { SOV = { has_government = communism }}
-				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOV
-						has_war_with = HUN
-					}
-				}
-			}
-			is_subject = no
-			communism > 0.4
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_matyas_rakosi
-			}
-		}
-
-		bypass = {
-			OR = {
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			add_political_power = 75
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					SOV = {
-						has_government = communism
-						is_faction_leader = yes
-					}
-				}
-				SOV = {
-					country_event = generic.2
-				}
-			}
-			ELSE = {
-				get_best_alliance_match_communism_effect = yes
-				var:best_leader = {
-					country_event = generic.2
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = HUN_erno_gero
-
-			hidden_effect = {
-
-				news_event = { id = wuw_HUN_news_events.8 }
-
-				IF = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-
-			}
-		}
-	}
-
-	focus = {
 		id = wuw_HUN_restore_the_socialist_federative_republic
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		prerequisite = { focus = wuw_HUN_elections_in_the_revolutionary_council }
-		mutually_exclusive = { focus = wuw_HUN_join_the_comintern focus = wuw_HUN_establish_the_second_republic }
-		x = 6
+		mutually_exclusive = { focus = wuw_HUN_join_the_comintern focus = wuw_HUN_establish_the_second_republic focus = wuw_HUN_elect_a_democratic_king }
+		x = 3
 		y = 1
 		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
 
@@ -12259,13 +12160,13 @@ focus_tree = {
 				}
 				NOT = { has_completed_focus = wuw_HUN_continue_the_regency }
 				NOT = { has_completed_focus = wuw_HUN_end_the_regency }
-				NOT = { has_completed_focus = wuw_HUN_join_the_comintern }
+				NOT = { has_completed_focus = wuw_HUN_elect_a_democratic_king }
 				NOT = { has_completed_focus = wuw_HUN_establish_the_second_republic }
 			}
 		}
 
 		offset = {
-			x = -6
+			x = -3
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -12343,8 +12244,8 @@ focus_tree = {
 		id = wuw_HUN_establish_the_second_republic
 		icon = GFX_focus_HUN_establish_the_second_republic
 		prerequisite = { focus = wuw_HUN_elections_in_the_revolutionary_council }
-		mutually_exclusive = { focus = wuw_HUN_join_the_comintern focus = wuw_HUN_restore_the_socialist_federative_republic }
-		x = -6
+		mutually_exclusive = { focus = wuw_HUN_elect_a_democratic_king focus = wuw_HUN_restore_the_socialist_federative_republic }
+		x = -4
 		y = 1
 		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
 
@@ -12365,7 +12266,7 @@ focus_tree = {
 				NOT = { has_completed_focus = wuw_HUN_continue_the_regency }
 				NOT = { has_completed_focus = wuw_HUN_end_the_regency }
 				NOT = { has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic }
-				NOT = { has_completed_focus = wuw_HUN_join_the_comintern }
+				NOT = { has_completed_focus = wuw_HUN_elect_a_democratic_king }
 			}
 		}
 
@@ -13334,28 +13235,16 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_restore_the_hungarian_red_army
 		icon = GFX_focus_SOV_builder_of_the_red_army
-		prerequisite = { focus = wuw_HUN_join_the_comintern focus = wuw_HUN_restore_the_socialist_federative_republic }
+		prerequisite = { focus = wuw_HUN_goulash_communism }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = 3
+		x = 1
 		y = 1
-		relative_position_id = wuw_HUN_join_the_comintern
+		relative_position_id = wuw_HUN_goulash_communism
 
 		cost = 10
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		offset = {
-			x = -5
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-			}
 		}
 
 		available = {
@@ -13381,11 +13270,12 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_goulash_communism
 		icon = GFX_focus_HUN_goulash_communism
-		prerequisite = { focus = wuw_HUN_join_the_comintern }
+		prerequisite = { focus = HUN_hero_of_the_revolution focus = wuw_HUN_joint_hungarian_soviet_research_effort }
+		prerequisite = { focus = wuw_HUN_invest_in_universal_education focus = HUN_balkan_ambitions }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
 		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_join_the_comintern
+		y = 6
+		relative_position_id = wuw_HUN_restore_the_socialist_federative_republic
 
 		cost = 10
 
@@ -13421,13 +13311,13 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_state_protection_authority
 		icon = GFX_focus_generic_secret_service_agency
-		prerequisite = { focus = wuw_HUN_goulash_communism }
+		prerequisite = { focus = wuw_HUN_instate_a_socialist_economy }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_goulash_communism
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_instate_a_socialist_economy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -13475,20 +13365,20 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_joint_hungarian_soviet_research_effort
 		icon = GFX_focus_generic_socialist_science
-		prerequisite = { focus = wuw_HUN_join_the_comintern }
+		prerequisite = { focus = wuw_HUN_nationalize_key_industries }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = -1
-		y = 2
-		relative_position_id = wuw_HUN_join_the_comintern
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_nationalize_key_industries
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
 		}
 
 		available = {
-			is_in_faction_with = SOV
+
 		}
 
 		bypass = {
@@ -13502,9 +13392,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			SOV = { add_to_tech_sharing_group = comintern_research }
-			add_to_tech_sharing_group = comintern_research
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_ideas = HUN_soviet_cooperation_programmes
@@ -13514,11 +13401,11 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_soviet_hungarian_war_indsutry
 		icon = GFX_focus_generic_communist_industry
-		prerequisite = { focus = wuw_HUN_joint_hungarian_soviet_research_effort }
+		prerequisite = { focus = wuw_HUN_instate_a_socialist_economy }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_joint_hungarian_soviet_research_effort
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_instate_a_socialist_economy
 
 		cost = 10
 
@@ -13527,7 +13414,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_in_faction_with = SOV
+
 		}
 
 		bypass = {
@@ -13598,13 +13485,14 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_a_cult_of_personality
 		icon = GFX_focus_NOR_moscows_education_centers
-		prerequisite = { focus = wuw_HUN_soviet_hungarian_war_indsutry }
+		prerequisite = { focus = wuw_HUN_state_protection_authority }
+		prerequisite = {focus = wuw_HUN_soviet_hungarian_war_indsutry}
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
 		x = 0
 		y = 2
-		relative_position_id = wuw_HUN_soviet_hungarian_war_indsutry
+		relative_position_id = wuw_HUN_instate_a_socialist_economy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -13612,10 +13500,6 @@ focus_tree = {
 
 		available = {
 			has_government = communism
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_matyas_rakosi
-			}
 		}
 
 		bypass = {
@@ -13639,264 +13523,17 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = wuw_HUN_kadars_hussars
-		icon = GFX_focus_HUN_kadars_hussars
-		prerequisite = { focus = wuw_HUN_restore_the_hungarian_red_army }
-		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_restore_the_hungarian_red_army
 
-		cost = 10
 
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			has_government = communism
-			has_idea_with_trait = HUN_goulash_communist
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-
-			swap_ideas = {
-				remove_idea = wuw_HUN_the_hungarian_red_army
-				add_idea = wuw_HUN_the_hungarian_red_army_suppression
-			}
-
-			#custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_tech_bonus = {
-				bonus = 0.3
-				uses = 2
-				category = military_police_tech
-				name = wuw_HUN_kadars_hussars
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_soviet_hungarian_military_academy
-		icon = GFX_focus_generic_soviet_politics
-		prerequisite = { focus = wuw_HUN_restore_the_hungarian_red_army }
-		prerequisite = { focus = wuw_HUN_join_the_comintern }
-		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = -1
-		y = 1
-		relative_position_id = wuw_HUN_restore_the_hungarian_red_army
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			SOU = {
-				exists = yes
-				has_government = communism
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_doctrine_cost_reduction = {
-				name = HUN_soviet_hungarian_military_academy
-			    cost_reduction = 0.5
-			    uses = 2
-			    category = land_doctrine
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_central_military_planning_committee
-		icon = GFX_focus_SOV_mobilization_plan
-		prerequisite = { focus = wuw_HUN_soviet_hungarian_military_academy }
-		prerequisite = { focus = wuw_HUN_state_protection_authority }
-		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = -1
-		y = 2
-		relative_position_id = wuw_HUN_soviet_hungarian_military_academy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-			has_government = communism
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-
-			add_war_support = 0.1
-			add_command_power = 40
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_army_leader = {
-				add_logistics = 1
-				add_planning = 1
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_state = {
-				limit = {
-					OR = {
-						state = 73
-						state = 664
-						state = 76
-						state = 45
-						state = 975
-					}
-				}
-				add_core_of = ROOT
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_intervene_in_czechoslovakia
-		icon = GFX_focus_generic_attack_czechoslovakia
-		prerequisite = { focus = wuw_HUN_central_military_planning_committee }
-		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = -1
-		y = 1
-		relative_position_id = wuw_HUN_central_military_planning_committee
-
-		dynamic = yes
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			has_government = communism
-			is_subject = no
-			is_in_faction_with = SOV
-			CZE = {
-				exists = yes
-				NOT = { has_war_with = SOV }
-				NOT = { is_in_faction_with = SOV }
-			}
-			SOV_comintern_joinable = yes
-		}
-
-		bypass = {
-			CZE = {
-				is_in_faction_with = SOV
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			SOV = { country_event = DOD_hungary.120 }
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_pressure_romania
-		icon = GFX_goal_support_communism
-		prerequisite = { focus = wuw_HUN_central_military_planning_committee }
-		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_central_military_planning_committee
-
-		dynamic = yes
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			is_subject = no
-			has_government = communism
-			is_in_faction_with = SOV
-			ROM = {
-				exists = yes
-				NOT = { is_in_faction_with = SOV }
-				NOT = { has_war_with = SOV }
-				OR = {
-					owns_state = 76
-					owns_state = 78
-				}
-			}
-			NOT = { has_war_with = SOV }
-			SOV_comintern_joinable = yes
-		}
-
-		bypass = {
-			ROM = {
-				is_in_faction_with = SOV
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			SOV = { country_event = DOD_hungary.110 }
-		}
-	}
 
 	focus = {
 		id = wuw_HUN_the_bulwark_against_the_west
 		icon = GFX_focus_ETH_callout_to_the_world
-		prerequisite = { focus = wuw_HUN_pressure_romania focus = wuw_HUN_intervene_in_czechoslovakia }
+		prerequisite = { focus = wuw_HUN_goulash_communism }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
 		x = -1
 		y = 1
-		relative_position_id = wuw_HUN_pressure_romania
-
+		relative_position_id = wuw_HUN_goulash_communism
 		cost = 10
 
 		ai_will_do = {
@@ -13923,105 +13560,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = wuw_HUN_reinstate_the_lenin_boys
-		icon = GFX_focus_HUN_reinstate_the_lenin_boys
-		prerequisite = { focus = wuw_HUN_restore_the_hungarian_red_army }
-		prerequisite = { focus = wuw_HUN_restore_the_socialist_federative_republic }
-		
-		x = 1
-		y = 1
-		relative_position_id = wuw_HUN_restore_the_hungarian_red_army
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			has_government = communism
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_bela_kun
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-
-			add_manpower = 19000
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HUN_lenin_boys_militia_recruitment
-
-			hidden_effect = {
-				delete_unit_template_and_units = {
-					division_template = "Lenin-fiúk"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-
-				division_template = {
-					name = "Lenin-fiúk"
-					division_names_group = HUN_MIL_02
-					role = garrison
-					template_counter = 69
-					override_model = HUN_militia_alt_3_entity
-					is_locked = yes
-					force_allow_recruiting = yes
-					division_cap = 24
-					regiments = {
-						militia = { x = 0 y = 0 }
-						militia = { x = 0 y = 1 }
-						militia = { x = 1 y = 0 }
-						militia = { x = 1 y = 1 }
-						militia = { x = 2 y = 0 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-					}
-				}
-
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-						is_core_of = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Lenin-fiúk 'József Cserny'\" division_template = \"Lenin-fiúk\" start_experience_factor = 0.4 start_equipment_factor = 0.9"
-					    owner = ROOT
-					    officer = {
-					    	name = HUN_bela_lowinger
-					    }
-					}
-					create_unit = {
-					    division = "name = \"Lenin-fiúk 'Tibor Szamuely'\" division_template = \"Lenin-fiúk\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
-					    owner = ROOT
-					    officer = {
-					    	name = HUN_vladimir_urasov
-					    }
-					}
-				}
-			}
-
-		}
-	}
-
-	focus = {
 		id = wuw_HUN_instate_a_socialist_economy
 		icon = GFX_focus_prc_agrarian_socialism
 		prerequisite = { focus = wuw_HUN_restore_the_socialist_federative_republic }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = wuw_HUN_restore_the_socialist_federative_republic
 
@@ -14081,13 +13624,13 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_nationalize_key_industries
 		icon = GFX_goal_generic_soviet_construction
-		prerequisite = { focus = wuw_HUN_instate_a_socialist_economy }
+		prerequisite = { focus = wuw_HUN_a_cult_of_personality }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
 		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_instate_a_socialist_economy
+		y = 1
+		relative_position_id = wuw_HUN_a_cult_of_personality
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -14133,11 +13676,11 @@ focus_tree = {
 		icon = GFX_focus_generic_university_1
 		prerequisite = { focus = wuw_HUN_nationalize_key_industries }
 		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = wuw_HUN_nationalize_key_industries
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -14176,7 +13719,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_restore_the_socialist_federative_republic
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -14290,7 +13833,7 @@ focus_tree = {
 		will_lead_to_war_with = CZE
 		will_lead_to_war_with = SLO
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -14384,7 +13927,7 @@ focus_tree = {
 		will_lead_to_war_with = TRA
 		will_lead_to_war_with = ROM
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -14480,7 +14023,7 @@ focus_tree = {
 		will_lead_to_war_with = TRA
 		will_lead_to_war_with = SER
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -14572,57 +14115,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = communism
-			AND = {
-				OR = {
-					owns_state = 664
-					controls_state = 664
-				}
-				OR = {
-					owns_state = 73
-					controls_state = 73
-				}
-				OR = {
-					owns_state = 76
-					controls_state = 76
-				}
-				OR = {
-					owns_state = 84
-					controls_state = 84
-				}
-				OR = {
-					owns_state = 83
-					controls_state = 83
-				}
-				OR = {
-					owns_state = 82
-					controls_state = 82
-				}
-				OR = {
-					owns_state = 45
-					controls_state = 45
-				}
-			}
-			NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
-			custom_trigger_tooltip = {
-				tooltip = wuw_HUN_proclaim_greater_hungary_core_states_requirement
-				AND = {
-					155 = {
-						is_fully_controlled_by = ROOT
-					}
-					974 = {
-						is_fully_controlled_by = ROOT
-					}
-					973 = {
-						is_fully_controlled_by = ROOT
-					}
-					43 = {
-						is_fully_controlled_by = ROOT
-					}
-					154 = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-			}
 		}
 
 		bypass = {
@@ -14813,62 +14305,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			unlock_decision_tooltip = HUN_unify_the_balkans_decision
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_denounce_marxism_leninism
-		icon = GFX_goal_generic_war_with_comintern
-		prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
-		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
-		x = 0
-		y = 2
-		relative_position_id = wuw_HUN_a_revolutionary_greater_hungary
-
-		will_lead_to_war_with = SOV
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			is_subject = no
-			has_government = communism
-			SOU = {
-				exists = yes
-				has_country_leader = {
-					ruling_only = yes
-					character = SOV_iosif_stalin
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-
-			add_timed_idea = {
-				idea = HUN_denounce_bolshevism_idea
-				days = 650
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = SOU
-			}
 
 		}
 	}
