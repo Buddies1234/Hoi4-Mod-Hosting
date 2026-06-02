@@ -58,13 +58,7 @@
   Annex_Korea_DESC:0 " "
 
  Annex_Mangukuo:0 "The Manchurian Manhattan Project"
- Annex_Mangukuo_DESC:0 " "|
-
- Annex_Mengukuo:0 "Nuke The Chinese United Front"
- Annex_Mengukuo_DESC:0 " "
-
- TUR_Kill_the_greeks:0 "The Anti Greece"
- TUR_Kill_the_greeks_DESC:0 " "
+ Annex_Mangukuo_DESC:0 " "
 
   Sale_of_Syria:0 "The Sale Of Syria"
   Sale_of_Syria_DESC:0 "The Decolonization Of The Middle-East "
@@ -99,5 +93,14 @@
   idea_TUR_Remilitarization:0 "Rapid Modernization of the Ottoman Empire"
   idea_TUR_Remilitarization_DESC:0 "Rapid Modernization of the Ottoman Empire "
 
-  SWE_ice_carrier:0 "Firefly's Great Armada"
-  SWE_ice_carrier_DESC:0 "Gives u Ice Carriers because the meta navy player Firefly asked for this"
+ Annex_Mengukuo:0 "Nuke The Chinese United Front"
+ Annex_Mengukuo_DESC:0 " "
+
+ TUR_Kill_the_greeks:0 "The Anti Greece"
+ TUR_Kill_the_greeks_DESC:0 " "
+
+  wuw_HUN_remove_treaty_of_trianon:0 "Remove Treaty Of Trianon"
+  wuw_HUN_remove_treaty_of_trianon_DESC:0 "Removes Treaty Of Trainon "
+
+
+

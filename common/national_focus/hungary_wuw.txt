@@ -12241,6 +12241,42 @@ focus_tree = {
 	}
 
 	focus = {
+		id = wuw_HUN_remove_treaty_of_trianon
+		icon = GFX_focus_CHL_the_future_of_Chile
+		prerequisite = { focus = wuw_HUN_restore_the_socialist_federative_republic }
+		#mutually_exclusive = { focus = wuw_HUN_approach_the_diasporas }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_restore_the_socialist_federative_republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+	has_idea = HUN_treaty_of_triannon_aat_wuw
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+		remove_ideas = HUN_treaty_of_triannon_aat_wuw
+		custom_effect_tooltip = generic_skip_one_line_tt
+		}
+	}
+
+
+	focus = {
 		id = wuw_HUN_establish_the_second_republic
 		icon = GFX_focus_HUN_establish_the_second_republic
 		prerequisite = { focus = wuw_HUN_elections_in_the_revolutionary_council }
