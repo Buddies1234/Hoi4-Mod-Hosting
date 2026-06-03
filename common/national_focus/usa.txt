@@ -1590,6 +1590,9 @@ focus_tree = {
 				}
 			}
 			set_rule = { can_send_volunteers = yes }
+			set_rule = { can_declare_war_on_same_ideology = yes }
+			set_rule = { can_puppet = yes }
+			set_rule = { can_only_justify_war_on_threat_country = no }
 			add_ideas = USA_limited_intervention
 			USA_congress_medium_opposition = yes
 			if = {

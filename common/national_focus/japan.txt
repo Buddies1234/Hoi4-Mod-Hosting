@@ -21958,6 +21958,7 @@ focus_tree = {
 			add_political_power = 50
 		
 			custom_effect_tooltip = generic_skip_one_line_tt
+			set_rule = { can_only_justify_war_on_threat_country = no }
 
 			country_event = {
 				id = SEA_japan_popup_events.25
