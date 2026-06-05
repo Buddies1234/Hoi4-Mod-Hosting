@@ -10118,7 +10118,7 @@ BUL_balkan_confederation = {
 			modifier = {
 				factor = 5
 				FROM = {
-					democratic > 0.25
+					democratic > 0.2
 				}
 			}
 			modifier = {
@@ -10206,7 +10206,7 @@ BUL_balkan_confederation = {
 				FROM = {
 					add_popularity = {
 						ideology = democratic
-						popularity = 0.25
+						popularity = 0.2
 					}
 					if = {
 						limit = {
@@ -10332,7 +10332,7 @@ BUL_balkan_confederation = {
 
 		cost = 15
 
-		days_remove = 30
+		days_remove = 60
 
 		modifier = {
 			consumer_goods_factor = 0.10
@@ -10355,11 +10355,11 @@ BUL_balkan_confederation = {
 				FROM = {
 					add_popularity = {
 						ideology = democratic
-						popularity = 0.25
+						popularity = 0.1
 					}
 					add_timed_idea = {
 						idea = BUL_bulgarian_capital_injection
-						days = 30
+						days = 60
 					}
 				}
 			}

@@ -3199,7 +3199,16 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			add_stability = 0.2
+			add_stability = 0.1
+			if = {
+				limit = {
+					has_idea = BUL_second_national_catastrophe
+				}
+				swap_ideas = {
+					remove_idea = BUL_second_national_catastrophe
+					add_idea = BUL_second_national_catastrophe_02
+				}
+			}
 			if = {
 				limit = {
 					NOT = { has_government = communism }
@@ -3670,6 +3679,7 @@ focus_tree = {
 		available = {
 			has_government = communism
 			is_subject = no
+			date > 1939.1.1
 		}
 		
 
@@ -3890,6 +3900,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
+			custom_effect_tooltip = "Doing this focus will make you count as the Balkan Federation"
 			if = {
 				limit = {
 					has_idea = BUL_second_national_catastrophe
@@ -8089,7 +8100,7 @@ focus_tree = {
 	focus = {
 		id = BUL_bulgarian_administration_of_the_balkans
 
-		prerequisite = { focus = BUL_peaceful_development focus = BUL_nationalist_propaganda }
+		prerequisite = { focus = BUL_peaceful_development }
 
 		icon = GFX_focus_BUL_bulgarian_administration_of_the_balkans
 		relative_position_id = BUL_join_the_tripartite_pact

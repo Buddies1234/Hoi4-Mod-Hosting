@@ -380,7 +380,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_end_the_regency
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -432,7 +432,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_end_the_regency
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -509,7 +509,7 @@ focus_tree = {
 		icon = GFX_focus_POL_habsburg
 		prerequisite = { focus = wuw_HUN_reach_out_to_candidates }
 		mutually_exclusive = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
-		x = -3
+		x = -6
 		y = 1
 		relative_position_id = wuw_HUN_reach_out_to_candidates
 
@@ -1083,11 +1083,17 @@ focus_tree = {
 				add_idea = HUN_hungarian_monarchy_resored_habsburgs_otto
 			}
 
+			add_mastery_bonus = {
+				name = HUN_feldmarchall_augusts_expertise
+				bonus = 0.15
+				days = 180
+			}
+
 			add_doctrine_cost_reduction = {
 				name = HUN_feldmarchall_augusts_expertise
-				cost_reduction = 0.25
+				cost_reduction = 0.2
 				uses = 1
-				category = cat_grand_battle_plan
+				category = land_doctrine
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -1622,7 +1628,11 @@ focus_tree = {
 			}
 			ELSE = {
 				set_rule = { can_create_factions = yes }
-				create_faction = GER_central_powers_faction
+				create_faction_from_template = {
+					template = faction_template_GER_mitteleuropa_alliance
+					name = GER_central_powers_faction
+					icon = GFX_faction_logo_generic_13
+				}
 				# We create our own faction and invite Germany
 				GER = {
 					country_event = {
@@ -1670,9 +1680,19 @@ focus_tree = {
 
 			add_political_power = 25
 
-			create_faction = habsburg_alliance_faction
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_habsburg_alliance
+				add_faction_initiative = 1
+			}
+			ELSE = {
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_habsburg_alliance
+			}
 
-			set_rule = { can_create_factions = yes }
 
 		}
 	}
@@ -5334,12 +5354,15 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_doctrine_cost_reduction = {
+
+
+			add_mastery_bonus = {
 				name = wuw_HUN_the_legacy_of_the_isonzo_front
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_grand_battle_plan
+				bonus = 0.2
+				days = 180
+				track = combat_support
 			}
+
 
 			add_tech_bonus = {
 				name = wuw_HUN_the_legacy_of_the_isonzo_front
@@ -5490,8 +5513,8 @@ focus_tree = {
 		id = wuw_HUN_establishing_a_new_dynasty
 		icon = GFX_focus_HUN_establishing_a_new_dynasty
 		prerequisite = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
-		mutually_exclusive = { focus = wuw_HUN_elect_a_fascist_king }
-		x = -1
+		mutually_exclusive = { focus = wuw_HUN_elect_a_democratic_king focus = wuw_HUN_elect_a_fascist_king }
+		x = -4
 		y = 1
 		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
 
@@ -5581,13 +5604,13 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_elect_a_democratic_king
 		icon = GFX_focus_HUN_elect_a_democratic_king
-		prerequisite = { focus = wuw_HUN_elections_in_the_revolutionary_council }
-		mutually_exclusive = { focus = wuw_HUN_restore_the_socialist_federative_republic focus = wuw_HUN_establish_the_second_republic}
-		x = 9
+		prerequisite = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
+		mutually_exclusive = { focus = wuw_HUN_establishing_a_new_dynasty focus = wuw_HUN_elect_a_fascist_king }
+		x = 0
 		y = 1
-		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
+		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -5602,20 +5625,10 @@ focus_tree = {
 					}
 				}
 				NOT = { has_completed_focus = wuw_HUN_continue_the_regency }
-				NOT = { has_completed_focus = wuw_HUN_end_the_regency }
-				NOT = { has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic }
-				NOT = { has_completed_focus = wuw_HUN_establish_the_second_republic }
-			}
-		}
-		offset = {
-			x = -9
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
+				NOT = { has_completed_focus = wuw_HUN_end_the_white_terror }
+				NOT = { has_completed_focus = wuw_HUN_establishing_a_new_dynasty }
+				NOT = { has_completed_focus = wuw_HUN_elect_a_fascist_king }
+				NOT = { has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction }
 			}
 		}
 
@@ -5623,10 +5636,6 @@ focus_tree = {
 			OR = {
 				has_government = neutrality
 				has_government = democratic
-			}
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_mihaly_karolyi
 			}
 		}
 
@@ -5819,8 +5828,8 @@ focus_tree = {
 		id = wuw_HUN_elect_a_fascist_king
 		icon = GFX_focus_HUN_elect_a_fascist_king
 		prerequisite = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
-		mutually_exclusive = { focus = wuw_HUN_establishing_a_new_dynasty }
-		x = 3
+		mutually_exclusive = { focus = wuw_HUN_establishing_a_new_dynasty focus = wuw_HUN_elect_a_democratic_king }
+		x = 4
 		y = 1
 		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
 
@@ -6028,7 +6037,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_cancel_the_german_trade_deal
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = { focus = wuw_HUN_establishing_a_new_dynasty }
+		prerequisite = { focus = wuw_HUN_establishing_a_new_dynasty focus = wuw_HUN_elect_a_democratic_king }
 		#mutually_exclusive = { focus = wuw_HUN_elect_a_democratic_king focus = wuw_HUN_elect_a_fascist_king }
 		x = 2
 		y = 1
@@ -6313,10 +6322,17 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			add_mastery_bonus = {
+				name = wuw_HUN_a_mobile_army
+				bonus = 0.1
+				days = 180
+				grand_doctrine = new_mobile_warfare
+			}
+
 			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
+				cost_reduction = 0.25
 				uses = 1
-				category = cat_mobile_warfare
+				category = land_doctrine
 				name = wuw_HUN_a_mobile_army
 			}
 
@@ -6356,10 +6372,17 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			add_mastery_bonus = {
+				name = wuw_HUN_an_airforce_to_be_reckoned_with
+				bonus = 0.15
+				days = 180
+				grand_doctrine = superior_firepower
+			}
+
 			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
+				cost_reduction = 0.25
 				uses = 1
-				category = cat_superior_firepower
+				category = land_doctrine
 				name = wuw_HUN_an_airforce_to_be_reckoned_with
 			}
 
@@ -7465,8 +7488,20 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			set_rule = { can_create_factions = yes }
-			create_faction = HUN_BALKAN_FACTION
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_balkan_pact
+				add_faction_initiative = 1
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			ELSE = {
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_balkan_pact
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
 
 			IF = {
 				limit = {
@@ -7505,7 +7540,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_guarantee_religious_liberties
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -9953,7 +9988,15 @@ focus_tree = {
 			custom_effect_tooltip = HUN_demands_tt
 			random_country = {
 				limit = {
-					owns_state = 73
+					OR = {
+						AND = {
+							owns_state = 73
+							is_subject = no
+						}
+						any_subject_country = {
+							owns_state = 73
+						}
+					}
 				}
 				country_event = {
 					id = WW_hungary.20
@@ -11308,12 +11351,16 @@ focus_tree = {
 				}
 				ROOT = {
 					set_rule = { can_create_factions = yes }
-					create_faction = HUN_PACT_OF_ROME_FACTION
+					create_faction_from_template = {
+						template = faction_template_regional
+						name = HUN_PACT_OF_ROME_FACTION
+						icon = GFX_faction_logo_generic_11
+					}
 					ITA = {
 						country_event = generic.5
 						add_ai_strategy = {
 							type = alliance
-							id = "HUN"
+							id = HUN
 							value = 200
 						}
 					}
@@ -11419,7 +11466,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 2
+		cost = 3
 
 		ai_will_do = {
 			factor = 15
@@ -11469,7 +11516,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 2
+		cost = 1
 
 		ai_will_do = {
 			factor = 5
@@ -11512,7 +11559,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
 
-		cost = 2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -11549,9 +11596,7 @@ focus_tree = {
 	focus = {
 		id = wuw_HUN_reviving_the_spirit_of_1848
 		icon = GFX_focus_generic_workers_and_farmers_rise
-		prerequisite = { focus = wuw_HUN_politicize_the_levente_associations }
-		prerequisite = { focus = wuw_HUN_undermine_the_volksbund }
-		prerequisite = { focus = wuw_HUN_salami_slicing_tactics }
+		prerequisite = { focus = wuw_HUN_politicize_the_levente_associations focus = wuw_HUN_undermine_the_volksbund focus = wuw_HUN_salami_slicing_tactics }
 		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
 		x = 0
 		y = 1
@@ -12092,6 +12137,7 @@ focus_tree = {
 		}
 
 		available = {
+		has_civil_war = no
 			OR = {
 				AND = {
 					is_subject = yes
@@ -13755,7 +13801,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_restore_the_socialist_federative_republic
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 15
@@ -13763,6 +13809,7 @@ focus_tree = {
 
 		available = {
 			has_government = communism
+			date > 1938.6.1
 		}
 
 		bypass = {
@@ -14142,7 +14189,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_march_south
 
-		cost = 10
+		cost = 15
 
 		ai_will_do = {
 			factor = 25
@@ -14274,6 +14321,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
+			custom_effect_tooltip = "Doing this focus will make you count as the balkan federation"
 
 			every_other_country = {
 				limit = {
@@ -16531,8 +16579,8 @@ focus_tree = {
 						instant_build = yes
 					}
 					add_resource = {
-						type = steel
-						amount = 2
+						type = coal
+						amount = 8 
 					}
 				}
 			}

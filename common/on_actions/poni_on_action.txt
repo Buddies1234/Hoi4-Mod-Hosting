@@ -2,51 +2,51 @@ on_actions = {
     on_weekly = {
         effect = {
     		add_mastery = {
-				amount = 7
+				amount = 4
 				track = infantry
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = combat_support
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = armor
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = operations
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = capital_ships
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = carriers
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = screens
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = submarines
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = fighter_aircraft
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = strike_aircraft
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = medium_aircraft
 			}
 			add_mastery = {
-				amount = 7
+				amount = 4
 				track = heavy_aircraft
 			}
         }
