@@ -9287,22 +9287,10 @@ focus_tree = {
 	# START IRAQ/IRAN/USSR INTERVENTION #
 
 	focus = {
-		id = uk_iraq_focus
+		id = uk_irish_reconquest
 		available = {
-			IRQ = {
-				OR = { 
-					communism > 0.2
-			 		fascism > 0.2
-			 	} 
-			}
-		} #UK at war with fascist/commie. iraq is fascist/commie
-
-		bypass = {
-			IRQ = { exists = no }
 		}
-
-		will_lead_to_war_with = IRQ
-		prerequisite = { focus = ENG_home_defence }
+		prerequisite = { focus = ENG_home_defence focus = ENG_global_defense}
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = -6
 		y = 1
@@ -9320,11 +9308,12 @@ focus_tree = {
 		}	
 		completion_reward = {
 			create_wargoal = {
-				type = take_state_focus
-				target = IRQ
-				generator = { 291 }
-				expire = 0
+				type = annex_everything
+				target = IRE
 			}
+			add_state_core = 113
+			add_state_core = 134
+			add_state_core = 135
 		}
 	}
 	focus = {
