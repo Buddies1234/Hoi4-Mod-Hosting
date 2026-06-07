@@ -7308,7 +7308,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_regional_defense_council_of_aragon
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -7332,7 +7332,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_appropriate_the_means_of_production
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -7407,7 +7407,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SPR_autogestion
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -7480,7 +7480,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPR_regional_defense_council_of_aragon
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
@@ -7641,7 +7641,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPR_seize_public_transport
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -7962,6 +7962,135 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
+				division_template = {
+					name = "Epstein Farmers"
+					priority = 2
+					template_counter = 118
+					division_names_group = SPR_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 328 }
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+					create_unit = {
+						division = "name = \"Epstein Farmers\" division_template = \"Epstein Farmers\" start_experience_factor = 0.6" 
+						owner = SPR
+					}
+				}			
 			effect_tooltip = {
 				if = {
 					limit = {
@@ -8203,7 +8332,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_all_must_bear_the_torch
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -8237,7 +8366,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SPR_the_threats_abound
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -8282,7 +8411,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_portuguese_anarchism
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -8374,7 +8503,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPR_all_must_bear_the_torch
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
