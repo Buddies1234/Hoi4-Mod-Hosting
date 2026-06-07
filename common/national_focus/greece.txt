@@ -385,6 +385,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_research_slot = 1
 			if = {
 				limit = {
 					has_idea = GRE_venerate_the_ancient_hellenes_spirit
@@ -780,7 +781,6 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_research_slot = 1
 			set_rule = { can_create_factions = yes }
 		}
 	}
@@ -788,9 +788,6 @@ focus_tree = {
 	focus = {
 		id = GRE_reviving_the_double_headed_eagle
 		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
-		available = {
-			has_government = fascism
-		}
 		prerequisite = { focus = GRE_horror_and_fear }
 		x = -1
 		y = 1
