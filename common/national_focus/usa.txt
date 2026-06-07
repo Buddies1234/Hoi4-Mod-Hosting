@@ -750,6 +750,65 @@ focus_tree = {
 
 		}
 	}
+		focus = {
+		id = USA_Compensation
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 2
+		y = 3
+		prerequisite = { focus = USA_communal_property_act }
+		relative_position_id = USA_guarantee_the_american_dream
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+			country_exists = CSA
+			has_war = No
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_state_core = 465
+			add_state_core = 464
+			add_state_core = 468
+			add_state_core = 862
+			add_state_core = 863
+			add_state_core = 466
+			add_state_core = 861
+			add_state_core = 860
+			add_state_core = 332
+			add_state_core = 331
+			add_state_core = 682
+			add_state_core = 866
+			add_state_core = 867
+			add_state_core = 683
+			add_state_core = 467
+			add_state_core = 469
+			add_state_core = 865
+			add_state_core = 472
+			add_state_core = 470
+			add_state_core = 469
+			add_state_core = 473
+			add_state_core = 740
+			add_state_core = 276
+			add_state_core = 471
+			add_state_core = 864
+			add_state_core = 463
+			add_state_core = 739
+
+		}
+	}
 	focus = {
 		id = USA_reintegration
 		icon = GFX_goal_generic_intelligence_exchange
