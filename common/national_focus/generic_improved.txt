@@ -11,6 +11,80 @@ focus_tree = {
 	initial_show_position = {
 		focus = generic_industrial_effort
 	}
+		focus = {
+		id = Confederate_conquest
+		icon = GFX_goal_generic_alliance
+		prerequisite = {  
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = { 
+		 }
+		allow_branch = {
+			original_tag = CSA
+		}
+		x = 25
+		y = 0
+		relative_position_id = political_sphere
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		create_wargoal = {
+			target = MEX
+			type = annex_everything
+		}
+		create_wargoal = {
+			target = ELS
+			type = annex_everything
+		}
+		hidden_effect = {
+		add_state_core = 479
+		add_state_core = 480
+		add_state_core = 482
+		add_state_core = 483
+		add_state_core = 484
+		add_state_core = 481
+		add_state_core = 478
+		add_state_core = 477
+		add_state_core = 277
+		add_state_core = 485
+		add_state_core = 478
+		add_state_core = 476
+		add_state_core = 475
+		add_state_core = 474
+		add_state_core = 311
+		add_state_core = 313
+		add_state_core = 312
+		add_state_core = 314
+		add_state_core = 317
+		add_state_core = 316
+		add_state_core = 304
+		add_state_core = 685
+		add_state_core = 315
+		add_state_core = 689
+		add_state_core = 690
+		add_state_core = 693
+		add_state_core = 318
+		add_state_core = 317
+		add_state_core = 319
+		add_state_core = 686
+		add_state_core = 694
+		add_state_core = 692
+		add_state_core = 308
+		add_state_core = 619
+		add_state_core = 695
+		add_state_core = 493
+		add_state_core = 489
+		add_state_core = 307
+		}
+		}
+	}
+
 	focus = {
 		id = Siam1
 		icon = GFX_goal_generic_alliance
