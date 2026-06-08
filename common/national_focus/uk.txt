@@ -9289,6 +9289,7 @@ focus_tree = {
 	focus = {
 		id = uk_irish_reconquest
 		available = {
+			date > 1938.1.1 
 		}
 		prerequisite = { focus = ENG_home_defence focus = ENG_global_defense}
 		icon = GFX_goal_generic_occupy_states_ongoing_war
