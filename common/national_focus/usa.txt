@@ -756,7 +756,7 @@ focus_tree = {
 		x = 2
 		y = 3
 		prerequisite = { focus = USA_communal_property_act }
-		mutually_exclusive = {USA_reintegration}
+		mutually_exclusive = { focus = USA_reintegration }
 		relative_position_id = USA_guarantee_the_american_dream
 		cost = 10
 
@@ -767,7 +767,7 @@ focus_tree = {
 		available = {
 			OR = {
 			country_exists = CSA
-			has_war = No
+			has_civil_war = no
 			}
 		}
 		
@@ -816,7 +816,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		prerequisite = { focus = USA_communal_property_act }
-		mutually_exclusive = {USA_Compensation}
+		mutually_exclusive = { focus = USA_Compensation }
 		relative_position_id = USA_guarantee_the_american_dream
 		cost = 10
 
