@@ -30207,7 +30207,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			air_experience = 15
+			air_experience = 250
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
