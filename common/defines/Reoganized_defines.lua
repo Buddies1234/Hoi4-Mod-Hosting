@@ -48,7 +48,8 @@ NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 9999
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 60				
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 0
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 60				
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 60		
+NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false     -- Whether unit leader XP gain is scaled by 1/<nr_of_traits>		
 
 ---Free Div Templates---
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 	--Base cost to unlock a regiment slot,
