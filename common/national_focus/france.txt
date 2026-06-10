@@ -3595,6 +3595,7 @@
 		}
 
 		prerequisite = {
+			focus = FRA_reform_the_labour_laws
 			focus = FRA_protect_the_rights_of_man
 		}
 		relative_position_id = FRA_reform_the_labour_laws
