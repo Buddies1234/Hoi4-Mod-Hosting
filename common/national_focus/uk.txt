@@ -187,7 +187,7 @@ focus_tree = {
 	focus = {
 		id = limited_rearmament_focus
 		icon = GFX_goal_generic_build_tank
-		x = 5
+		x = 6
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -2084,7 +2084,7 @@ focus_tree = {
 		}
 
 		icon = GFX_goal_generic_national_unity
-		x = 29
+		x = 30
 		y = 0
 		offset = {
 			x = -2
@@ -2960,7 +2960,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 34
+		x = 35
 		y = 0
 
 		offset = {
@@ -8330,7 +8330,7 @@ focus_tree = {
 			}
 		}
 
-		x = 14
+		x = 15
 		y = 0
 		relative_position_id = ENG_revisit_colonial_policy
 
@@ -9319,11 +9319,11 @@ focus_tree = {
 	}
 	focus = {
 		id = uk_iran_focus
-		prerequisite = { focus = uk_iraq_focus }
+		prerequisite = { focus = ENG_no_further_appeasement }
 		icon = GFX_goal_generic_forceful_treaty
-		x = 0
+		x = 3
 		y = 1
-		relative_position_id = uk_iraq_focus
+		relative_position_id = ENG_no_further_appeasement
 		cost = 10
 
 		ai_will_do = {
@@ -9389,7 +9389,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_embargo_ussr 
-		prerequisite = { focus = uk_iran_focus focus = ENG_no_further_appeasement }
+		prerequisite = { focus = uk_iran_focus }
 
 		allow_branch = {
 			if = {
@@ -10007,7 +10007,7 @@ focus_tree = {
 		}
 		}
 		icon = GFX_focus_generic_strike_at_democracy2
-		x = 18
+		x = 19
 		y = 0
 		relative_position_id = ENG_steady_as_she_goes
 
