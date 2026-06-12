@@ -3,10 +3,6 @@ NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.0005 -- Base equipme
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0	-- num convoys needed per fuel land lease
 
 
----NAVAL INVASION FIX---
-NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 10			-- base days needed to prepare a naval invasion
-NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 999					-- base cap of naval invasions can be planned at the same time
-NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 10 -- base cap of divisions that can be assigned in a naval invasion
 
 ---FULL PLANNING ON IMMOBILE COHESION---
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0	-- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
@@ -22,7 +18,7 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane t
 		0.0, -- NAVAL_KAMIKAZE
         0.0, -- PORT_STRIKE
 		0.0, -- ATTACK_LOGISTICS
-		0.02, -- AIR_SUPPLY
+		100.02, -- Logi bombing
 		0.0, -- TRAINING
 		0.0, -- NAVAL_MINES_PLANTING
 		0.0, -- NAVAL_MINES_SWEEPING
@@ -38,16 +34,13 @@ NDefines.NSupply.BASE_TRUCK_HP = 1000.0
 
 ---Training Speed/level/SPF Cap/XP cap/general Cap---
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 100000000       	-- How many deployment lines minimum can be training
-NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2
-NDefines.NMilitary.TRAINING_MAX_LEVEL = 2
-NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 8 -- Base training done each day during deployment.
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 99999999
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.00000000000000001
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 9999
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 60				
-NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 0
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 5
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 60		
 NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false     -- Whether unit leader XP gain is scaled by 1/<nr_of_traits>		
 
@@ -70,7 +63,7 @@ NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0.0
 
 ---Diplomacy
 NDefines.NDiplomacy.DIPLOMACY_HOURS_BETWEEN_REQUESTS = 12
-NDefines.NDiplomacy.GUARANTEE_COST = 25
+NDefines.NDiplomacy.GUARANTEE_COST = 0
 NDefines.NDiplomacy.PEACE_SCORE_PER_PASS = 2.0
 NDefines.NDiplomacy.TRUCE_PERIOD_AFTER_KICKING_FROM_FACTION = 0
 NDefines.NDiplomacy.NUM_DAYS_TO_ENABLE_KICKING_NEW_MEMBERS_OF_FACTION = 0
@@ -79,12 +72,10 @@ NDefines.NDiplomacy.FRONT_IS_DANGEROUS = 0
 NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = -1
 
 
----VETERANCY NERFS---
-NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3, 0.92, 0.97 }	-- Experience needed to progress to the next level
 
 
 ---Speed Changes---
-NDefines.NGame.GAME_SPEED_SECONDS = { 10000.0, 0.25, 0.175, 0.1, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 3600.0, 0.3, 0.175, 0.09, 0.0 }
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 30
 NDefines_Graphics.NGraphics.MAPICON_GROUP_PASSES = 10
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 999

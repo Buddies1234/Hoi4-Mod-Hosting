@@ -20,7 +20,9 @@ focus_tree = {
 	}
 	
 	default = no
-
+	shared_focus = INSHOL_dutch_east_indies
+	shared_focus = INSHOL_reasserting_control
+	shared_focus = INSHOL_reform_knil
 	continuous_focus_position = { x = 50 y = 1500 }
 
  ##   ##  #    ##  #  # ###  ##  #       ### #  # ###  #  #  ## ### ###  #   #     ### ###  ### ### 
@@ -51,7 +53,7 @@ focus_tree = {
 		}
 		
 		icon = GFX_goal_generic_consumer_goods
-		x = 3
+		x = 5
 		y = 0
 		cost = 10
 
@@ -78,7 +80,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_obtain_foreign_colonial_investments }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = HOL_obtain_foreign_colonial_investments
 		cost = 5
@@ -184,7 +186,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_expand_curacao_oil_refineries }
 		icon = GFX_focus_generic_aluminum
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = HOL_expand_curacao_oil_refineries
 		cost = 10
@@ -225,7 +227,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = HOL_expand_curacao_oil_refineries }
 		icon = GFX_goal_generic_construct_military
-		x = 2
+		x = 0
 		y = 2
 		relative_position_id = HOL_expand_curacao_oil_refineries
 		cost = 5

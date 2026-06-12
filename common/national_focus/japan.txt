@@ -9032,6 +9032,17 @@ focus_tree = {
 		}
 
 		available = {
+			has_war_with_major = yes
+			OR = {
+				has_war_support > 0.79
+				surrender_progress > 0
+			}
+			any_enemy_country = {
+				ic_ratio = {
+					tag = ROOT
+					ratio > 0.3
+				}
+			}
 		}
 
 		bypass = {
@@ -30196,7 +30207,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			air_experience = 250
+			air_experience = 100
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
