@@ -33,12 +33,8 @@ ideas = {
 		Reversed_NON_Player_Buff = {
 		
 			allowed = {
-				tag = BHU
 			}
 			cancel = {
-			OR = {	
-				is_ai = no
-			}
 			}
 			modifier = {
 				conscription_factor = -500
