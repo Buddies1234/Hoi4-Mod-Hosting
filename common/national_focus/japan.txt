@@ -8426,7 +8426,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			has_war = yes
 		}
 
 		bypass = {
@@ -9032,7 +9032,17 @@ focus_tree = {
 		}
 
 		available = {
-
+			has_war_with_major = yes
+			OR = {
+				has_war_support > 0.79
+				surrender_progress > 0
+			}
+			any_enemy_country = {
+				ic_ratio = {
+					tag = ROOT
+					ratio > 0.3
+				}
+			}
 		}
 
 		bypass = {
@@ -12154,6 +12164,80 @@ focus_tree = {
 			unlock_decision_category_tooltip = prospect_for_resources
 			
 				
+			
+		}
+	}
+
+	focus = {
+		id = JAP_an_expedition_to_tibet
+		icon = GFX_focus_prc_infiltration
+		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
+		x = 3
+		y = 1
+		relative_position_id = JAP_reinforce_the_beijing_garrison
+
+		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			TIB = {
+				exists = yes
+				is_subject = no
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+			OR = {
+				has_war_with = CHI
+				CHI = {
+					exists = no
+				}
+				has_subject = CHI
+				has_subject = RNG
+			}
+			JAP_army_faction_is_at_least_influential = yes
+		}
+
+		bypass = {
+			TIB = {
+				OR = {
+					exists = no
+					is_ally_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+
+			TIB = {
+				country_event = {
+					id = SEA_japan_foreign_policy.22
+					days = 2
+					random_days = 4
+				}	
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = JAP_an_expedition_to_tibet_tt
+			
+			add_ai_strategy = {
+				type = protect
+				id = TIB
+				value = 100
+			}
 			
 		}
 	}
@@ -30123,7 +30207,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			air_experience = 300
+			air_experience = 100
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

@@ -187,7 +187,7 @@ focus_tree = {
 	focus = {
 		id = limited_rearmament_focus
 		icon = GFX_goal_generic_build_tank
-		x = 6
+		x = 5
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -2084,7 +2084,7 @@ focus_tree = {
 		}
 
 		icon = GFX_goal_generic_national_unity
-		x = 30
+		x = 29
 		y = 0
 		offset = {
 			x = -2
@@ -2960,7 +2960,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 35
+		x = 34
 		y = 0
 
 		offset = {
@@ -8330,7 +8330,7 @@ focus_tree = {
 			}
 		}
 
-		x = 15
+		x = 14
 		y = 0
 		relative_position_id = ENG_revisit_colonial_policy
 
@@ -8699,6 +8699,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_motion_of_no_confidence }
 		available = { 
 			is_subject = no
+			date > 1938.1.1
 		}
 
 		continue_if_invalid = yes
@@ -8717,7 +8718,6 @@ focus_tree = {
 			hidden_effect = {
 				set_rule = { can_declare_war_on_same_ideology = yes }
 				set_rule = { can_puppet = yes }
-				set_rule = { can_only_justify_war_on_threat_country = no }
 			}
 			set_rule = { can_send_volunteers = yes }
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -9287,11 +9287,22 @@ focus_tree = {
 	# START IRAQ/IRAN/USSR INTERVENTION #
 
 	focus = {
-		id = uk_irish_reconquest
+		id = uk_iraq_focus
 		available = {
-			date > 1938.1.1 
+			IRQ = {
+				OR = { 
+					communism > 0.2
+			 		fascism > 0.2
+			 	} 
+			}
+		} #UK at war with fascist/commie. iraq is fascist/commie
+
+		bypass = {
+			IRQ = { exists = no }
 		}
-		prerequisite = { focus = ENG_home_defence focus = ENG_global_defense}
+
+		will_lead_to_war_with = IRQ
+		prerequisite = { focus = ENG_home_defence }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = -6
 		y = 1
@@ -9309,21 +9320,20 @@ focus_tree = {
 		}	
 		completion_reward = {
 			create_wargoal = {
-				type = annex_everything
-				target = IRE
+				type = take_state_focus
+				target = IRQ
+				generator = { 291 }
+				expire = 0
 			}
-			add_state_core = 113
-			add_state_core = 134
-			add_state_core = 135
 		}
 	}
 	focus = {
 		id = uk_iran_focus
-		prerequisite = { focus = ENG_no_further_appeasement }
+		prerequisite = { focus = uk_iraq_focus }
 		icon = GFX_goal_generic_forceful_treaty
-		x = 3
+		x = 0
 		y = 1
-		relative_position_id = ENG_no_further_appeasement
+		relative_position_id = uk_iraq_focus
 		cost = 10
 
 		ai_will_do = {
@@ -9389,7 +9399,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_embargo_ussr 
-		prerequisite = { focus = uk_iran_focus }
+		prerequisite = { focus = uk_iran_focus focus = ENG_no_further_appeasement }
 
 		allow_branch = {
 			if = {
@@ -10007,7 +10017,7 @@ focus_tree = {
 		}
 		}
 		icon = GFX_focus_generic_strike_at_democracy2
-		x = 19
+		x = 18
 		y = 0
 		relative_position_id = ENG_steady_as_she_goes
 
@@ -11114,8 +11124,39 @@ focus_tree = {
 	focus = {
 		id = ENG_ceylon_forward_operating_base
 		prerequisite = { focus = ENG_god_save_the_king }
+		available = {
+			has_full_control_of_state = 422
+			hidden_trigger = {
+					if = {
+						limit = {
+							has_dlc = "Graveyard of Empires"
+							has_event_target = UK_INDIA
+						}
+						event_target:UK_INDIA = { is_subject_of = ENG }
+					}
+				}
+			}
 		bypass = {
-			always = yes
+			OR = {
+				RAJ = {
+					is_in_faction_with = ENG
+					OR = {
+						has_country_flag = ENG_dominions_stayed_with_fascist_britain_flag
+						has_country_flag = britain_enforced_our_loyalty
+					}
+				}
+				has_completed_focus = ENG_towards_indian_independence
+			}
+			if = {
+					limit = {
+						has_dlc = "Graveyard of Empires"
+						has_event_target = UK_INDIA
+					}
+					event_target:UK_INDIA = {
+						exists = no
+						NOT = { is_subject_of = ROOT }
+					}
+				}
 			}
 		icon = GFX_goal_generic_position_armies
 		x = -1
@@ -13048,7 +13089,37 @@ focus_tree = {
 			}
 		}
 	}
-
+	focus = {
+		id = uk_irish_reconquest
+		available = {
+			date > 1938.1.1 
+		}
+		prerequisite = { focus = ENG_steady_as_she_goes}
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 7
+		y = 1
+		offset = {
+			x = 6
+			y = -1
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = ENG_steady_as_she_goes
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = IRE
+			}
+			add_state_core = 113
+			add_state_core = 134
+			add_state_core = 135
+		}
+	}
 	focus = {
 		id = ENG_spirit_of_the_industrial_revolution
 		prerequisite = { focus = ENG_soviet_cooperation focus = ENG_liberate_the_home_of_marx focus = ENG_crush_the_dream }
