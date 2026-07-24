@@ -104,3 +104,30 @@
 
   uk_irish_reconquest:0 "Irish Recounquest"
   uk_irish_reconquest_DESC:0 ""
+
+ ROM_GER_advisors:0 "German Advisory Council"
+ ROM_GER_advisors_DESC:0 ""
+
+ ROM_Bulgarian_intergration:0 "Bulgarian Intergration"
+ ROM_Bulgarian_intergration_DESC:0 ""
+
+ ROM_Carpathian_union:0 "Carpathian Union"
+ ROM_Carpathian_union_DESC:0 ""
+
+ ROM_Specialized_army:0 "Special Forces Army"
+ ROM_Specialized_army_DESC:0 ""
+
+ ROM_Special_Army:0 "Special Kids Army"
+ ROM_Special_Army_DESC:0 ""
+
+ ROM_Mass_production:0 "Romanian Mass Gun production"
+ ROM_Mass_production_DESC:0 ""
+
+ Rom_massproduction:0 "Mass Gun Production"
+ Rom_massproduction_DESC:0 ""
+
+ ROM_Mass_production_arty:0 "Mass Artillery Production"
+ ROM_Mass_production_arty_DESC:0 ""
+
+ ROM_arty_Production:0 "Romanian Mass Artillery production"
+ ROM_arty_Production_DESC:0 ""
